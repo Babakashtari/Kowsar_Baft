@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta lang="fa" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="fabric, textile, Iranian company,kosar baft, پارچه، کوثر بافت، ترگال، کج راه"
+    />
+    <meta name="author" content="Babak Ashtari" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--this is how I add an icon followed by a plain text to my page title-->
+    <link
+      rel="shortcut icon"
+      href="../images/logos/کوثر بافت لوگو قهوه ای.png"
+      type="image/x-icon"
+    />
+    <!-- code in order to user font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <!-- this is how I normalize my file using an external css -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <title>کوثر بافت نوین</title>
+    <!--this is how I add an external css file to my html-->
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="hideBar()">
+    <header>
+      <nav>
+        <div>
+          <i class="fas fa-bars"></i>
+          <img
+            src="../images/logos/کوثر بافت لوگو.png"
+            alt="logo"
+            width="40%"
+            height="auto"
+          />
+        </div>
+        <ul>
+          <li>
+            <form action="#" class="left zeroOpacity">
+              <a href="">
+                <i id="search-button" class="fa fa-search"></i>
+              </a>
+              <input
+                type="search"
+                class="search"
+                placeholder="کلمه مورد نظر خود را اینجا جستجو کنید"
+                value=""
+              />
+            </form>
+          </li>
+          <li><i id="searchInitializer" class="fas fa-search"></i></li>
+          <li>
+            <a href=""><i class="fa fa-home"></i></a>
+          </li>
+          <!-- لیست محصولات -->
+          <li id="products">
+            <span><i class="fa fa-caret-down"></i>&nbsp;محصولات</span>
+            <ul class="displayNone">
+              <li>
+                <span><i class="fa fa-caret-down"></i>&nbsp;ترگال</span>
+                <ul class="displayNone">
+                  <li><a href="KaliteTeregal.html">کالیته ترگال</a></li>
+                </ul>
+              </li>
+              <li>
+                <span><i class="fa fa-caret-down"></i>&nbsp;مقنعه ای</span>
+                <ul class="displayNone">
+                  <li>
+                    <a href="#">در دست ساخت</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span><i class="fa fa-caret-down"></i>&nbsp;پرشیا</span>
+                <ul class="displayNone">
+                  <li><a href="KalitePersia.html">کالیته پرشیا</a></li>
+                </ul>
+              </li>
+              <li>
+                <span><i class="fa fa-caret-down"></i>&nbsp;چهارخونه</span>
+                <ul class="displayNone">
+                  <li><a href="KaliteCharkhoune.html">کالیته چهارخونه</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="درباره ما.html"
+              ><i class="fa fa-exclamation"></i>&nbsp;درباره ما</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-volume-control-phone"></i>&nbsp; تماس با ما</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- white manu bar and logo container -->
+      <div>
+        <ul>
+          <a href="#">
+            <img
+              src="../images/Logos/کوثر بافت لوگو.png"
+              alt="Kosar Baft"
+              width="auto"
+              height="80rem"
+            />
+          </a>
+          <li>
+            <a href=""
+              ><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;سبد خرید
+            </a>
+          </li>
+          <li>
+            <a href=""> <i class="fa fa-user"></i>&nbsp;&nbsp;نام کاربر</a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa fa-sign-in"></i>&nbsp;&nbsp;ثبت نام / ورود</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    <!-- starting progress bar -->
+    <div id="progress">
+      <p></p>
+      <div></div>
+    </div>
+    <script src="../JS/home.js"></script>
+  </body>
+</html>
