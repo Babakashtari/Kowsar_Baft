@@ -391,7 +391,7 @@ main > section:first-child > h1 {
   background-image: url(../images/TeregalTexture.jpg);
   background-position: center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .container > div > p {
@@ -475,7 +475,7 @@ body > main > div:nth-of-type(2) > div:nth-child(2)::after {
   background-image: url(../images/TeregalTexture.jpg);
   background-size: 30%;
   background-repeat: repeat;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: 13;
 }
 body > main > div:nth-of-type(2) > div:nth-child(2) > span {
