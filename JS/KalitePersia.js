@@ -118,8 +118,9 @@ window.addEventListener("click", event => {
 });
 
 // hamburger button on the green navbar for small screens:
-let hamburgerButton = document.querySelector("header>nav>div>i");
-let navBar = document.querySelector("header>nav>ul");
+const hamburgerButton = document.querySelector("header>nav>div>i");
+const navBar = document.querySelector("header>nav>ul");
+const hamburgerbuttonDiv = document.querySelector("header>nav>div");
 
 setInterval(() => {
   document.querySelector("header>div").style.marginTop =
@@ -138,10 +139,12 @@ let hideBar = () => {
     navBar.classList.add("displayNone");
     navBar.classList.add("zeroOpacity");
     secondLogoLink.classList.add("displayNone");
+    hamburgerbuttonDiv.classList.remove("displayNone");
   } else {
     navBar.classList.remove("displayNone");
     navBar.classList.remove("zeroOpacity");
     secondLogoLink.classList.remove("displayNone");
+    hamburgerbuttonDiv.classList.add("displayNone");
   }
 };
 window.onresize = hideBar;

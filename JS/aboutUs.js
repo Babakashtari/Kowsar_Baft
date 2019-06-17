@@ -1,5 +1,6 @@
-let hamburgerButton = document.querySelector("header>nav>div>i");
-let navBar = document.querySelector("header>nav>ul");
+const hamburgerButton = document.querySelector("header>nav>div>i");
+const navBar = document.querySelector("header>nav>ul");
+const hamburgerbuttonDiv = document.querySelector("header>nav>div");
 
 // products navbar variables:
 const products = document.querySelector("#products");
@@ -120,7 +121,7 @@ setInterval(() => {
 let hideBar = () => {
   // in order to have 3 onload/resize events:
   showProgress();
-  // in order to reset the hamburger button on landscape/portrait change:
+  // in order to reset the hamburger button on landscape/portrait change and close the open menu ul:
   hamburgerButton.classList.remove("far");
   hamburgerButton.classList.remove("fa-window-close");
   hamburgerButton.classList.add("fas");
@@ -131,10 +132,12 @@ let hideBar = () => {
     navBar.classList.add("displayNone");
     navBar.classList.add("zeroOpacity");
     secondLogoLink.classList.add("displayNone");
+    hamburgerbuttonDiv.classList.remove("displayNone");
   } else {
     navBar.classList.remove("displayNone");
     navBar.classList.remove("zeroOpacity");
     secondLogoLink.classList.remove("displayNone");
+    hamburgerbuttonDiv.classList.add("displayNone");
   }
 };
 window.onresize = hideBar;
@@ -188,3 +191,16 @@ function showProgress() {
   }
   let x = setInterval(increment, 20);
 }
+// scroll effect on top logo:
+window.addEventListener("scroll", () => {
+  if (scrollY > 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.add("displayNone");
+  } else if (scrollY < 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.add("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  } else if (window.screen.width < 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  }
+});
