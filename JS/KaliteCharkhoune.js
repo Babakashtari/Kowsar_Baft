@@ -468,7 +468,7 @@ function showProgress() {
       clearInterval(x);
       header.style.display = "block";
       main.style.display = "block";
-      footer.style.display = "block";
+      footer.style.display = "flex";
       progressBar.style.display = "none";
     } else {
       width++;
