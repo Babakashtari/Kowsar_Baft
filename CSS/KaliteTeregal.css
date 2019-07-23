@@ -65,6 +65,7 @@ header > nav > ul > li {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 header > nav > ul > li > a,
@@ -615,17 +616,74 @@ footer {
     transparent 0.75rem
   );
 }
+
+/* footer styles: */
+footer {
+  background-color: steelblue;
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+footer > section {
+  padding: 2.5rem 0;
+}
+footer > section > p {
+  line-height: 1.5rem;
+}
+footer > section:first-of-type > p {
+  direction: rtl;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+footer > section:first-of-type > p > i {
+  color: white;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+footer > section:first-of-type > p > a > i {
+  color: white;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+footer > section:first-of-type > hr {
+  color: white;
+}
+/* map styles: */
+footer > section:nth-of-type(2) > div#map {
+  width: 500px;
+  height: 300px;
+  border: 3px groove gray;
+}
+footer > section:last-of-type {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+footer > section:last-of-type > p {
+  color: white;
+  direction: rtl;
+}
+footer > section:last-of-type > p > span {
+  color: darkblue;
+  text-decoration: underline;
+}
+
 /* meida queries */
+@media screen and (max-width: 525px) {
+  /* in order to make the map scale down as the screen shrinks */
+  footer > section:nth-of-type(2) > div#map {
+    width: 300px;
+  }
+}
 @media screen and (max-width: 1100px) {
   #radio-container {
     padding: 0 25%;
   }
 }
-/* @media screen and (max-width: 442px) {
-  #radio-container {
-    padding: 0 5%;
-  }
-} */
 @media screen and (max-width: 385px) {
   header > nav > ul > li > ul {
     display: block;

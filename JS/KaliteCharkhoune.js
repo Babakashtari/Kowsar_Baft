@@ -468,7 +468,7 @@ function showProgress() {
       clearInterval(x);
       header.style.display = "block";
       main.style.display = "block";
-      footer.style.display = "block";
+      footer.style.display = "flex";
       progressBar.style.display = "none";
     } else {
       width++;
@@ -478,3 +478,16 @@ function showProgress() {
   }
   let x = setInterval(increment, 20);
 }
+// scroll effect on top logo:
+window.addEventListener("scroll", () => {
+  if (scrollY > 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.add("displayNone");
+  } else if (scrollY < 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.add("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  } else if (window.screen.width < 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  }
+});

@@ -118,9 +118,10 @@ setInterval(() => {
   document.querySelector("header>div").style.marginTop =
     document.querySelector("header>nav").offsetHeight + "px";
 }, 200);
-let hideBar = () => {
+const hideBar = () => {
   // in order to have 3 onload/resize events:
   showProgress();
+  photoslider();
   // in order to reset the hamburger button on landscape/portrait change:
   hamburgerButton.classList.remove("far");
   hamburgerButton.classList.remove("fa-window-close");
@@ -181,7 +182,7 @@ function showProgress() {
       clearInterval(x);
       header.style.display = "block";
       main.style.display = "block";
-      footer.style.display = "block";
+      footer.style.display = "flex";
       progressBar.style.display = "none";
     } else {
       width++;
@@ -191,3 +192,59 @@ function showProgress() {
   }
   let x = setInterval(increment, 20);
 }
+// scroll effect on top logo:
+window.addEventListener("scroll", () => {
+  if (scrollY > 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.add("displayNone");
+  } else if (scrollY < 80 && window.screen.width > 700) {
+    hamburgerbuttonDiv.classList.add("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  } else if (window.screen.width < 700) {
+    hamburgerbuttonDiv.classList.remove("displayNone");
+    hamburgerButton.classList.remove("displayNone");
+  }
+});
+
+//homepage photoslider: prettier-ignore
+const radios = document.querySelectorAll(
+  "main > section > div > label> input "
+);
+let index = 0;
+const photoslider = () => {
+  const photos = document.querySelectorAll("main>section>div:nth-child(1)>div");
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      index = i;
+      photos[i].style.display = "inline";
+      const x = setTimeout(() => {
+        photos[i].style.left = "0";
+      }, 1);
+    } else {
+      photos[i].style.left = "100%";
+      photos[i].style.display = "none";
+    }
+  }
+};
+// left and right buttons:
+const sideMoves = (n = 1) => {
+  index += n;
+  if (index > radios.length - 1) {
+    index = 0;
+  }
+  if (index < 0) {
+    index = radios.length - 1;
+  }
+  radios[index].checked = true;
+  photoslider();
+};
+let timer = setInterval(sideMoves, 4000);
+const photoslider_container = document.querySelector(
+  "main>section>div:nth-child(1)"
+);
+photoslider_container.addEventListener("mouseenter", () => {
+  clearInterval(timer);
+});
+photoslider_container.addEventListener("mouseleave", () => {
+  timer = setInterval(sideMoves, 4000);
+});
