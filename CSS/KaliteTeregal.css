@@ -303,10 +303,11 @@ main > section:first-child {
   overflow: hidden;
 }
 
-main > section:first-child > h1 {
+main > section:first-child > h1,
+main > section:first-child > h3 {
   text-align: center;
+  direction: rtl;
 }
-
 #radio-container > span:hover {
   color: blue;
   cursor: pointer;
@@ -412,7 +413,35 @@ main > section:first-child > h1 {
 .container > div:hover p {
   background-color: rgba(900, 900, 900, 1);
 }
-
+/* color comparison section */
+main > section:nth-of-type(2) > h3 {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  direction: rtl;
+}
+main > section:nth-of-type(2) > div {
+  text-align: center;
+  direction: rtl;
+  padding: 1rem;
+  background-color: white;
+}
+main > section:nth-of-type(2) > div > i {
+  color: white;
+  font-size: 30rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, blue, red);
+}
+main > section:nth-of-type(2) > div > select {
+  color: black;
+  padding: 0 1rem;
+  margin: 1rem;
+  font-family: IranSans;
+  cursor: pointer;
+}
+main > section:nth-of-type(2) > div > select > option {
+  text-shadow: 1px 1px 4px white, -1px -1px 4px white;
+}
 /* modal box: */
 body > main > div:nth-of-type(2) {
   position: fixed;
@@ -494,24 +523,24 @@ body > main > div:nth-of-type(2) > div:nth-child(2) > span:hover {
   text-shadow: none;
 }
 /* skewed table style */
-body > main > div:nth-last-of-type(2) > div:nth-child(2) > div:first-of-type {
+body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:first-of-type {
   position: absolute;
   right: calc(5% - 2px);
   bottom: -1px;
   top: 50%;
-  background-color: gray;
+  background-color: black;
   width: calc(20% + 4px);
   height: calc(80% + 4px);
   transform: translateY(-50%) skew(2deg, 2deg);
+  filter: blur(18px);
   z-index: 14;
-  visibility: hidden;
 }
-body > main > div:nth-last-of-type(2) > div:nth-child(2) > div:nth-of-type(2) {
+body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
   position: absolute;
   right: calc(5% - 2px);
   bottom: -1px;
   top: 50%;
-  filter: blur(4px);
+  filter: blur(18px);
   background-color: black;
   width: calc(20% + 4px);
   height: calc(80% + 4px);

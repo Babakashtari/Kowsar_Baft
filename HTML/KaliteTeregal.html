@@ -137,6 +137,7 @@
       <section>
         <!-- first container -->
         <h1>:کالیته رنگ های ترگال</h1>
+        <h3>برای مشاهده بهتر نمونه رنگ روی کد موردنظر کلیک کنید.</h3>
         <div class="container">
           <div>
             <p>
@@ -646,6 +647,15 @@
         </label>
         <span onclick="prevnext(1)">&gt;</span>
       </div>
+      <!-- comparison section: -->
+      <section>
+        <h3>در این قسمت می توانید رنگ های انتخابی خود را در پس زمینه های مختلف با یکدیگر مقایسه کنید:</h3>
+        <div>
+            <i class="fas fa-tshirt"></i><br>
+            <label for="picker">رنگ لباس را انتخاب کنید:</label>
+            <select name="colorpicker" id="picker" onchange="colorpicker(event)"></select>
+        </div>
+      </section>
       <!-- modal opaque box -->
       <div class="displayNone zeroOpacity">
         <div id="skewBox"></div>
@@ -668,7 +678,7 @@
               <td id="colorCode"></td>
             </tr>
             <tr>
-              <td>قیمت بدون احتساب مالیات:</td>
+              <td>قیمت هر متر:</td>
               <td>125000 ریال</td>
             </tr>
             <tr>

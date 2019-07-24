@@ -302,8 +302,10 @@ main > section:first-child {
   overflow: hidden;
 }
 
-main > section:first-child > h1 {
+main > section:first-child > h1,
+main > section:first-child > h3 {
   text-align: center;
+  direction: rtl;
 }
 
 #radioContainer > span:hover {
@@ -503,27 +505,27 @@ body > main > div:nth-of-type(2) > div:nth-child(2) > span:hover {
 }
 
 /* skewed table style */
-body > main > div:nth-last-of-type(2) > div:nth-child(2) > div:first-of-type {
+body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:first-of-type {
   position: absolute;
   right: calc(5% - 2px);
   bottom: -1px;
   top: 50%;
   /* filter: blur(4px); */
   /* border-radius: 15px; */
-  background-color: gray;
+  background-color: black;
   width: calc(20% + 4px);
   height: calc(80% + 4px);
+  filter: blur(18px);
   transform: translateY(-50%) skew(2deg, 2deg);
   z-index: 14;
-  visibility: hidden;
 }
 
-body > main > div:nth-last-of-type(2) > div:nth-child(2) > div:nth-of-type(2) {
+body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
   position: absolute;
   right: calc(5% - 2px);
   bottom: -1px;
   top: 50%;
-  filter: blur(4px);
+  filter: blur(18px);
   /* border-radius: 15px; */
   background-color: black;
   width: calc(20% + 4px);

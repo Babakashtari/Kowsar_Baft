@@ -211,8 +211,8 @@ function heightset() {
 setInterval(heightset, 1000);
 
 // array for color codes and their color RGB:
-var codes = [];
-var gradients = [
+const codes = [];
+const gradients = [
   /* 1 */
   "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem)",
   /* 2 */

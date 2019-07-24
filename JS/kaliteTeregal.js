@@ -209,7 +209,7 @@ function heightset() {
 }
 setInterval(heightset, 1000);
 // array for color codes and their color RGB:
-var codes = [
+const codes = [
   709.1,
   705,
   704.6,
@@ -295,7 +295,7 @@ var codes = [
   303,
   302
 ];
-var colors = [
+const colors = [
   // 709.1
   "0b0700",
   // 705
@@ -463,13 +463,7 @@ var colors = [
   // 303
   "7a1c61",
   // 302
-  "c45e6d",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
+  "c45e6d"
 ];
 var kaliteCells = document.querySelectorAll(".container>div");
 var CodePlaces = document.querySelectorAll(".container>div>p>a");
@@ -566,3 +560,21 @@ window.addEventListener("scroll", () => {
     hamburgerButton.classList.remove("displayNone");
   }
 });
+
+// color picker for color comparison:
+(() => {
+  const select = document.querySelector(
+    "main>section:nth-of-type(2)>div>select"
+  );
+  let option = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
+  for (let i = 0; i < colors.length; i++) {
+    option += `<option value=${colors[i]} style="background-color:#${
+      colors[i]
+    }">کد رنگ:  ${codes[i]}</option>`;
+  }
+  select.innerHTML = option;
+})();
+const colorpicker = event => {
+  const T_shirt = document.querySelector("main>section:nth-of-type(2)>div>i");
+  T_shirt.style.color = "#" + event.target.value;
+};
