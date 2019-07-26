@@ -414,23 +414,42 @@ main > section:first-child > h3 {
   background-color: rgba(900, 900, 900, 1);
 }
 /* color comparison section */
-main > section:nth-of-type(2) > h3 {
+main > section:nth-of-type(2) {
+  display: flex;
+  background-color: white;
+}
+main > h3 {
   text-align: center;
   background-color: white;
   padding: 1rem;
   direction: rtl;
+  line-height: 2.5rem;
 }
 main > section:nth-of-type(2) > div {
   text-align: center;
   direction: rtl;
   padding: 1rem;
   background-color: white;
+  flex: 1;
+  margin: 1rem;
+  box-shadow: 1px 1px 3px black;
 }
 main > section:nth-of-type(2) > div > i {
-  color: white;
-  font-size: 30rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to right, blue, red);
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 20rem;
+  padding-bottom: 1rem;
+}
+.background {
+  background-color: white;
+}
+.gradient {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+main > section:nth-of-type(2) > div > label {
+  display: block;
+  color: black;
+  text-shadow: 1px 1px 3px white;
 }
 main > section:nth-of-type(2) > div > select {
   color: black;
@@ -438,6 +457,8 @@ main > section:nth-of-type(2) > div > select {
   margin: 1rem;
   font-family: IranSans;
   cursor: pointer;
+  text-overflow: ellipsis;
+  width: 80%;
 }
 main > section:nth-of-type(2) > div > select > option {
   text-shadow: 1px 1px 4px white, -1px -1px 4px white;
@@ -797,6 +818,12 @@ footer > section:last-of-type > p > span {
   header > div > ul {
     padding: 1rem 1.5rem 1rem 0;
     margin: 0;
+  }
+  main > h3 {
+    font-size: 1rem;
+  }
+  main > section:nth-of-type(2) > div > select {
+    font-size: 0.7rem;
   }
 }
 @media screen and (min-width: 701px) {

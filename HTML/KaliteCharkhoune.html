@@ -96,8 +96,8 @@
     </header>
     <main>
         <section>
-            <h1>:کالیته رنگ های چهارخانه</h1>
-            <h3>برای مشاهده بهتر نمونه رنگ بر روی آن کلیک کنید.</h3>
+            <h1>کالیته رنگ های چهارخانه:</h1>
+            <h3>برای مشاهده بهتر نمونه رنگ بر روی کد آن کلیک کنید.</h3>
             <!-- first container -->
             <div class="parent">
                 <div>
@@ -608,6 +608,38 @@
             </label>
             <span onclick="prevnext(1)">&gt;</span>
         </div>
+              <!-- comparison section: -->
+      <h3>در این قسمت می توانید رنگ های انتخابی خود را در پس زمینه های مختلف با یکدیگر مقایسه کنید:</h3>
+      <section>
+        <div>
+            <i class="fas fa-tshirt background"></i><br>
+            <label for="picker1">کد ترگال برای لباس</label>
+            <select name="teregal" id="picker1" onchange="teregalpicker(event)"></select>
+            <label for="picker2">کد چهارخانه برای لباس</label>
+            <select name="Charkhoune" id="picker2" onchange="colorpicker(event)"></select>
+            <label for="picker3">کد پس زمینه لباس</label>
+            <select name="background" id="picker3" onchange="backgroundpicker(event)"></select>
+        </div>
+        <div>
+            <i class="fas fa-tshirt background"></i><br>
+            <label for="picker4">کد ترگال برای لباس</label>
+            <select name="teregal" id="picker4" onchange="teregalpicker(event)"></select>
+            <label for="picker5">کد چهارخانه برای لباس</label>
+            <select name="Charkhoune" id="picker5" onchange="colorpicker(event)"></select>
+            <label for="picker6">کد پس زمینه لباس</label>
+            <select name="background" id="picker6" onchange="backgroundpicker(event)"></select>
+        </div>
+        <div>
+            <i class="fas fa-tshirt background"></i><br>
+            <label for="picker7">کد ترگال برای لباس</label>
+            <select name="teregal" id="picker7" onchange="teregalpicker(event)"></select>
+            <label for="picker8">کد چهارخانه برای لباس</label>
+            <select name="Charkhoune" id="picker8" onchange="colorpicker(event)"></select>
+            <label for="picker9">کد پس زمینه لباس</label>
+            <select name="background" id="picker9" onchange="backgroundpicker(event)"></select>
+        </div>
+      </section>
+
         <!-- modal opaque box -->
         <div class="displayNone zeroOpacity">
             <div id="skewBox"></div>

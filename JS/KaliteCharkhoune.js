@@ -211,7 +211,7 @@ function heightset() {
 setInterval(heightset, 1000);
 
 // array for color codes and their color RGB:
-const codes = [];
+const Color_codes = [];
 const gradients = [
   /* 1 */
   "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem)",
@@ -393,12 +393,12 @@ const gradients = [
 
 var kaliteCells = document.querySelectorAll(".parent>div");
 for (var b = 0; b < kaliteCells.length; b++) {
-  codes.push(b + 1);
+  Color_codes.push(b + 1);
   // kaliteCells[b].classList.add('col-sm-3', 'col-md-2', 'justify-content-center');
 }
 
 var CodePlaces = document.querySelectorAll(".parent>div>p>a");
-codes.forEach(function(value, index) {
+Color_codes.forEach(function(value, index) {
   CodePlaces[index].innerHTML = "کد: " + value + "</br>" + "افزودن به سبد خرید";
 });
 gradients.forEach(function(value, index) {
@@ -491,3 +491,353 @@ window.addEventListener("scroll", () => {
     hamburgerButton.classList.remove("displayNone");
   }
 });
+
+const codes = [
+  709.1,
+  705,
+  704.6,
+  807.2,
+  609,
+  401.8,
+  104,
+  603,
+  1008,
+  1002.7,
+  1008.2,
+  1023,
+  405,
+  800.58,
+  401.5,
+  800.59,
+  805,
+  602.3,
+  603.2,
+  601.1,
+  404.3,
+  800.55,
+  800.66,
+  400.1,
+  760,
+  466,
+  700.5,
+  1030,
+  436,
+  703,
+  830,
+  700.11,
+  345,
+  840,
+  120,
+  101.6,
+  380,
+  809.1,
+  360,
+  206.22,
+  355,
+  205,
+  100,
+  205.77,
+  102.3,
+  436,
+  801.7,
+  900,
+  704.2,
+  193,
+  801.62,
+  103,
+  1002.6,
+  1002.1,
+  1005,
+  903.6,
+  876,
+  904.2,
+  903,
+  800.5,
+  209.5,
+  205.5,
+  255,
+  241,
+  206,
+  204,
+  204.25,
+  246,
+  240,
+  202.11,
+  202,
+  201.1,
+  109,
+  107.7,
+  103.2,
+  102.1,
+  408,
+  439,
+  776,
+  404.22,
+  350,
+  304,
+  303,
+  302
+];
+const colors = [
+  // 709.1
+  "0b0700",
+  // 705
+  "170d00",
+  // 704.6
+  "734319",
+  // 807.2
+  "4a2500",
+  // 609
+  "000e00",
+  // 401.8
+  "253307",
+  // 104
+  "0d1900",
+  // 603
+  "3a3207",
+  // 1008
+  "250a00",
+  // 1002.7
+  "26170d",
+  // 1008.2
+  "310000",
+  // 1023
+  "670d17",
+  // 405
+  "00260b",
+  // 800.58
+  "658000",
+  // 401.5
+  "525927",
+  // 800.59
+  "373f00",
+  // 805
+  "6f4800",
+  // 602.3
+  "876e3b",
+  // 603.2
+  "54461a",
+  // 601.1
+  "d2d971",
+  // 404.3
+  "008a4b",
+  // 800.55
+  "8fff00",
+  // 800.66
+  "24c900",
+  // 400.1
+  "2bff69",
+  // 760
+  "271502",
+  // 466
+  "dff589",
+  // 700.5
+  "8c8f4f",
+  // 1030
+  "260d0c",
+  // 436
+  "000a00",
+  // 703
+  "2f2305",
+  // 830
+  "b17700",
+  // 700.11
+  "FFFEAB",
+  // 345
+  "400e20",
+  // 840
+  "9c3e00",
+  // 120
+  "525c4a",
+  // 101.6
+  "8fa16f",
+  // 380
+  "020008",
+  // 809.1
+  "ff0f00",
+  // 360
+  "190019",
+  // 206.22
+  "011213",
+  // 355
+  "0f0300",
+  // 205
+  "041006",
+  // 100
+  "fff",
+  // 205.77
+  "000604",
+  // 102.3
+  "37321e",
+  // 436
+  "001000",
+  // 801.7
+  "ffff00",
+  // 900
+  "ffbf8a",
+  // 704.2
+  "382309",
+  // 193
+  "05fcac",
+  // 801.62
+  "e37400",
+  // 103
+  "193118",
+  // 1002.6
+  "360200",
+  // 1002.1
+  "6b2f33",
+  // 1005
+  "c40014",
+  // 903.6
+  "87240d",
+  // 876
+  "5e0900",
+  // 904.2
+  "830000",
+  // 903
+  "f7632a",
+  // 800.5
+  "ffff54",
+  // 209.5
+  "00000a",
+  // 205.5
+  "0b0b07",
+  // 255
+  "000803",
+  // 241
+  "24232c",
+  // 206
+  "00002e",
+  // 204
+  "133838",
+  // 204.25
+  "00234a",
+  // 246
+  "002424",
+  // 240
+  "006949",
+  // 202.11
+  "1a6182",
+  // 202
+  "2b91a6",
+  // 201.1
+  "808080",
+  // 109
+  "000",
+  // 107.7
+  "0a0a0a",
+  // 103.2
+  "181a1a",
+  // 102.1
+  "393d22",
+  // 408
+  "001202",
+  // 439
+  "001d0d",
+  // 776
+  "140900",
+  // 404.22
+  "004033",
+  // 350
+  "220000",
+  // 304
+  "4b2638",
+  // 303
+  "7a1c61",
+  // 302
+  "c45e6d"
+];
+
+// color picker for color comparison:
+(() => {
+  const teregal_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='teregal']"
+  );
+  let option1 = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
+  for (let n = 0; n < teregal_select.length; n++) {
+    for (let i = 0; i < colors.length; i++) {
+      option1 += `<option value=${colors[i]} style="background-color:#${
+        colors[i]
+      }">کد رنگ:  ${codes[i]}</option>`;
+    }
+    teregal_select[n].innerHTML = option1;
+  }
+
+  let option2 = `<option value="">کد چهارخانه مورد نظر خود را انتخاب کنید</option>`;
+  const charkhoune_select = document.querySelectorAll(
+    'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
+  );
+  for (let n = 0; n < charkhoune_select.length; n++) {
+    for (let i = 0; i < gradients.length; i++) {
+      option2 += `<option value=${i} >کد چهارخونه:  ${i + 1}</option>`;
+    }
+    charkhoune_select[n].innerHTML = option2;
+  }
+
+  let option3 = `<option value="">کد پس زمینه مورد نظر خود را انتخاب کنید</option>`;
+  const background_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='background']"
+  );
+  for (let n = 0; n < background_select.length; n++) {
+    for (let i = 0; i < colors.length; i++) {
+      option3 += `<option value=${colors[i]} style="background-color:#${
+        colors[i]
+      }">کد رنگ:  ${codes[i]}</option>`;
+    }
+    background_select[n].innerHTML = option3;
+  }
+})();
+
+const teregalpicker = event => {
+  const teregal_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='teregal']"
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < teregal_select.length; i++) {
+    if (event.target === teregal_select[i]) {
+      T_shirt[i].style.color = "#" + event.target.value;
+      T_shirt[i].classList.remove("gradient");
+      T_shirt[i].classList.remove("background");
+      T_shirt[i].style.backgroundImage = null;
+    }
+  }
+};
+
+const colorpicker = event => {
+  const charkhouneh_select = document.querySelectorAll(
+    'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < charkhouneh_select.length; i++) {
+    if (event.target === charkhouneh_select[i]) {
+      T_shirt[i].style.backgroundImage = gradients[event.target.value];
+      T_shirt[i].classList.add("gradient");
+      T_shirt[i].classList.add("background");
+    }
+  }
+};
+
+const backgroundpicker = event => {
+  const background_selector = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div"
+  );
+  const background_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='background']"
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < background_select.length; i++) {
+    if (event.target === background_select[i]) {
+      background_selector[i].style.backgroundColor = "#" + event.target.value;
+      if (!T_shirt[i].classList.contains("gradient")) {
+        T_shirt[i].classList.remove("background");
+      }
+    }
+  }
+};

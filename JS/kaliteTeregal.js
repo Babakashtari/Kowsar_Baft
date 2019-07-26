@@ -560,21 +560,275 @@ window.addEventListener("scroll", () => {
     hamburgerButton.classList.remove("displayNone");
   }
 });
+// prettier-ignore
+const gradients = [
+  /* 1 */
+  'repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(22, 166, 101, 0.5) 1rem, rgba(22, 166, 101, 0.5) 2rem)',
+  /* 2 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(0, 87, 255, 0.6) 1rem, rgba(0, 87, 255, 0.6) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(0, 87, 255, 0.6) 1rem, rgba(0, 87, 255, 0.6) 2rem)",
+  /* 3 */
+  "repeating-linear-gradient(to right, rgba(91, 0, 57, 0.6) 0, rgba(91, 0, 57, 0.6) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(91, 0, 57, 0.5) 0, rgba(91, 0, 57, 0.5) 1rem, transparent 1rem, transparent 2rem)",
+  /* 4 */
+  "repeating-linear-gradient(to right, rgba(209, 41, 0, 0.7) 0, rgba(209, 41, 0, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(209, 41, 0, 0.5) 0, rgba(209, 41, 0, 0.5) 1rem, transparent 1rem, transparent 2rem)",
+  /* 5 */
+  "repeating-linear-gradient(to right, rgba(135, 61, 0, 0.6) 0, rgba(135, 61, 0, 0.6) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(135, 61, 0, 0.8) 0, rgba(135, 61, 0, 0.8) 1rem, transparent 1rem, transparent 2rem)",
+  /* 6 */
+  "repeating-linear-gradient(to right, rgba(66, 28, 0, 0.8) 0, rgba(66, 28, 0, 0.8) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(66, 28, 0, 0.6) 0, rgba(66, 28, 0, 0.6) 1rem, transparent 1rem, transparent 2rem), linear-gradient(rgba(197, 0, 0, 0.3), rgba(197, 0, 0, 0.3))",
+  /* 7 */
+  "repeating-linear-gradient(to right, rgba(172, 0, 0, 0.7) 0, rgba(172, 0, 0, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(172, 0, 0, 0.5) 0, rgba(172, 0, 0, 0.5) 1rem, transparent 1rem, transparent 2rem), linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2))",
+  /* 8 */
+  "repeating-linear-gradient(to right, rgba(250, 64, 56, 0.7) 0, rgba(250, 64, 56, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(250, 64, 56, 0.7) 0, rgba(250, 64, 56, 0.7) 1rem, transparent 1rem, transparent 2rem)",
+  /* 9 */
+  "repeating-linear-gradient(to right, rgba(105, 40, 0, 0.5) 0, rgba(105, 40, 0, 0.5) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(105, 40, 0, 0.5) 0, rgba(105, 40, 0, 0.5) 1rem, transparent 1rem, transparent 2rem)",
+  /* 10 */
+  "repeating-linear-gradient(to right, rgba(255, 48, 0, 0.7) 0, rgba(255, 48, 0, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(255, 48, 0, 0.7) 0, rgba(255, 48, 0, 0.7) 1rem, transparent 1rem, transparent 2rem)",
+  /* 11 */
+  "repeating-linear-gradient(to right, rgba(0, 87, 255, 0.6) 0, rgba(0, 87, 255, 0.6) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(0, 87, 255, 0.5) 0, rgba(0, 87, 255, 0.5) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 12 */
+  "repeating-linear-gradient(to right, rgba(255, 175, 0, 0.7) 0, rgba(255, 175, 0, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(255, 175, 0, 0.5) 0, rgba(255, 175, 0, 0.5) 1rem, transparent 1rem, transparent 2rem)",
+  /* 13 */
+  "repeating-linear-gradient(to right, rgba(255, 119, 0, 0.7) 0, rgba(255, 119, 0, 0.7) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(255, 119, 0, 0.5) 0, rgba(255, 119, 0, 0.5) 1rem, transparent 1rem, transparent 2rem)",
+  /* 14 */
+  "repeating-linear-gradient(to right, rgba(0, 94, 0, 0.6) 0, rgba(0, 94, 0, 0.6)  1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(0, 94, 0, 0.6) 0, rgba(0, 94, 0, 0.6) 1rem, transparent 1rem, transparent 2rem)",
+  /* 15 */
+  "repeating-linear-gradient(to right, rgba(52, 79, 0, 0.8) 0, rgba(52, 79, 0, 0.8) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(52, 79, 0, 0.8) 0, rgba(52, 79, 0, 0.8) 1rem, transparent 1rem, transparent 2rem)",
+  /* 16 */
+  "repeating-linear-gradient(to right, rgba(255, 28, 27, 0.6) 0, rgba(255, 28, 27, 0.6) 1rem, transparent 1rem, transparent 2rem),    repeating-linear-gradient(rgba(255, 28, 27, 0.6) 0, rgba(255, 28, 27, 0.6) 1rem, transparent 1rem, transparent 2rem)",
+  /* 17 */
+  "repeating-linear-gradient(to right, rgba(0, 51, 86, 0.8) 0, rgba(0, 51, 86, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(0, 51, 86, 0.6) 0, rgba(0, 51, 86, 0.6) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 18 */
+  "repeating-linear-gradient(to right, rgba(136, 64, 3, 0.8) 0, rgba(136, 64, 3, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(136, 64, 3, 0.8) 0, rgba(136, 64, 3, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 19 */
+  "repeating-linear-gradient(to right, rgba(0, 26, 18, 0.8) 0, rgba(0, 26, 18, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(0, 26, 18, 0.8) 0, rgba(0, 26, 18, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 20 */
+  "repeating-linear-gradient(to right, rgba(143, 0, 0, 0.7) 0, rgba(143, 0, 0, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(143, 0, 0, 0.7) 0, rgba(143, 0, 0, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 21 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 1rem, rgba(0, 0, 35, 0.7) 1rem, rgba(0, 0, 35, 0.7) 3rem, transparent 3rem, transparent 5rem, rgba(127, 0, 0, 0.6) 5rem, rgba(127, 0, 0, 0.6) 7rem), repeating-linear-gradient(rgba(0, 0, 35, 0.7) 0, rgba(0, 0, 35, 0.7) 2rem, transparent 2rem, transparent 4rem, rgba(0, 75, 0, 0.7) 4rem, rgba(0, 75, 0, 0.7) 6rem, transparent 6rem, transparent 8rem), repeating-linear-gradient(rgba(255, 168, 0, 0.5), rgba(255, 168, 0, 0.5))",
+  /* 22 */
+  "repeating-linear-gradient(to right, transparent -3rem, transparent -1rem, rgba(0, 0, 35, 0.7) -1rem, rgba(0, 0, 35, 0.7) 1rem, transparent 1rem, transparent 3rem, rgba(127, 0, 0, 0.6) 3rem, rgba(127, 0, 0, 0.6) 5rem), repeating-linear-gradient(to top, transparent -3rem, transparent -1rem, rgba(0, 0, 35, 0.7) -1rem, rgba(0, 0, 35, 0.7) 1rem, transparent 1rem, transparent 3rem, rgba(127, 0, 0, 0.6) 3rem, rgba(127, 0, 0, 0.6) 5rem), repeating-linear-gradient(rgba(255, 168, 0, 0.5), rgba(255, 168, 0, 0.5))",
+  /* 23 */
+  "repeating-linear-gradient(to right, rgba(250, 64, 56, 0.7) 0, rgba(250, 64, 56, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(250, 64, 56, 0.7) 0, rgba(250, 64, 56, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 24 */
+  "repeating-linear-gradient(to right, rgba(255, 175, 0, 0.7) 0, rgba(255, 175, 0, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem),    repeating-linear-gradient(rgba(255, 175, 0, 0.7) 0, rgba(255, 175, 0, 0.7) 0.5rem, transparent 0.5rem, transparent 1rem)",
+  /* 25 */
+  "repeating-linear-gradient(to right, rgba(0, 51, 86, 0.8) 0, rgba(0, 51, 86, 0.8) 0.4rem, transparent .4rem, transparent 1rem, rgba(0, 51, 86, 0.8) 1rem, rgba(0, 51, 86, 0.8) 1.4rem)",
+  /* 26 */
+  "repeating-linear-gradient(to right, rgba(135, 61, 0, 0.8) 0, rgba(135, 61, 0, 0.8) 0.4rem, transparent .4rem, transparent 1rem, rgba(135, 61, 0, 0.8) 1rem,  rgba(135, 61, 0, 0.8) 1.4rem)",
+  /* 27 */
+  "repeating-linear-gradient(to right, rgba(66, 28, 0, 0.9) 0, rgba(66, 28, 0, 0.9) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(66, 28, 0, 0.9) 1rem, rgba(66, 28, 0, 0.9) 1.4rem), linear-gradient(rgba(197, 0, 0, 0.2), rgba(197, 0, 0, 0.2))",
+  /* 28 */
+  "repeating-linear-gradient(to right, rgba(0, 26, 18, 0.8) 0, rgba(0, 26, 18, 0.8) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(0, 26, 18, 0.8) 1rem, rgba(0, 26, 18, 0.8) 1.4rem)",
+  /* 29 */
+  "repeating-linear-gradient(to right, rgba(0, 87, 255, 0.6) 0, rgba(0, 87, 255, 0.6) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(0, 87, 255, 0.6) 1rem, rgba(0, 87, 255, 0.6) 1.4rem)",
+  /* 30 */
+  "repeating-linear-gradient(to right, rgba(91, 0, 57, 0.7) 0, rgba(91, 0, 57, 0.7) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(91, 0, 57, 0.7) 1rem, rgba(91, 0, 57, 0.7) 1.4rem)",
+  /* 31 */
+  "repeating-linear-gradient(to right, rgba(255, 0, 26, 0.7) 0, rgba(255, 0, 26, 0.7) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(255, 0, 26, 0.7) 1rem, rgba(255, 0, 26, 0.7) 1.4rem)",
+  /* 32 */
+  "repeating-linear-gradient(to right, rgba(255, 0, 0, 0.9) 0, rgba(255, 0, 0, 0.9) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(255, 0, 0, 0.9) 1rem, rgba(255, 0, 0, 0.9) 1.4rem), linear-gradient(rgba(197, 0, 0, 0.2), rgba(197, 0, 0, 0.2))",
+  /* 33 */
+  "repeating-linear-gradient(to right, rgba(255, 175, 0, 0.9) 0, rgba(255, 175, 0, 0.9) 0.2rem, transparent 0.2rem, transparent 0.5rem, rgba(255, 175, 0, 0.9) 0.5rem, rgba(255, 175, 0, 0.9) 0.7rem)",
+  /* 34 */
+  " repeating-linear-gradient(to right, rgba(0, 175, 0, 0.9) 0, rgba(0, 175, 0, 0.9) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(0, 175, 0, 0.9) 1rem, rgba(0, 175, 0, 0.9) 1.4rem)",
+  /* 35 */
+  "repeating-linear-gradient(to right, rgba(255, 255, 0, 0.9) 0,rgba(255, 255, 0, 0.9) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(255, 255, 0, 0.9) 1rem, rgba(255, 255, 0, 0.9) 1.4rem)",
+  /* 36 */
+  "repeating-linear-gradient(to right, rgba(255, 87, 0, 1) 0, rgba(255, 87, 0, 1) 0.4rem, transparent 0.4rem, transparent 1rem, rgba(255, 87, 0, 1) 1rem, rgba(255, 87, 0, 1) 1.4rem)",
+  /* 37 */
+  "repeating-linear-gradient(to right, rgba(255, 0, 0, 0.8) 0, rgba(255, 0, 0, 0.8) 0.2rem, transparent 0.2rem, transparent 0.5rem, rgba(255, 0, 0, 0.8) 0.5rem, rgba(255, 0, 0, 0.8) 0.7rem)",
+  /* 38 */
+  "repeating-linear-gradient(to right, rgba(91, 0, 57, 0.9) 0, rgba(91, 0, 57, 0.9) 0.2rem, transparent 0.2rem, transparent 0.5rem, rgba(91, 0, 57, 0.9) 0.5rem, rgba(91, 0, 57, 0.9) 0.7rem)",
+  /* 39 */
+  "repeating-linear-gradient(to right, rgba(0, 0, 158, 0.7) 0, rgba(0, 0, 158, 0.7) 0.2rem, transparent 0.2rem, transparent 0.5rem, rgba(0, 0, 158, 0.7) 0.5rem, rgba(0, 0, 158, 0.7) 0.7rem)",
+  /* 40 */
+  "repeating-linear-gradient(to right,  rgba(48, 54, 27, 0.9) 0, rgba(48, 54, 27, 0.9) 0.2rem, transparent 0.2rem, transparent 0.5rem,  rgba(48, 54, 27, 0.9) 0.5rem,  rgba(48, 54, 27, 0.9) 0.7rem)",
+  /* 41 */
+  "repeating-linear-gradient(to right, transparent -4rem, transparent 2rem, rgba(91, 0, 57, 0.7) 2rem, rgba(91, 0, 57, 0.7) 8rem), repeating-linear-gradient(transparent 0, transparent 5.5rem, rgba(91, 0, 57, 0.7) 5.5rem, rgba(91, 0, 57, 0.7) 11rem)",
+  /* 42 */
+  "repeating-linear-gradient(to right, transparent -9rem, transparent -3rem, rgba(0, 18, 255, 0.5) -3rem, rgba(0, 18, 255, 0.5) 3rem), repeating-linear-gradient(transparent 0, transparent 5.5rem, rgba(0, 18, 255, 0.8) 5.5rem, rgba(0, 18, 255, 0.8) 11rem)",
+  /* 43 */
+  "repeating-linear-gradient(to right, transparent -5rem, transparent 1rem, rgba(0, 0, 61, 0.8) 1rem, rgba(0, 0, 61, 0.8) 7rem), repeating-linear-gradient(transparent -7rem, transparent -1.5rem, rgba(0, 0, 61, 0.6) -1.5rem, rgba(0, 0, 61, 0.6) 4rem)",
+  /* 44 */
+  "repeating-linear-gradient(to right, transparent -5rem, transparent 1rem, rgba(0, 0, 0, 0.8) 1rem, rgba(0, 0, 0, 0.8) 7rem), repeating-linear-gradient(transparent -15rem, transparent -7rem, rgba(0, 0, 0, 0.7) -7rem, rgba(0, 0, 0, 0.7) 1rem)",
+  /* 45 */
+  "repeating-linear-gradient(to right, rgba(250, 64, 56, 0.7) -5rem, rgba(250, 64, 56, 0.7) 1rem, transparent 1rem, transparent 7rem), repeating-linear-gradient(transparent -3.5rem, transparent 2.5rem, rgba(250, 64, 56, 0.6) 2.5rem, rgba(250, 64, 56, 0.6) 8.5rem)",
+  /* 46 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 5rem, rgba(176, 0, 2, 0.8) 5rem, rgba(176, 0, 2, 0.8) 11rem), repeating-linear-gradient(transparent -3.5rem, transparent 2.5rem, rgba(176, 0, 2, 0.9) 2.5rem, rgba(176, 0, 2, 0.9) 8.5rem)",
+  /* 47 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 6rem, rgba(255, 59, 0, 0.6) 6rem, rgba(255, 59, 0, 0.6) 12rem), repeating-linear-gradient(transparent -8rem, transparent -1rem, rgba(255, 59, 0, 0.8) -1rem, rgba(255, 59, 0, 0.8) 6rem)",
+  /* 48 */
+  "repeating-linear-gradient(to right, transparent -4rem, transparent 2rem, rgba(255, 143, 0, 0.8) 2rem, rgba(255, 143, 0, 0.8) 8rem), repeating-linear-gradient(transparent -1rem, transparent 5rem, rgba(255, 143, 0, 0.8) 5rem, rgba(255, 143, 0, 0.8) 11rem)",
+  /* 49 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(0, 75, 0, 0.9) 2rem, rgba(0, 75, 0, 0.9) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(0, 75, 0, 0.7) 3.25rem, rgba(0, 75, 0, 0.7) 6.25rem)",
+  /* 50 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(96, 47, 0, 0.8) 2rem, rgba(96, 47, 0, 0.8) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(96, 47, 0, 0.7) 3.25rem, rgba(96, 47, 0, 0.7) 6.25rem)",
+  /* 51 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(99, 0, 0, 0.8) 2rem, rgba(99, 0, 0, 0.8) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(99, 0, 0, 0.7) 3.25rem, rgba(99, 0, 0, 0.7) 6.25rem), linear-gradient(rgba(197, 0, 0, 0.3), rgba(197, 0, 0, 0.3))",
+  /* 52 */
+  " repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(0, 0, 0, 0.8) 2rem, rgba(0, 0, 0, 0.8) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(0, 0, 0, 0.7) 3.25rem, rgba(0, 0, 0, 0.7) 6.25rem)",
+  /* 53 */
+  "repeating-linear-gradient(to left, transparent -1rem, transparent 2rem, rgba(250, 37, 55, 0.7) 2rem, rgba(250, 37, 55, 0.7) 5rem), repeating-linear-gradient(rgba(250, 37, 55, 0.7) 0, rgba(250, 37, 55, 0.7) 3rem, transparent 3rem, transparent 6rem)",
+  /* 54 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(91, 0, 57, 0.7) 2rem, rgba(91, 0, 57, 0.7) 5rem), repeating-linear-gradient(to top, rgba(91, 0, 57, 0.7) 0, rgba(91, 0, 57, 0.7) 3rem, transparent 3rem, transparent 6rem)",
+  /* 55 */
+  "repeating-linear-gradient(to right, transparent -5.75rem, transparent -2.75rem, rgba(0, 87, 255, 0.6) -2.75rem, rgba(0, 87, 255, 0.6) 0.25rem), repeating-linear-gradient(to top, rgba(0, 87, 255, 0.6) -1.5rem, rgba(0, 87, 255, 0.6) 1.5rem, transparent 1.5rem, transparent 4.5rem)",
+  /* 56 */
+  "repeating-linear-gradient(to right, transparent -5.75rem, transparent -2.75rem, rgba(0, 0, 61, 0.8) -2.75rem, rgba(0, 0, 61, 0.8) 0.25rem), repeating-linear-gradient(to top, rgba(0, 0, 61, 0.8) -1.5rem, rgba(0, 0, 61, 0.8) 1.5rem, transparent 1.5rem, transparent 4.5rem)",
+  /* 57 */
+  "repeating-linear-gradient(to right, transparent -5.75rem, transparent -2.75rem, rgba(255, 143, 0, 0.8) -2.75rem, rgba(255, 143, 0, 0.8) 0.25rem), repeating-linear-gradient(to top, rgba(255, 143, 0, 0.8) -1.5rem, rgba(255, 143, 0, 0.8) 1.5rem, transparent 1.5rem, transparent 4.5rem)",
+  /* 58 */
+  "repeating-linear-gradient(to right, transparent -5.75rem, transparent -2.75rem, rgba(255, 41, 0, 0.8) -2.75rem, rgba(255, 41, 0, 0.8) 0.25rem), repeating-linear-gradient(to top, rgba(255, 41, 0, 0.8) -1.5rem, rgba(255, 41, 0, 0.8) 1.5rem, transparent 1.5rem, transparent 4.5rem)",
+  /* 59 */
+  "repeating-linear-gradient(to right, transparent -2rem, transparent 1rem, rgba(176, 0, 2, 0.8) 1rem, rgba(176, 0, 2, 0.8) 4rem), repeating-linear-gradient(to top, transparent -1rem, transparent 2rem,  rgba(176, 0, 2, 0.8) 2rem, rgba(176, 0, 2, 0.8) 5rem)",
+  /* 60 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(209, 41, 0, 0.7) 2rem, rgba(209, 41, 0, 0.7) 5rem), repeating-linear-gradient(to bottom, transparent 0rem, transparent 3rem,  rgba(209, 41, 0, 0.7) 3rem, rgba(209, 41, 0, 0.7) 6rem)",
+  /* 61 */
+  "repeating-linear-gradient(to right, transparent 1rem, transparent 2rem, rgba(0, 0, 16, 0.9) 2rem, rgba(0, 0, 16, 0.9) 3rem), repeating-linear-gradient(to bottom, transparent 0rem, transparent 1rem,  rgba(0, 0, 16, 0.9) 1rem, rgba(0, 0, 16, 0.9) 2rem)",
+  /* 62 */
+  "repeating-linear-gradient(to right, transparent 1rem, transparent 2rem, rgba(0, 0, 27, 0.7) 2rem, rgba(0, 0, 27, 0.7) 3rem), repeating-linear-gradient(to bottom, transparent 0rem, transparent 1rem,  rgba(0, 0, 27, 0.7) 1rem, rgba(0, 0, 27, 0.7) 2rem)",
+  /* 63 */
+  "repeating-linear-gradient(to right, transparent 1rem, transparent 2rem, rgba(48, 54, 27, 0.8) 2rem, rgba(48, 54, 27, 0.8) 3rem), repeating-linear-gradient(to bottom, transparent 0rem, transparent 1rem, rgba(48, 54, 27, 0.7) 1rem, rgba(48, 54, 27, 0.7) 2rem)",
+  /* 64 */
+  "repeating-linear-gradient(to right, transparent 1rem, transparent 2rem, rgba(20, 20, 0, 0.9) 2rem, rgba(20, 20, 0, 0.9) 3rem), repeating-linear-gradient(to bottom, transparent 0rem, transparent 1rem, rgba(20, 20, 0, 0.9) 1rem, rgba(20, 20, 0, 0.9) 2rem)",
+  /* 65 */
+  "repeating-linear-gradient(transparent 0rem, transparent 1rem, rgba(255, 255, 0, 0.3) 1rem, rgba(255, 255, 0, 0.3) 1.1rem, transparent 1.1rem, transparent 3rem), repeating-linear-gradient(transparent 0, transparent 2rem, rgba(255, 255, 0, 0.3) 2rem, rgba(255, 255, 0, 0.3) 3rem), repeating-linear-gradient(to right, transparent 0, transparent 2rem, rgba(255, 255, 0, 0.3) 2rem, rgba(255, 255, 0, 0.3) 3rem), repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(255, 255, 0, 0.3) 1rem, rgba(255, 255, 0, 0.3) 1.1rem, transparent 1.1rem, transparent 3rem), repeating-linear-gradient(rgba(19, 0, 0, 1), rgba(19, 0, 0, 1))",
+  /* 66 */
+  "repeating-linear-gradient(transparent 0, transparent 0.75rem, rgba(255,255,255, 0.5) 0.75rem, rgba(255,255,255, 0.5) 0.85rem), repeating-linear-gradient(to right, transparent 0, transparent 0.75rem, rgba(255,255,255, 0.5) 0.75rem, rgba(255,255,255, 0.5) 0.85rem), repeating-linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0))",
+  /* 67 */
+  "repeating-linear-gradient(to top, transparent 0, transparent 3rem, rgba(0, 26, 18, 0.8) 3rem, rgba(0, 26, 18, 0.8) 4rem, transparent 4rem, transparent 5rem, rgba(0, 26, 18, 0.8) 5rem, rgba(0, 26, 18, 0.8) 6rem, transparent 6rem, transparent 7rem, rgba(0, 26, 18, 0.8) 7rem, rgba(0, 26, 18, 0.8) 8rem, transparent 8rem, transparent 10rem), repeating-linear-gradient(to top, rgba(127, 0, 0, 0.6) 0, rgba(127, 0, 0, 0.6) 1rem, transparent 1rem, transparent 10rem), repeating-linear-gradient(to right, transparent 0, transparent 3rem, rgba(0, 26, 18, 0.8) 3rem, rgba(0, 26, 18, 0.8) 4rem, rgba(255, 255, 255, 0.5) 4rem, rgba(255, 255, 255, 0.5) 5rem, rgba(0, 26, 18, 0.8) 5rem, rgba(0, 26, 18, 0.8) 6rem, rgba(255, 255, 255, 0.5) 6rem, rgba(255, 255, 255, 0.5) 7rem, rgba(0, 26, 18, 0.8) 7rem, rgba(0, 26, 18, 0.8) 8rem, transparent 8rem, transparent 10rem), repeating-linear-gradient(to right, rgba(127, 0, 0, 0.6) 0, rgba(127, 0, 0, 0.6) 1rem, transparent 1rem, transparent 10rem), repeating-linear-gradient(rgba(255, 168, 0, 0.8), rgba(255, 168, 0, 0.8))",
+  /* 68 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(48, 9, 0, 0.8) 1rem, rgba(48, 9, 0, 0.8) 2rem), repeating-linear-gradient(transparent 0rem, transparent 1rem, rgba(48, 9, 0, 0.7) 1rem, rgba(48, 9, 0, 0.7) 2rem)",
+  /* 69 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(0, 26, 18, 0.8) 1rem, rgba(0, 26, 18, 0.8) 2rem), repeating-linear-gradient(rgba(255, 28, 27, 0.8) 0, rgba(255, 28, 27, 0.8) 1rem, transparent 1rem, transparent 2rem, rgba(0, 26, 18, 0.8) 2rem, rgba(0, 26, 18, 0.8) 3rem, transparent 3rem, transparent 4rem)",
+  /* 70 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(0, 26, 18, 0.9) 1rem, rgba(0, 26, 18, 0.9) 2rem), repeating-linear-gradient(rgba(0, 26, 18, 0.7) 0, rgba(0, 26, 18, 0.7) 1rem, transparent 1rem, transparent 2rem, rgba(0, 26, 18, 0.7) 2rem, rgba(0, 26, 18, 0.7) 3rem, transparent 3rem, transparent 4rem)",
+  /* 71 */
+  " repeating-linear-gradient(to right, rgba(0, 0, 0, 0.9) -1rem, rgba(0, 0, 0, 0.9) 1rem, transparent 1rem, transparent 3rem),    repeating-linear-gradient(rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.9) 1.5rem, transparent 1.5rem, transparent 3rem), repeating-linear-gradient(rgb(122, 0, 0), rgb(122, 0, 0))",
+  /* 72 */
+  "repeating-linear-gradient(to right, rgba(96, 47, 0, 0.9) 0, rgba(96, 47, 0, 0.9) 1rem, transparent 1rem, transparent 2rem, rgba(0, 26, 18, 0.7) 2rem, rgba(0, 26, 18, 0.7) 3rem, transparent 3rem, transparent 4rem), repeating-linear-gradient(rgba(0, 26, 18, 0.7) 0, rgba(0, 26, 18, 0.7) 1rem, transparent 1rem, transparent 2rem, rgba(0, 26, 18, 0.7) 2rem, rgba(0, 26, 18, 0.7) 3rem, transparent 3rem, transparent 4rem), repeating-linear-gradient(rgba(255, 168, 0, 0.8), rgba(255, 168, 0, 0.8))",
+  /* 73 */
+  "repeating-linear-gradient(to right, rgba(0, 26, 18, 0.8) 0, rgba(0, 26, 18, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem, rgba(255, 28, 27, 0.8) 1rem, rgba(255, 28, 27, 0.8) 1.5rem, transparent 1.5rem, transparent 2rem), repeating-linear-gradient(rgba(0, 26, 18, 0.8) 0, rgba(0, 26, 18, 0.8) 0.5rem, transparent 0.5rem, transparent 1rem, rgba(255, 28, 27, 0.8) 1rem, rgba(255, 28, 27, 0.8) 1.5rem, transparent 1.5rem, transparent 2rem)",
+  /* 74 */
+  "repeating-linear-gradient(to right, rgba(0, 26, 18, 0.6) 0, rgba(0, 26, 18, 0.6) 1rem, transparent 1rem, transparent 2rem, rgba(0, 26, 18, 0.6) 2rem, rgba(0, 26, 18, 0.6) 3rem, transparent 3rem, transparent 4rem), repeating-linear-gradient(rgba(0, 26, 18, 0.6) 0.5rem, rgba(0, 26, 18, 0.6) 1.5rem, transparent 1.5rem, transparent 2.5rem, rgba(0, 26, 18, 0.6) 2.5rem, rgba(0, 26, 18, 0.6) 3.5rem, transparent 3.5rem, transparent 4.5rem), repeating-linear-gradient(transparent 0.5rem, transparent 2rem, rgba(96, 47, 0, 0.9) 2rem, rgba(96, 47, 0, 1)2.1rem, transparent 2.1rem, transparent 4.5rem), repeating-linear-gradient(to right, transparent 0, transparent 1.5rem, rgba(96, 47, 0, 1) 1.5rem, rgba(96, 47, 0, 1)1.6rem, transparent 1.6rem, transparent 4rem), repeating-linear-gradient(rgba(255, 168, 0, 0.8), rgba(255, 168, 0, 0.8))",
+  /* 75 */
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(0, 0, 28, 0.7) 2rem, rgba(0, 0, 28, 0.7) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(0, 0, 28, 0.7) 3.25rem, rgba(0, 0, 28, 0.7) 6.25rem)",
+  /* 76*/
+  "repeating-linear-gradient(to right, transparent -1rem, transparent 2rem, rgba(96, 47, 0, 0.9) 2rem, rgba(96, 47, 0, 0.9) 5rem), repeating-linear-gradient(transparent 0.25rem, transparent 3.25rem, rgba(96, 47, 0, 0.9) 3.25rem, rgba(96, 47, 0, 0.9) 6.25rem)",
+  /* 77 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(0, 137, 94, 0.8) 1rem, rgba(0, 137, 94, 0.8) 2rem), repeating-linear-gradient(rgba(0, 137, 94, 0.8) 0, rgba(0, 137, 94, 0.8) 1rem, transparent 1rem, transparent 2rem, rgba(0, 137, 94, 0.8) 2rem, rgba(0, 137, 94, 0.8) 3rem, transparent 3rem, transparent 4rem)",
+  /* 78 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(0, 64, 42, 0.9) 1rem, rgba(0, 64, 42, 0.9) 2rem), repeating-linear-gradient(rgba(0, 64, 42, 0.7) 0, rgba(0, 64, 42, 0.7) 1rem, transparent 1rem, transparent 2rem, rgba(0, 64, 42, 0.7) 2rem, rgba(0, 64, 42, 0.7) 3rem, transparent 3rem, transparent 4rem) ",
+  /* 79 */
+  "repeating-linear-gradient(to right, transparent 0rem, transparent 1rem, rgba(0, 64, 42, 0.9) 1rem, rgba(0, 64, 42, 0.9) 2rem), repeating-linear-gradient(rgba(0, 64, 42, 0.7) 0, rgba(0, 64, 42, 0.7) 1rem, transparent 1rem, transparent 2rem, rgba(0, 64, 42, 0.7) 2rem, rgba(0, 64, 42, 0.7) 3rem, transparent 3rem, transparent 4rem), repeating-linear-gradient(rgba(120, 255, 255, 0.5), rgba(120, 255, 255, 0.5))",
+  /* 80 */
+  " repeating-linear-gradient(to right, transparent -4rem, transparent 2rem, rgba(0, 0, 13, 0.8) 2rem, rgba(0, 0, 13, 0.8) 8rem), repeating-linear-gradient(to top, transparent -1rem, transparent 5rem, rgba(0, 0, 13, 0.8) 5rem, rgba(0, 0, 13, 0.8) 11rem)",
+  /* 81 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(0, 94, 0, 0.6) 1rem, rgba(0, 94, 0, 0.6) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(0, 94, 0, 0.6) 1rem, rgba(0, 94, 0, 0.6) 2rem)",
+  /* 82 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(112, 179, 255, 0.5) 1rem, rgba(112, 179, 255, 0.5) 2rem),    repeating-linear-gradient(transparent 0, transparent 1rem, rgba(112, 179, 255, 0.5) 1rem, rgba(112, 179, 255, 0.5) 2rem)",
+  /* 83 */
+  "repeating-linear-gradient(to right, transparent 0, transparent .5rem, rgba(136, 64, 3, 0.8) .5rem, rgba(136, 64, 3, 0.8) 1rem)",
+  /* 84 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(52, 79, 0, 0.8) 1rem, rgba(52, 79, 0, 0.8) 2rem)",
+  /* 85 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(45, 145, 114, 0.9) 1rem, rgba(45, 145, 114, 0.9) 2rem)",
+  /* 86 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(120, 158, 0, 0.8) 1rem, rgba(120, 158, 0, 0.8) 2rem)",
+  /* 87 */
+  "repeating-linear-gradient(to right, transparent 0, transparent 1rem, rgba(0, 34, 34, 0.9) 1rem, rgba(0, 34, 34, 0.9) 2rem)",
+  /* 88 */
+  "repeating-linear-gradient(to right, transparent 0, transparent .5rem, rgba(122, 0, 0, 0.8) .5rem, rgba(122, 0, 0, 0.8) 1rem), repeating-linear-gradient(rgb(250, 215, 255), rgb(250, 215, 255))"
+];
 
 // color picker for color comparison:
 (() => {
-  const select = document.querySelector(
-    "main>section:nth-of-type(2)>div>select"
+  const teregal_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='teregal']"
   );
-  let option = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
-  for (let i = 0; i < colors.length; i++) {
-    option += `<option value=${colors[i]} style="background-color:#${
-      colors[i]
-    }">کد رنگ:  ${codes[i]}</option>`;
+  let option1 = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
+  for (let n = 0; n < teregal_select.length; n++) {
+    for (let i = 0; i < colors.length; i++) {
+      option1 += `<option value=${colors[i]} style="background-color:#${
+        colors[i]
+      }">کد رنگ:  ${codes[i]}</option>`;
+    }
+    teregal_select[n].innerHTML = option1;
   }
-  select.innerHTML = option;
+
+  let option2 = `<option value="">کد چهارخانه مورد نظر خود را انتخاب کنید</option>`;
+  const charkhoune_select = document.querySelectorAll(
+    'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
+  );
+  for (let n = 0; n < charkhoune_select.length; n++) {
+    for (let i = 0; i < gradients.length; i++) {
+      option2 += `<option value=${i} >کد چهارخونه:  ${i + 1}</option>`;
+    }
+    charkhoune_select[n].innerHTML = option2;
+  }
+
+  let option3 = `<option value="">کد پس زمینه مورد نظر خود را انتخاب کنید</option>`;
+  const background_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='background']"
+  );
+  for (let n = 0; n < background_select.length; n++) {
+    for (let i = 0; i < colors.length; i++) {
+      option3 += `<option value=${colors[i]} style="background-color:#${
+        colors[i]
+      }">کد رنگ:  ${codes[i]}</option>`;
+    }
+    background_select[n].innerHTML = option3;
+  }
 })();
+
+const teregalpicker = event => {
+  const teregal_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='teregal']"
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < teregal_select.length; i++) {
+    if (event.target === teregal_select[i]) {
+      T_shirt[i].style.color = "#" + event.target.value;
+      T_shirt[i].classList.remove("gradient");
+      T_shirt[i].classList.remove("background");
+      T_shirt[i].style.backgroundImage = null;
+    }
+  }
+};
+
 const colorpicker = event => {
-  const T_shirt = document.querySelector("main>section:nth-of-type(2)>div>i");
-  T_shirt.style.color = "#" + event.target.value;
+  const charkhouneh_select = document.querySelectorAll(
+    'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < charkhouneh_select.length; i++) {
+    if (event.target === charkhouneh_select[i]) {
+      T_shirt[i].style.backgroundImage = gradients[event.target.value];
+      T_shirt[i].classList.add("gradient");
+      T_shirt[i].classList.add("background");
+    }
+  }
+};
+
+const backgroundpicker = event => {
+  const background_selector = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div"
+  );
+  const background_select = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>select[name='background']"
+  );
+  const T_shirt = document.querySelectorAll(
+    "main>section:nth-of-type(2)>div>i"
+  );
+  for (let i = 0; i < background_select.length; i++) {
+    if (event.target === background_select[i]) {
+      background_selector[i].style.backgroundColor = "#" + event.target.value;
+      if (!T_shirt[i].classList.contains("gradient")) {
+        T_shirt[i].classList.remove("background");
+      }
+    }
+  }
 };
