@@ -551,6 +551,9 @@ footer > section:last-of-type > p > span {
     text-align: right;
     padding: 1rem 0;
   }
+  header > nav > ul > li {
+    z-index: initial;
+  }
   header > nav > ul > li > ul {
     top: 50%;
   }

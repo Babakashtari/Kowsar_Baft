@@ -103,6 +103,10 @@ header > nav > ul > li > ul {
 header > nav > ul > li > ul > li {
   margin-bottom: 0.1rem;
   width: 5.75rem;
+  z-index: 3;
+}
+header > nav > ul > li#products > ul > li > span {
+  z-index: 3;
 }
 header > nav > ul > li > ul > li:hover {
   margin-bottom: 0;
@@ -344,6 +348,10 @@ main > section:first-of-type > div > p {
 main > section:first-of-type > div > p > span {
   color: blue;
 }
+main > section:first-of-type > div > p > span > a {
+  color: blue;
+  text-decoration: underline;
+}
 main > section:first-of-type > div > h4 {
   direction: rtl;
   text-align: right;
@@ -416,6 +424,9 @@ footer {
 }
 .zeroOpacity {
   opacity: 0;
+}
+.left {
+  left: 100%;
 }
 .rotate {
   transform: rotate(180deg);
@@ -516,6 +527,9 @@ footer > section:last-of-type > p > span {
     width: 100%;
     text-align: right;
     padding: 1rem 0;
+  }
+  header > nav > ul > li {
+    z-index: initial;
   }
   header > nav > ul > li > ul {
     top: 50%;

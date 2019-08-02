@@ -1,14 +1,13 @@
-var radios = document.querySelectorAll("#radio-container>label>input");
-var containers = document.querySelectorAll(".container");
-var main = document.querySelector("main");
-var sectionOne = document.querySelector("main>section:first-child");
-var index = 0;
+const radios = document.querySelectorAll("#radio-container>label>input");
+const containers = document.querySelectorAll(".container");
+const main = document.querySelector("main");
+const sectionOne = document.querySelector("main>section:first-child");
+let index = 0;
 radios[index].checked = true;
-kalite();
 
 // search button click event:
-let searchInitializer = document.querySelector("#searchInitializer");
-let searchForm = document.querySelector("header>nav>ul>li:first-child>form");
+const searchInitializer = document.querySelector("#searchInitializer");
+const searchForm = document.querySelector("header>nav>ul>li:first-child>form");
 searchInitializer.addEventListener("click", () => {
   searchForm.classList.toggle("zeroOpacity");
   searchForm.classList.toggle("left");
@@ -126,7 +125,7 @@ setInterval(() => {
   document.querySelector("header>div").style.marginTop =
     document.querySelector("header>nav").offsetHeight + "px";
 }, 200);
-let hideBar = () => {
+const hideBar = () => {
   // in order to have 3 onload/resize events:
   showProgress();
   // in order to reset the hamburger button on landscape/portrait change:
@@ -134,7 +133,7 @@ let hideBar = () => {
   hamburgerButton.classList.remove("fa-window-close");
   hamburgerButton.classList.add("fas");
   hamburgerButton.classList.add("fa-bars");
-  let secondLogoLink = document.querySelector("header>div>ul>a");
+  const secondLogoLink = document.querySelector("header>div>ul>a");
   if (window.screen.width <= 700) {
     navBar.classList.add("displayNone");
     navBar.classList.add("zeroOpacity");
@@ -174,7 +173,7 @@ hamburgerButton.addEventListener("click", () => {
   }
 });
 
-function prevnext(n) {
+const prevnext = n => {
   index += n;
   if (index > radios.length - 1) {
     index = 0;
@@ -184,9 +183,21 @@ function prevnext(n) {
   }
   radios[index].checked = true;
   kalite();
-}
+};
 
-function kalite() {
+const checker = event => {
+  const radio_divs = document.querySelectorAll(
+    "#radio-container > label > div"
+  );
+  for (let i = 0; i < radio_divs.length; i++) {
+    if (radio_divs[i] === event.target) {
+      radios[i].checked = true;
+      kalite();
+    }
+  }
+};
+
+const kalite = () => {
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       index = i;
@@ -196,44 +207,45 @@ function kalite() {
       containers[i].style.left = "100%";
     }
   }
-}
+};
+kalite();
 
-function heightset() {
+const heightset = () => {
   sectionOne.style.height =
     containers[0].offsetHeight +
     document.getElementById("radio-container").offsetHeight +
     "px";
-}
+};
 setInterval(heightset, 1000);
 
 // array for color codes and their color RGB:
-var codes = ["پرشیا 1008", "پرشیا 103", "پرشیا 1030", "پرشیا 205.77"];
-var images = [
+const codes = ["پرشیا 1008", "پرشیا 103", "پرشیا 1030", "پرشیا 205.77"];
+const images = [
   "../images/Persia1008.jpg",
   "../images/Persia103.jpg",
   "../images/Persia1030.jpg",
   "../images/Persia205.77.jpg"
 ];
-var kaliteCells = document.querySelectorAll(".container>div");
-var CodePlaces = document.querySelectorAll(".container>div>p>a");
+const kaliteCells = document.querySelectorAll(".container>div");
+const CodePlaces = document.querySelectorAll(".container>div>p>a");
 codes.forEach(function(value, index) {
   CodePlaces[index].innerHTML = "کد: " + value + "</br>" + "افزودن به سبد خرید";
 });
 images.forEach(function(value, index) {
-  var img = document.createElement("img");
+  const img = document.createElement("img");
   img.setAttribute("src", value);
   kaliteCells[index].appendChild(img);
 });
 
 // progress bar:
-function showProgress() {
-  let progressDiv = document.querySelector("#progress>div");
-  let paragraph = document.querySelector("#progress>p");
+const showProgress = () => {
+  const progressDiv = document.querySelector("#progress>div");
+  const paragraph = document.querySelector("#progress>p");
   let width = 0;
-  let header = document.querySelector("header");
-  let main = document.querySelector("main");
-  let footer = document.querySelector("footer");
-  let progressBar = document.querySelector("#progress");
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+  const footer = document.querySelector("footer");
+  const progressBar = document.querySelector("#progress");
 
   function increment() {
     if (width === 100) {
@@ -248,8 +260,8 @@ function showProgress() {
       paragraph.innerHTML = width + " %";
     }
   }
-  let x = setInterval(increment, 20);
-}
+  const x = setInterval(increment, 20);
+};
 // scroll effect on top logo:
 window.addEventListener("scroll", () => {
   if (scrollY > 80 && window.screen.width > 700) {

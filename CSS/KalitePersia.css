@@ -307,7 +307,7 @@ main > section:first-child > h1 {
 }
 
 #radio-container > span:hover {
-  color: blue;
+  color: rgba(57, 161, 244, 1);
   cursor: pointer;
 }
 
@@ -315,7 +315,7 @@ main > section:first-child > h1 {
   font-size: 3rem;
   transition: 0.5s;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: gray;
+  color: rgba(173, 216, 230, 1);
   display: inline-block;
 }
 
@@ -330,15 +330,15 @@ main > section:first-child > h1 {
   position: absolute;
   transform: scale(2.5);
   z-index: 1;
-  cursor: pointer;
-  opacity: 0;
+  display: none;
 }
 
 #radio-container > label > div {
-  background-color: gray;
+  background-color: rgba(173, 216, 230, 1);
   transition: 0.5s;
   border-radius: 50%;
   position: absolute;
+  cursor: pointer;
   top: 0;
   bottom: 0;
   right: 0;
@@ -346,7 +346,7 @@ main > section:first-child > h1 {
 }
 
 #radio-container > label > div:hover {
-  background-color: blue;
+  background-color: rgba(57, 161, 244, 1);
 }
 
 #radio-container > label > input:checked + div {
@@ -588,6 +588,9 @@ footer > section:last-of-type > p > span {
   }
 }
 @media screen and (max-width: 700px) {
+  header > nav > ul > li {
+    z-index: initial;
+  }
   header > nav > ul > li > ul {
     top: 50%;
   }

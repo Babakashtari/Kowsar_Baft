@@ -100,8 +100,8 @@ window.addEventListener("click", event => {
 });
 
 // search button click event:
-let searchInitializer = document.querySelector("#searchInitializer");
-let searchForm = document.querySelector("header>nav>ul>li:first-child>form");
+const searchInitializer = document.querySelector("#searchInitializer");
+const searchForm = document.querySelector("header>nav>ul>li:first-child>form");
 searchInitializer.addEventListener("click", () => {
   searchForm.classList.toggle("zeroOpacity");
   searchForm.classList.toggle("left");
@@ -128,7 +128,7 @@ const hideBar = () => {
   hamburgerButton.classList.add("fas");
   hamburgerButton.classList.add("fa-bars");
 
-  let secondLogoLink = document.querySelector("header>div>ul>a");
+  const secondLogoLink = document.querySelector("header>div>ul>a");
   if (window.screen.width <= 700) {
     navBar.classList.add("displayNone");
     navBar.classList.add("zeroOpacity");
@@ -168,16 +168,16 @@ hamburgerButton.addEventListener("click", () => {
 });
 
 // progress bar:
-function showProgress() {
-  let progressDiv = document.querySelector("#progress>div");
-  let paragraph = document.querySelector("#progress>p");
+const showProgress = () => {
+  const progressDiv = document.querySelector("#progress>div");
+  const paragraph = document.querySelector("#progress>p");
   let width = 0;
-  let header = document.querySelector("header");
-  let main = document.querySelector("main");
-  let footer = document.querySelector("footer");
-  let progressBar = document.querySelector("#progress");
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+  const footer = document.querySelector("footer");
+  const progressBar = document.querySelector("#progress");
 
-  function increment() {
+  const increment = () => {
     if (width === 100) {
       clearInterval(x);
       header.style.display = "block";
@@ -189,9 +189,9 @@ function showProgress() {
       progressDiv.style.width = width + "%";
       paragraph.innerHTML = width + " %";
     }
-  }
-  let x = setInterval(increment, 20);
-}
+  };
+  const x = setInterval(increment, 10);
+};
 // scroll effect on top logo:
 window.addEventListener("scroll", () => {
   if (scrollY > 80 && window.screen.width > 700) {

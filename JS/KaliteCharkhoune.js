@@ -1,14 +1,13 @@
-var radios = document.querySelectorAll("#radioContainer>label>input");
-var containers = document.querySelectorAll(".parent");
-var main = document.querySelector("main");
-var sectionOne = document.querySelector("main>section:first-child");
-var index = 0;
+const radios = document.querySelectorAll("#radioContainer>label>input");
+const containers = document.querySelectorAll(".parent");
+const main = document.querySelector("main");
+const sectionOne = document.querySelector("main>section:first-child");
+let index = 0;
 radios[index].checked = true;
-kalite();
 
 // search button click event:
-let searchInitializer = document.querySelector("#searchInitializer");
-let searchForm = document.querySelector("header>nav>ul>li:first-child>form");
+const searchInitializer = document.querySelector("#searchInitializer");
+const searchForm = document.querySelector("header>nav>ul>li:first-child>form");
 searchInitializer.addEventListener("click", () => {
   searchForm.classList.toggle("zeroOpacity");
   searchForm.classList.toggle("left");
@@ -128,7 +127,7 @@ setInterval(() => {
   document.querySelector("header>div").style.marginTop =
     document.querySelector("header>nav").offsetHeight + "px";
 }, 200);
-let hideBar = () => {
+const hideBar = () => {
   // in order to have 3 onload/resize events:
   showProgress();
   // in order to reset the hamburger button on landscape/portrait change:
@@ -136,7 +135,7 @@ let hideBar = () => {
   hamburgerButton.classList.remove("fa-window-close");
   hamburgerButton.classList.add("fas");
   hamburgerButton.classList.add("fa-bars");
-  let secondLogoLink = document.querySelector("header>div>ul>a");
+  const secondLogoLink = document.querySelector("header>div>ul>a");
   if (window.screen.width <= 700) {
     navBar.classList.add("displayNone");
     navBar.classList.add("zeroOpacity");
@@ -175,7 +174,7 @@ hamburgerButton.addEventListener("click", () => {
     });
   }
 });
-function prevnext(n) {
+const prevnext = n => {
   index += n;
   if (index > radios.length - 1) {
     index = 0;
@@ -185,9 +184,19 @@ function prevnext(n) {
   }
   radios[index].checked = true;
   kalite();
-}
+};
 
-function kalite() {
+const checker = event => {
+  const radio_divs = document.querySelectorAll("#radioContainer>label>div");
+  for (let i = 0; i < radio_divs.length; i++) {
+    if (radio_divs[i] === event.target) {
+      radios[i].checked = true;
+      kalite();
+    }
+  }
+};
+
+const kalite = () => {
   for (let a = 0; a < radios.length; a++) {
     if (radios[a].checked) {
       index = a;
@@ -200,15 +209,16 @@ function kalite() {
       containers[a].style.transition = "all 0s";
     }
   }
-}
+};
+kalite();
 
-function heightset() {
+const heightset = () => {
   sectionOne.style.height =
     containers[0].offsetHeight +
     document.getElementById("radioContainer").offsetHeight +
     "px";
-}
-setInterval(heightset, 1000);
+};
+setInterval(heightset, 1);
 
 // array for color codes and their color RGB:
 const Color_codes = [];
@@ -391,26 +401,26 @@ const gradients = [
   "repeating-linear-gradient(to right, transparent 0, transparent .5rem, rgba(122, 0, 0, 0.8) .5rem, rgba(122, 0, 0, 0.8) 1rem), repeating-linear-gradient(rgb(250, 215, 255), rgb(250, 215, 255))"
 ];
 
-var kaliteCells = document.querySelectorAll(".parent>div");
-for (var b = 0; b < kaliteCells.length; b++) {
+const kaliteCells = document.querySelectorAll(".parent>div");
+for (let b = 0; b < kaliteCells.length; b++) {
   Color_codes.push(b + 1);
   // kaliteCells[b].classList.add('col-sm-3', 'col-md-2', 'justify-content-center');
 }
 
-var CodePlaces = document.querySelectorAll(".parent>div>p>a");
-Color_codes.forEach(function(value, index) {
+const CodePlaces = document.querySelectorAll(".parent>div>p>a");
+Color_codes.forEach((value, index) => {
   CodePlaces[index].innerHTML = "کد: " + value + "</br>" + "افزودن به سبد خرید";
 });
-gradients.forEach(function(value, index) {
+gradients.forEach((value, index) => {
   kaliteCells[index].style.backgroundImage = value;
 });
 
 //modal box:
 // quantity calculation:
-function measure() {
-  var metters = document.getElementById("measurement");
-  var taghe = document.getElementsByName("orderQuantityTaghe")[0].value;
-  var adl = document.getElementsByName("OrderQuantityAdl")[0].value;
+const measure = () => {
+  const metters = document.getElementById("measurement");
+  const taghe = document.getElementsByName("orderQuantityTaghe")[0].value;
+  const adl = document.getElementsByName("OrderQuantityAdl")[0].value;
   switch (taghe * 40 + adl * 320) {
     case 0:
       metters.innerHTML = "... متر";
@@ -419,17 +429,16 @@ function measure() {
       metters.innerHTML = taghe * 40 + adl * 320 + " متر ";
       break;
   }
-}
+};
 
-(function() {
-  var modalOpaqueBox = document.querySelector("body>main>div:nth-of-type(2)");
-  var modalBox = modalOpaqueBox.querySelector("div:nth-child(2)");
-  var borderBox = modalOpaqueBox.querySelector("div:first-child");
-  var modalCloseBox = modalBox.querySelector("span");
+(() => {
+  const modalOpaqueBox = document.querySelector("body>main>div:nth-of-type(2)");
+  const modalBox = modalOpaqueBox.querySelector("div:nth-child(2)");
+  const modalCloseBox = modalBox.querySelector("span");
   // modal closing:
-  modalCloseBox.addEventListener("click", function() {
+  modalCloseBox.addEventListener("click", () => {
     modalOpaqueBox.classList.add("zeroOpacity");
-    modalOpaqueBox.addEventListener("transitionend", function() {
+    modalOpaqueBox.addEventListener("transitionend", () => {
       if (modalOpaqueBox.classList.contains("zeroOpacity")) {
         modalOpaqueBox.classList.add("displayNone");
       }
@@ -437,7 +446,7 @@ function measure() {
   });
   // modal opening:
   for (let index = 0; index < kaliteCells.length; index++) {
-    kaliteCells[index].addEventListener("click", function(event) {
+    kaliteCells[index].addEventListener("click", event => {
       modalBox.style.backgroundImage =
         event.currentTarget.style.backgroundImage;
       document.getElementById(
@@ -446,7 +455,7 @@ function measure() {
         .querySelector("div>p>a")
         .innerHTML.replace("افزودن به سبد خرید", "");
       modalOpaqueBox.classList.remove("displayNone");
-      setTimeout(function() {
+      setTimeout(() => {
         modalOpaqueBox.classList.remove("zeroOpacity");
       }, 20);
     });
@@ -454,16 +463,16 @@ function measure() {
 })();
 
 // progress bar:
-function showProgress() {
-  let progressDiv = document.querySelector("#progress>div");
-  let paragraph = document.querySelector("#progress>p");
+const showProgress = () => {
+  const progressDiv = document.querySelector("#progress>div");
+  const paragraph = document.querySelector("#progress>p");
   let width = 0;
-  let header = document.querySelector("header");
-  let main = document.querySelector("main");
-  let footer = document.querySelector("footer");
-  let progressBar = document.querySelector("#progress");
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+  const footer = document.querySelector("footer");
+  const progressBar = document.querySelector("#progress");
 
-  function increment() {
+  const increment = () => {
     if (width === 100) {
       clearInterval(x);
       header.style.display = "block";
@@ -473,11 +482,11 @@ function showProgress() {
     } else {
       width++;
       progressDiv.style.width = width + "%";
-      paragraph.innerHTML = width + " %";
+      paragraph.innerHTML = width + "%";
     }
-  }
-  let x = setInterval(increment, 20);
-}
+  };
+  const x = setInterval(increment, 10);
+};
 // scroll effect on top logo:
 window.addEventListener("scroll", () => {
   if (scrollY > 80 && window.screen.width > 700) {
@@ -754,8 +763,8 @@ const colors = [
   const teregal_select = document.querySelectorAll(
     "main>section:nth-of-type(2)>div>select[name='teregal']"
   );
-  let option1 = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
   for (let n = 0; n < teregal_select.length; n++) {
+    let option1 = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
     for (let i = 0; i < colors.length; i++) {
       option1 += `<option value=${colors[i]} style="background-color:#${
         colors[i]
@@ -764,22 +773,22 @@ const colors = [
     teregal_select[n].innerHTML = option1;
   }
 
-  let option2 = `<option value="">کد چهارخانه مورد نظر خود را انتخاب کنید</option>`;
   const charkhoune_select = document.querySelectorAll(
     'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
   );
   for (let n = 0; n < charkhoune_select.length; n++) {
+    let option2 = `<option value="">کد چهارخانه مورد نظر خود را انتخاب کنید</option>`;
     for (let i = 0; i < gradients.length; i++) {
       option2 += `<option value=${i} >کد چهارخونه:  ${i + 1}</option>`;
     }
     charkhoune_select[n].innerHTML = option2;
   }
 
-  let option3 = `<option value="">کد پس زمینه مورد نظر خود را انتخاب کنید</option>`;
   const background_select = document.querySelectorAll(
     "main>section:nth-of-type(2)>div>select[name='background']"
   );
   for (let n = 0; n < background_select.length; n++) {
+    let option3 = `<option value="">کد پس زمینه مورد نظر خود را انتخاب کنید</option>`;
     for (let i = 0; i < colors.length; i++) {
       option3 += `<option value=${colors[i]} style="background-color:#${
         colors[i]
