@@ -28,7 +28,7 @@ header {
 }
 /* green navigation bar header links CSS */
 header nav {
-  background-color: #55b48c;
+  background-color: #5a66d0;
   position: fixed;
   width: 100%;
   left: 0;
@@ -562,7 +562,7 @@ footer > section:last-of-type > p > span {
     display: block;
     /* in order to make the 3 dots icon start with other links below */
     padding: 0.5rem;
-    background-color: #55b48c;
+    background-color: #5a66d0;
     font-size: 2rem;
   }
   header > nav > div > i {

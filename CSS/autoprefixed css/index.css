@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ header nav {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 header > nav > div {
   position: relative;
@@ -42,6 +43,8 @@ header > nav > div > img {
   position: absolute;
   top: 50%;
   left: 1rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   border-radius: 5px;
 }
@@ -49,13 +52,26 @@ header > nav > ul {
   text-align: right;
   /* in order to make a margin-right for تماس با ما  */
   padding-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 header > nav > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   z-index: 1;
 }
@@ -66,6 +82,8 @@ header > nav > ul > li > span {
   color: white;
   text-align: center;
   margin-bottom: 0.1rem;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 /* green nav hover effect  */
@@ -87,8 +105,15 @@ header > nav > ul > li > span:hover {
 /* products ul */
 header > nav > ul > li > ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   background-color: #8a72df;
   /* in order to make the drop down box lists fit the entire dropdown */
@@ -98,15 +123,13 @@ header > nav > ul > li > ul {
   left: 0;
   top: 100%;
   z-index: 2;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 header > nav > ul > li > ul > li {
   margin-bottom: 0.1rem;
   width: 5.75rem;
-  z-index: 3;
-}
-header > nav > ul > li#products > ul > li > span {
-  z-index: 3;
 }
 header > nav > ul > li > ul > li:hover {
   margin-bottom: 0;
@@ -118,9 +141,13 @@ header > nav > ul > li > ul > li > span {
   color: white;
   text-decoration: none;
   padding: 1.5rem 0.5rem;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 header > nav > ul > li > ul > li > span > i {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* hover styles of the main dropdown items */
@@ -134,9 +161,16 @@ header > nav > ul > li > ul > li > span:hover > i {
 }
 /* ul containing کالیته */
 header > nav > ul > li > ul > li > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   position: absolute;
   top: 100%;
@@ -152,6 +186,8 @@ header > nav > ul > li > ul > li > ul > li > a {
   padding: 1.5rem 0.5rem;
   color: white;
   margin-bottom: 0.1rem;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 /* hover effect on the second dropdown menu items */
@@ -161,11 +197,40 @@ header > nav > ul > li > ul > li > ul > li > a:hover > i {
   border-bottom: 0.1rem solid red;
   margin-bottom: 0;
 }
+::-webkit-input-placeholder {
+  font-family: "IranSans";
+  color: rgb(101, 93, 93);
+  /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+::-moz-placeholder {
+  font-family: "IranSans";
+  color: rgb(101, 93, 93);
+  /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+:-ms-input-placeholder {
+  font-family: "IranSans";
+  color: rgb(101, 93, 93);
+  /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+::-ms-input-placeholder {
+  font-family: "IranSans";
+  color: rgb(101, 93, 93);
+  /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
 ::placeholder {
   font-family: "IranSans";
   color: rgb(101, 93, 93);
   /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
   font-size: 1rem;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 /* search section */
@@ -180,6 +245,8 @@ header > nav > ul > li > form {
   top: 0;
   padding: 1.5rem 0.5rem;
   width: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 header > nav > ul > li:first-child > form > input.search {
@@ -212,6 +279,8 @@ header > nav > ul > li:first-child > form > a > i:hover {
 }
 header > nav > ul > li i {
   color: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* white horizontal navigation bar containing the logo */
@@ -220,9 +289,18 @@ header > div {
   margin: 0;
 }
 header > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   list-style-type: none;
   padding: 0 2rem 0 0;
@@ -235,7 +313,11 @@ header > div > ul > li + li {
 header > div > ul > a {
   /* in order to put the logo image on the left side of the navigation bar */
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 300px;
   min-width: 100px;
@@ -243,127 +325,182 @@ header > div > ul > a {
 main {
   display: none;
 }
-main > div {
-  height: 30vw;
+/* main styles */
+main > section:nth-child(1) > div:nth-child(1) {
   position: relative;
+  height: 35rem;
+  background-image: url(../images/KosarBaftFooter.jpg);
+  background-position: center;
+  background-size: contain;
 }
-main > div > img {
-  object-fit: cover;
-  object-position: 50%;
+main > section:nth-child(1) > div:nth-child(1) > div {
+  -webkit-transition: left 1000ms;
+  -o-transition: left 1000ms;
+  transition: left 1000ms;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 100%;
+}
+main > section:nth-child(1) > div:nth-child(1) > div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid white;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 15px;
+  -webkit-box-shadow: -3px 3px 1px white, 3px -3px 1px white;
+  box-shadow: -3px 3px 1px white, 3px -3px 1px white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main > section:nth-child(1) > div:nth-child(1) > div > div > p {
+  color: white;
+  text-shadow: 1px 1px 6px black, -1px -1px 6px black;
+  padding: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  direction: rtl;
+  text-align: center;
+}
+main > section:nth-child(1) > div:nth-child(1) > div > img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
-main > div::after {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  );
+main > section:nth-child(1) > div:nth-child(1) > i {
+  color: white;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+main > section:nth-child(1) > div:nth-child(1) > i:hover {
+  color: black;
+}
+main > section:nth-child(1) > div:nth-child(1)::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 255, 0, 0.4)),
+    to(rgba(0, 0, 255, 0.4))
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 255, 0, 0.4),
+    rgba(0, 0, 255, 0.4)
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 255, 0, 0.4),
+    rgba(0, 0, 255, 0.4)
+  );
 }
-main > div > div {
-  width: 70%;
-  height: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 15px;
-  box-shadow: -3px 3px 1px white, 3px -3px 1px white;
-  background-color: rgba(0, 0, 0, 0.5);
+main > section:nth-child(1) > div:nth-child(1) > i:first-of-type {
+  left: 1rem;
 }
-main > div > div > p {
-  font-size: 3rem;
-  text-align: center;
-  color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-shadow: -3px 3px 1px black;
+main > section:nth-child(1) > div:nth-child(1) > i:last-of-type {
+  right: 1rem;
 }
-main > section:first-of-type {
-  padding-top: 1rem;
-  counter-reset: heading;
-  display: flex;
-  direction: rtl;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-main > section:first-of-type > h2 {
+main > section:nth-child(1) > div:nth-child(2) {
   text-align: center;
   padding: 1rem;
-  width: 100%;
 }
-main > section:first-of-type > h2 > span {
-  border-bottom: 2px solid red;
-}
-main > section:first-of-type > div {
-  border-radius: 15px;
-  box-shadow: 3px 3px 1px gray, -3px -3px 1px gray;
+main > section:nth-child(1) > div:nth-child(2) > label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
   margin: 1rem;
-  padding-bottom: 1rem;
-  width: 45%;
 }
-main > section:first-of-type > div:last-of-type {
-  width: Calc(90% + 4.5rem);
+main > section:nth-child(1) > div:nth-child(2) > label > input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
 }
-main > section:first-of-type > div:last-of-type > p {
-  height: 130px;
+main > section:nth-child(1) > div:nth-child(2) > label > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: lightblue;
+  border-radius: 50%;
+}
+main > section:nth-child(1) > div:nth-child(2) > label:hover > span {
+  background-color: #2196f3;
+}
+main > section:nth-child(1) > div:nth-child(2) > label > input:checked ~ span {
+  background-color: blue;
+}
+main > section:nth-child(2) {
+  direction: rtl;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-main > section:first-of-type > div:last-of-type > img {
-  margin: 0 1rem 0 1rem;
-}
-main > section:first-of-type > div > h3 {
-  direction: rtl;
+main > section:nth-child(2) > h2 {
   text-align: center;
-  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
-main > section:first-of-type > div > img {
-  margin: 1rem 1rem 0 1rem;
-  border: 3px solid gray;
-  float: right;
-  object-fit: cover;
-  /* border: 3px solid gray; */
-  border-radius: 5px;
-}
-main > section:first-of-type > div:nth-of-type(3) > h4 {
-  margin-right: 145px;
-}
-main > section:first-of-type > div > p {
-  padding: 1rem;
-  direction: rtl;
-  line-height: 2rem;
-  text-align: justify;
-}
-main > section:first-of-type > div > p > span {
-  color: blue;
-}
-main > section:first-of-type > div > p > span > a {
-  color: blue;
-  text-decoration: underline;
-}
-main > section:first-of-type > div > h4 {
-  direction: rtl;
+main > section:nth-child(2) > div {
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 1px gray, -3px -3px 1px gray;
+  box-shadow: 3px 3px 1px gray, -3px -3px 1px gray;
+  font-family: IranSans;
+  color: rgb(101, 93, 93);
   text-align: right;
-  padding: 1rem 1rem 0 1rem;
-  counter-increment: heading;
+  width: 45%;
+  padding: 1rem;
+  margin: 1rem;
 }
-main > section:first-of-type > div > h4::before {
-  content: counter(heading) ". ";
+main > section:nth-child(2) > div > h3 {
+  text-align: center;
 }
-main > section:first-of-type > div > p > a {
+main > section:nth-child(2) > div > ul {
+  list-style-type: none;
+}
+main > section:nth-child(2) > div > ul > li span {
+  color: purple;
+  font-weight: 900;
+}
+main > section:nth-child(2) > div > ul > li {
+  padding: 0.5rem;
+  line-height: 1.5rem;
+}
+main > section:nth-child(2) > div > ul > li > p {
+  line-height: 2.5rem;
+}
+main > section:nth-child(2) > div > ul > li > p > a {
+  color: blue;
   text-decoration: underline;
-  color: darkblue;
+}
+main > section:nth-child(2) > h2 > span {
+  border-bottom: 2px solid red;
 }
 /* spinner styles */
 footer {
@@ -390,10 +527,23 @@ footer {
   z-index: 20;
   font-weight: bold;
   font-size: 0.5rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   text-shadow: 1px 1px 1px white, -1px -1px 1px white;
 }
 #progress > div {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 255, 0, 1)),
+    to(rgba(0, 255, 0, 0.5))
+  );
+  background-image: -o-linear-gradient(
+    rgba(0, 255, 0, 1),
+    rgba(0, 255, 0, 0.5)
+  );
   background-image: linear-gradient(rgba(0, 255, 0, 1), rgba(0, 255, 0, 0.5));
   position: absolute;
   width: 0;
@@ -410,6 +560,13 @@ footer {
   top: 0;
   left: 0;
   z-index: 20;
+  background-image: -o-repeating-linear-gradient(
+    45deg,
+    green 0.25rem,
+    green 0.5rem,
+    transparent 0.5rem,
+    transparent 0.75rem
+  );
   background-image: repeating-linear-gradient(
     45deg,
     green 0.25rem,
@@ -429,25 +586,25 @@ footer {
   left: 100%;
 }
 .rotate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .border-bottom {
   border-bottom: 0.1rem solid red;
   margin-bottom: 0;
 }
-/* style for left alignement of phone numbers  */
-main > section:nth-of-type(1) > div > p.left {
-  text-align: left;
-  line-height: 1rem;
-  padding: 0.5rem 2rem;
-}
-
 /* footer styles: */
 footer {
   background-color: steelblue;
   display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 1rem;
 }
@@ -461,7 +618,11 @@ footer > section:first-of-type > p {
   direction: rtl;
   color: white;
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 footer > section:first-of-type > p > i {
@@ -496,7 +657,14 @@ footer > section:last-of-type > p > span {
   color: darkblue;
   text-decoration: underline;
 }
-/* media queries */
+
+/* meida queries */
+@media screen and (max-width: 525px) {
+  /* in order to make the map scale down as the screen shrinks */
+  footer > section:nth-of-type(2) > div#map {
+    width: 300px;
+  }
+}
 @media screen and (max-width: 385px) {
   header > nav > ul > li > ul {
     display: block;
@@ -537,7 +705,7 @@ footer > section:last-of-type > p > span {
   header > nav > div {
     /* in order to show the sandwich button on small screens */
     display: block;
-    /* in order to make the sandwich button icon start with other links below */
+    /* in order to make the 3 dots icon start with other links below */
     padding: 0.5rem;
     background-color: #5a66d0;
     font-size: 2rem;
@@ -551,15 +719,28 @@ footer > section:last-of-type > p > span {
     cursor: pointer;
   }
   header > nav > ul {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     overflow: hidden;
     padding: 0 1rem 0.5rem 0;
   }
   header > nav > ul > li:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
   header > nav > ul > li:first-child {
@@ -571,8 +752,14 @@ footer > section:last-of-type > p > span {
     overflow: hidden;
   }
   header > nav > ul > li:first-child > form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     margin: 0;
     padding: 0;
@@ -581,57 +768,17 @@ footer > section:last-of-type > p > span {
     padding: 1rem 1.5rem 1rem 0;
     margin: 0;
   }
-}
-@media screen and (max-width: 1100px) {
-  main > div > div > p {
-    font-size: 2.5rem;
+  main > section:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
-}
-@media screen and (max-width: 870px) {
-  main > div > div > p {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 525px) {
-  /* in order to make the map scale down as the screen shrinks */
-  footer > section:nth-of-type(2) > div#map {
-    width: 300px;
-  }
-  main > div > div {
+  main > section:nth-child(2) > div {
     width: 90%;
-  }
-  main > div > div > p {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 945px) {
-  main > section:first-of-type {
-    flex-direction: column;
-    align-items: center;
-  }
-  main > section:first-of-type > div,
-  main > section:first-of-type > div:last-of-type {
-    width: Calc(90%);
-  }
-  main > section:first-of-type > div:not(.noCenter) > p {
-    clear: both;
-  }
-  main > section:first-of-type > div:not(.noCenter) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main > section:first-of-type > div.noCenter > p {
-    display: block;
-    height: auto;
-  }
-  main > section:first-of-type > div.noCenter > img {
-    margin-top: 1rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  main > section:first-of-type > div:nth-of-type(3) > h4 {
-    margin-right: 1rem;
   }
 }
 @media screen and (min-width: 701px) {
@@ -642,9 +789,30 @@ footer > section:last-of-type > p > span {
     right: 0;
     bottom: 0;
   }
+
   /* in order to make the top logo smaller in big screens after scrolling effect */
   header > nav > div > img {
     width: 15%;
     height: auto;
+  }
+}
+@media screen and (max-width: 925px) {
+  main > section > div:nth-child(1) > div > div {
+    width: 60%;
+  }
+  main > section > div:nth-child(1) > div > div > p {
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 475px) {
+  main > section > div:nth-child(1) > div > div {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main > section > div:nth-child(1) > div > div > p {
+    padding: 1.5rem;
+    font-size: 0.75rem;
   }
 }

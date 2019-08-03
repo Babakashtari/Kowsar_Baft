@@ -32,7 +32,7 @@ header {
 
 /* green navigation bar header links CSS */
 header > nav {
-  background-color: #55b48c;
+  background-color: #5a66d0;
   position: fixed;
   width: 100%;
   left: 0;
@@ -280,12 +280,7 @@ header > div > ul > a {
 }
 
 main {
-  background-color: #fffeab;
-  background-image: url(../images/KosarBaft-backPage.jpg);
-  background-size: contain;
-  background-position-x: 50%;
-  background-position-y: 100%;
-  background-repeat: no-repeat;
+  background: rgba(0, 255, 0, 0.4);
   display: none;
 }
 
@@ -307,9 +302,16 @@ main > section:first-child > h3 {
   text-align: center;
   direction: rtl;
 }
-
+main > section:first-child > h1 {
+  color: rgba(0, 0, 255, 0.9);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+main > section:first-child > h3 {
+  color: rgba(0, 0, 255, 0.7);
+}
 #radioContainer > span:hover {
-  color: rgba(57, 161, 244, 1);
+  color: red;
   cursor: pointer;
 }
 
@@ -317,7 +319,7 @@ main > section:first-child > h3 {
   font-size: 3rem;
   transition: 0.5s;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgba(173, 216, 230, 1);
+  color: rgba(0, 0, 255, 0.8);
   display: inline-block;
 }
 
@@ -336,7 +338,7 @@ main > section:first-child > h3 {
 }
 
 #radioContainer > label > div {
-  background-color: rgba(173, 216, 230, 1);
+  background-color: rgba(0, 0, 255, 0.8);
   transition: 0.5s;
   border-radius: 50%;
   position: absolute;
@@ -348,18 +350,18 @@ main > section:first-child > h3 {
 }
 
 #radioContainer > label > div:hover {
-  background-color: rgba(57, 161, 244, 1);
+  background-color: red;
 }
 
 #radioContainer > label > input:checked + div {
-  background-color: blue;
+  background-color: red;
 }
 
 .parent {
   position: absolute;
   width: 100%;
   left: 100%;
-  padding: 3rem 0;
+  padding: 1rem 0 4rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -408,7 +410,9 @@ main > section:first-child > h3 {
   background-color: rgba(900, 900, 900, 0.8);
   transition: 0.2s;
 }
-
+.parent > div > p > a {
+  color: black;
+}
 .parent > div:hover {
   transform: rotateX(0deg);
 }
@@ -628,7 +632,7 @@ main > section:nth-of-type(2) > div > label {
   text-shadow: 1px 1px 3px white;
 }
 main > section:nth-of-type(2) > div > select {
-  color: black;
+  color: rgba(0, 0, 0, 0.7);
   padding: 0 1rem;
   margin: 1rem;
   font-family: IranSans;
@@ -814,7 +818,7 @@ footer > section:last-of-type > p > span {
     display: block;
     /* in order to make the 3 dots icon start with other links below */
     padding: 0.5rem;
-    background-color: #55b48c;
+    background-color: #5a66d0;
     font-size: 2rem;
   }
 
