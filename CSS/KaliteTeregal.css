@@ -8,6 +8,10 @@
   src: url(fonts/IRANSansWeb_Bold.ttf);
   font-family: "IranSans";
 }
+@font-face {
+  src: url(fonts/yekannumbers-regular.woff);
+  font-family: "Yekan";
+}
 
 a,
 p,
@@ -424,6 +428,7 @@ main > section:first-child > h3 {
 /* color comparison section */
 main > section:nth-of-type(2) {
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
 }
 main > h3 {
@@ -444,7 +449,7 @@ main > section:nth-of-type(2) > div {
 }
 main > section:nth-of-type(2) > div > i {
   color: rgba(0, 0, 0, 0.1);
-  font-size: 20rem;
+  font-size: 20vw;
   padding-bottom: 1rem;
 }
 .background {
@@ -551,47 +556,26 @@ body > main > div:nth-of-type(2) > div:nth-child(2) > span {
 body > main > div:nth-of-type(2) > div:nth-child(2) > span:hover {
   text-shadow: none;
 }
-/* skewed table style */
-body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:first-of-type {
-  position: absolute;
-  right: calc(5% - 2px);
-  bottom: -1px;
-  top: 50%;
-  background-color: black;
-  width: calc(20% + 4px);
-  height: calc(80% + 4px);
-  transform: translateY(-50%) skew(2deg, 2deg);
-  filter: blur(18px);
-  z-index: 14;
-}
-body > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
-  position: absolute;
-  right: calc(5% - 2px);
-  bottom: -1px;
-  top: 50%;
-  filter: blur(18px);
-  background-color: black;
-  width: calc(20% + 4px);
-  height: calc(80% + 4px);
-  transform: translateY(-50%) skew(-2deg, -4deg);
-  z-index: 15;
-}
 body > main > div:nth-of-type(2) > div:nth-child(2) > table {
   text-align: right;
   position: absolute;
-  padding: 0 0.5rem;
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  height: 80%;
-  width: 20%;
+  height: 90%;
   direction: rtl;
   background-color: white;
   font-family: IranSans;
   color: #6c4c4c;
-  /* text-shadow: 0.25rem 0.25rem 0.75rem rgba(45, 90, 90, 1); */
-  z-index: 16;
+  z-index: 14;
+  border-radius: 15px;
+  box-shadow: 5px 5px 1.5rem black, -5px -5px 1.5rem black;
 }
+
+body > main > div:nth-of-type(2) > div:nth-child(2) > table td {
+  padding: 1rem 0.5rem;
+}
+
 .zeroOpacity {
   opacity: 0;
 }
@@ -614,12 +598,8 @@ body > main > div:nth-of-type(2) > div:nth-child(2) > table select {
   font-family: IranSans;
   color: #6c4c4c;
   /* text-shadow: 0.25rem 0.25rem 0.75rem rgba(45, 90, 90, 1); */
-  width: 90%;
+  width: 70%;
   text-overflow: ellipsis;
-}
-body > main > div:nth-of-type(2) > div:nth-child(2) > table tr,
-body > main > div:nth-of-type(2) > div:nth-child(2) > table td {
-  padding: 0 0.5rem;
 }
 /* spinner styles */
 footer {
@@ -697,7 +677,25 @@ footer > section:first-of-type > p {
   display: flex;
   align-items: center;
 }
-footer > section:first-of-type > p > i {
+footer > section:first-of-type > table {
+  direction: rtl;
+}
+footer > section:first-of-type > table p {
+  display: block;
+  direction: rtl;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  line-height: 1.5rem;
+}
+footer > section:first-of-type > table p > span.Yekan {
+  font-family: "Yekan";
+  font-weight: bold;
+  color: inherit;
+  margin: 0 0.25rem;
+}
+footer > section:first-of-type > p > i,
+footer > section:first-of-type > table i {
   color: white;
   padding: 0 1rem;
   font-size: 1.5rem;
@@ -732,6 +730,15 @@ footer > section:last-of-type > p > span {
 
 /* meida queries */
 @media screen and (max-width: 525px) {
+  body > header > nav {
+    padding: 1rem 0;
+  }
+  /* modal box table responsiveness styles: */
+  body > main > div:nth-of-type(2) > div:nth-child(2) > table td {
+    padding: 0.25rem;
+    font-size: 0.5rem;
+  }
+
   /* in order to make the map scale down as the screen shrinks */
   footer > section:nth-of-type(2) > div#map {
     width: 300px;
@@ -771,6 +778,11 @@ footer > section:last-of-type > p > span {
   }
 }
 @media screen and (max-width: 700px) {
+  header > nav {
+    width: 100%;
+    text-align: right;
+    padding: 2rem 0;
+  }
   header > nav > ul > li {
     z-index: initial;
   }
@@ -779,10 +791,6 @@ footer > section:last-of-type > p > span {
   }
   #radio-container > label {
     display: none;
-  }
-  header > nav {
-    text-align: right;
-    padding: 1rem 0;
   }
   header > nav > div {
     /* in order to show the sandwich button on small screens */
@@ -836,6 +844,9 @@ footer > section:last-of-type > p > span {
   main > section:nth-of-type(2) > div > select {
     font-size: 0.7rem;
   }
+  body > main > div:nth-of-type(2) > div:nth-child(2) > table {
+    font-size: 0.75rem;
+  }
 }
 @media screen and (min-width: 701px) {
   header > nav > div {
@@ -849,5 +860,17 @@ footer > section:last-of-type > p > span {
   header > nav > div > img {
     width: 15%;
     height: auto;
+  }
+}
+@media screen and (max-width: 1396px) {
+  main > section:nth-of-type(2) {
+    flex-direction: column;
+    align-items: center;
+  }
+  main > section:nth-of-type(2) > div {
+    width: 60%;
+  }
+  main > section:nth-of-type(2) > div > select {
+    width: 60%;
   }
 }

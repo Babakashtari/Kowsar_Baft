@@ -8,6 +8,10 @@
   src: url(fonts/IRANSansWeb_Bold.ttf);
   font-family: "IranSans";
 }
+@font-face {
+  src: url(fonts/yekannumbers-regular.woff);
+  font-family: "Yekan";
+}
 
 a,
 p,
@@ -511,7 +515,25 @@ footer > section:first-of-type > p {
   display: flex;
   align-items: center;
 }
-footer > section:first-of-type > p > i {
+footer > section:first-of-type > table {
+  direction: rtl;
+}
+footer > section:first-of-type > table p {
+  display: block;
+  direction: rtl;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  line-height: 1.5rem;
+}
+footer > section:first-of-type > table p > span.Yekan {
+  font-family: "Yekan";
+  font-weight: bold;
+  color: inherit;
+  margin: 0 0.25rem;
+}
+footer > section:first-of-type > p > i,
+footer > section:first-of-type > table i {
   color: white;
   padding: 0 1rem;
   font-size: 1.5rem;
@@ -546,6 +568,9 @@ footer > section:last-of-type > p > span {
 
 /* meida queries */
 @media screen and (max-width: 525px) {
+  body > header > nav {
+    padding: 1rem 0;
+  }
   /* in order to make the map scale down as the screen shrinks */
   footer > section:nth-of-type(2) > div#map {
     width: 300px;
@@ -585,6 +610,11 @@ footer > section:last-of-type > p > span {
   }
 }
 @media screen and (max-width: 700px) {
+  header > nav {
+    width: 100%;
+    text-align: right;
+    padding: 2rem 0;
+  }
   header > nav > ul > li {
     z-index: initial;
   }
@@ -594,12 +624,6 @@ footer > section:last-of-type > p > span {
   #radio-container > label {
     display: none;
   }
-  header > nav {
-    width: 100%;
-    text-align: right;
-    padding: 1rem 0;
-  }
-
   header > nav > div {
     /* in order to show the sandwich button on small screens */
     display: block;

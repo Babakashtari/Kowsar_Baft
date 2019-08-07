@@ -7,6 +7,10 @@
   src: url(fonts/IRANSansWeb_Bold.ttf);
   font-family: "IranSans";
 }
+@font-face {
+  src: url(fonts/yekannumbers-regular.woff);
+  font-family: "Yekan";
+}
 a,
 p,
 i,
@@ -116,6 +120,7 @@ header > nav > ul > li > ul > li > span {
   padding: 1.5rem 0.5rem;
   transition: color 0.5s;
 }
+
 header > nav > ul > li > ul > li > span > i {
   transition: 0.5s;
 }
@@ -243,9 +248,12 @@ main {
 main > section:nth-child(1) > div:nth-child(1) {
   position: relative;
   height: 35rem;
+  background-color: rgba(255, 255, 181, 1);
   background-image: url(../images/KosarBaftFooter.jpg);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 main > section:nth-child(1) > div:nth-child(1) > div {
   transition: left 1000ms;
@@ -357,7 +365,7 @@ main > section:nth-child(2) > h2 {
 main > section:nth-child(2) > div {
   border-radius: 15px;
   box-shadow: 3px 3px 1px gray, -3px -3px 1px gray;
-  font-family: IranSans;
+  font-family: "IranSans";
   color: rgb(101, 93, 93);
   text-align: right;
   width: 45%;
@@ -374,6 +382,12 @@ main > section:nth-child(2) > div > ul > li span {
   color: purple;
   font-weight: 900;
 }
+/* number spans that need to be in Persian: */
+main > section:nth-child(2) > div > ul > li > p > span.Yekan {
+  font-family: "Yekan";
+  color: inherit;
+}
+
 main > section:nth-child(2) > div > ul > li {
   padding: 0.5rem;
   line-height: 1.5rem;
@@ -441,6 +455,10 @@ footer {
     transparent 0.75rem
   );
 }
+body > main > section:nth-child(2) > div > ul > li > p > span.Yekan {
+  font-family: "Yekan";
+  color: inherit;
+}
 /* sandwich button close and open transition styles */
 .displayNone {
   display: none;
@@ -480,7 +498,25 @@ footer > section:first-of-type > p {
   display: flex;
   align-items: center;
 }
-footer > section:first-of-type > p > i {
+footer > section:first-of-type > table {
+  direction: rtl;
+}
+footer > section:first-of-type > table p {
+  display: block;
+  direction: rtl;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  line-height: 1.5rem;
+}
+footer > section:first-of-type > table p > span.Yekan {
+  font-family: "Yekan";
+  font-weight: bold;
+  color: inherit;
+  margin: 0 0.25rem;
+}
+footer > section:first-of-type > p > i,
+footer > section:first-of-type > table i {
   color: white;
   padding: 0 1rem;
   font-size: 1.5rem;
@@ -515,6 +551,9 @@ footer > section:last-of-type > p > span {
 
 /* meida queries */
 @media screen and (max-width: 525px) {
+  body > header > nav {
+    padding: 1rem 0;
+  }
   /* in order to make the map scale down as the screen shrinks */
   footer > section:nth-of-type(2) > div#map {
     width: 300px;
@@ -549,7 +588,7 @@ footer > section:last-of-type > p > span {
   header > nav {
     width: 100%;
     text-align: right;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   header > nav > ul > li {
     z-index: initial;
@@ -610,6 +649,9 @@ footer > section:last-of-type > p > span {
   }
   main > section:nth-child(2) > div {
     width: 90%;
+  }
+  main > section:nth-child(2) > h2 > span {
+    border: none;
   }
 }
 @media screen and (min-width: 701px) {

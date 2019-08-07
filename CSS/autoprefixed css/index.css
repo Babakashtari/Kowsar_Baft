@@ -332,6 +332,7 @@ main > section:nth-child(1) > div:nth-child(1) {
   background-image: url(../images/KosarBaftFooter.jpg);
   background-position: center;
   background-size: contain;
+  overflow: hidden;
 }
 main > section:nth-child(1) > div:nth-child(1) > div {
   -webkit-transition: left 1000ms;
@@ -660,6 +661,9 @@ footer > section:last-of-type > p > span {
 
 /* meida queries */
 @media screen and (max-width: 525px) {
+  body > header > nav {
+    padding: 1rem 0;
+  }
   /* in order to make the map scale down as the screen shrinks */
   footer > section:nth-of-type(2) > div#map {
     width: 300px;
@@ -694,7 +698,7 @@ footer > section:last-of-type > p > span {
   header > nav {
     width: 100%;
     text-align: right;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   header > nav > ul > li {
     z-index: initial;
@@ -779,6 +783,9 @@ footer > section:last-of-type > p > span {
   }
   main > section:nth-child(2) > div {
     width: 90%;
+  }
+  main > section:nth-child(2) > h2 > span {
+    border: none;
   }
 }
 @media screen and (min-width: 701px) {
