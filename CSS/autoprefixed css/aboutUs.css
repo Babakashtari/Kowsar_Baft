@@ -8,6 +8,11 @@
   src: url(fonts/IRANSansWeb_Bold.ttf);
   font-family: "IranSans";
 }
+@font-face {
+  src: url(fonts/yekannumbers-regular.woff);
+  font-family: "Yekan";
+}
+
 a,
 p,
 i,
@@ -420,26 +425,45 @@ main > section:first-of-type > div {
 main > section:first-of-type > div:last-of-type {
   width: Calc(90% + 4.5rem);
 }
-main > section:first-of-type > div:last-of-type > p {
-  height: 130px;
+main > section:first-of-type > div:last-of-type > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  overflow: auto;
 }
-main > section:first-of-type > div:last-of-type > img {
-  margin: 0 1rem 0 1rem;
+main > section:first-of-type > div:last-of-type > div > p {
+  line-height: 200%;
+  text-align: justify;
 }
+main > section:first-of-type > div:last-of-type > div > img {
+  margin-left: 1rem;
+  border-radius: 15px;
+  width: 130px;
+  height: 130px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+main > section:first-of-type > div:last-of-type > h4::before {
+  content: counter(heading) ". ";
+  font-family: "Yekan";
+  font-weight: bold;
+  font-size: inherit;
+}
+main > section:first-of-type > div:last-of-type > h4 {
+  padding-right: 145px;
+  counter-increment: heading;
+}
+
 main > section:first-of-type > div > h3 {
   direction: rtl;
   text-align: center;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
 }
 main > section:first-of-type > div > img {
   margin: 1rem 1rem 0 1rem;
@@ -447,11 +471,7 @@ main > section:first-of-type > div > img {
   float: right;
   -o-object-fit: cover;
   object-fit: cover;
-  /* border: 3px solid gray; */
   border-radius: 5px;
-}
-main > section:first-of-type > div:nth-of-type(3) > h4 {
-  margin-right: 145px;
 }
 main > section:first-of-type > div > p {
   padding: 1rem;
@@ -466,14 +486,14 @@ main > section:first-of-type > div > p > span > a {
   color: blue;
   text-decoration: underline;
 }
-main > section:first-of-type > div > h4 {
-  direction: rtl;
-  text-align: right;
-  padding: 1rem 1rem 0 1rem;
-  counter-increment: heading;
-}
-main > section:first-of-type > div > h4::before {
-  content: counter(heading) ". ";
+/* prettier-ignore */
+main > section:first-of-type > div > p > span.Yekan,
+main > section:first-of-type > div > p > a > span.Yekan,
+main> section:first-of-type > div:last-of-type> div> p> span {
+  font-family: "Yekan";
+  font-weight: bold;
+  color: inherit;
+  font-size: inherit;
 }
 main > section:first-of-type > div > p > a {
   text-decoration: underline;
@@ -609,7 +629,25 @@ footer > section:first-of-type > p {
   -ms-flex-align: center;
   align-items: center;
 }
-footer > section:first-of-type > p > i {
+footer > section:first-of-type > table {
+  direction: rtl;
+}
+footer > section:first-of-type > table p {
+  display: block;
+  direction: rtl;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  line-height: 1.5rem;
+}
+footer > section:first-of-type > table p > span.Yekan {
+  font-family: "Yekan";
+  font-weight: bold;
+  color: inherit;
+  margin: 0 0.25rem;
+}
+footer > section:first-of-type > p > i,
+footer > section:first-of-type > table i {
   color: white;
   padding: 0 1rem;
   font-size: 1.5rem;
@@ -770,6 +808,10 @@ footer > section:last-of-type > p > span {
   main > div > div > p {
     font-size: 1rem;
   }
+  main > section:first-of-type > div:last-of-type > h4 {
+    margin-right: 2.5rem;
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 945px) {
   main > section:first-of-type {
@@ -807,10 +849,11 @@ footer > section:last-of-type > p > span {
   main > section:first-of-type > div.noCenter > img {
     margin-top: 1rem;
   }
-}
-@media screen and (max-width: 450px) {
-  main > section:first-of-type > div:nth-of-type(3) > h4 {
-    margin-right: 1rem;
+  main > section:first-of-type > div:last-of-type > div {
+    display: block;
+  }
+  main > section:first-of-type > div:last-of-type > div > img {
+    float: right;
   }
 }
 @media screen and (min-width: 701px) {
