@@ -57,6 +57,7 @@ header > nav > div > img {
 }
 
 header > nav > ul {
+  list-style-type: none;
   /* in order to make a margin-right for تماس با ما  */
   padding-right: 1.5rem;
   display: flex;
