@@ -1,0 +1,202 @@
+* {
+	box-sizing: border-box;
+}
+@font-face{
+	src: url(/CSS/fonts/IRANSansWeb_Bold.ttf);
+	font-family:'IranSans';
+}
+a,p,i,label,h1,h2,h3,h4,h5,h6 {
+	text-decoration:none;
+	font-family:'IranSans';
+	color:#6c4c4c;
+	text-shadow: 0.25rem 0.25rem 0.75rem rgba(45, 90, 90, 1);
+}
+header{
+	display: flex;
+	flex-wrap: wrap;
+}
+/* green navigation bar header links CSS */
+header nav{
+	background-color:#55B48C;
+	width:100%;
+	order:1;
+}
+header nav>ul {
+	/* in order to make a margin-right for تماس با ما  */
+	padding: 0.4rem 0 0 0;
+	margin:0 1rem 0 0;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+header nav>ul>li{
+	width: 50%;
+	text-align: center;
+}
+header nav>ul>li a, header nav>ul>li a>i{
+	font-size: 0.7rem;
+}
+header nav>ul>a{
+	font-size: 0.7rem;
+}
+#search-button{
+	font-size: 0.7rem;
+	padding-top: 0.2rem;
+}
+header nav>ul>a>i{
+	font-size: 0.7rem;
+}
+header nav>ul>li>a {
+	display:inline-block;
+	padding: 1.5rem 0.5rem;
+	color:white;
+	text-align:center;
+	margin-bottom:0.1rem;
+}
+/* green nav hover effect  */
+nav>ul>li>a:hover, nav>ul>li>a:hover>i{
+	color:black;
+}
+nav>ul>li:not(#products)>a:hover{
+	border-bottom:0.1rem solid red;
+	margin-bottom:0;
+}
+#products>a {
+	margin-bottom: 0;
+}
+/* محصولات */
+#products>ul {
+	list-style-type:none;
+/* in order to make it unclear when not on hover */
+	display:none;
+	background-color: #55B48C;
+	/* in order to make the drop down box lists fit the entire dropdown */
+	padding:0;
+	width:100%;
+	position:absolute;
+	left:0;
+	z-index: 2;
+}
+/* in order to make a 15 pixel right margin so that links start at the same column */
+#products>ul>li:first-child{
+	margin-right:1rem;
+}
+#products>ul>li>a {
+	/*display is set to block but "li" items sit next to each other as display will be flex when mouse is hovering on them   */
+	display:block;
+	color:white;
+	text-decoration:none;
+	padding:1.75rem 0.75rem;
+}
+/* opening products main dropdown */
+#products:hover>ul{
+	display:flex;
+	flex-direction: row-reverse;
+	justify-content:flex-start;
+}
+#products:hover>a, #products:hover>ul{
+	background-color:greenyellow;
+}
+/* hover styles of the main dropdown items */
+#products>ul>li>a:hover, #products>ul>li>a:hover>i {
+	color:black;
+}
+/* ul containing کالیته */
+#products>ul>li>ul{
+	display:none;
+	position:absolute;
+	width:100%;
+	list-style-type:none;
+	z-index: 3;
+	left:0;
+	background-color: blue;
+}
+#products>ul>li>ul>li>a{
+	/* display block is set so that padding makes effects on boxes and display flex on hover makes links sit beside each other */
+	display:block;
+	padding:1.75rem 0.75rem;
+	color:white;
+}
+/* in order to make a 1rem right margin so that links start at the same column */
+#products>ul>li>ul>li:first-child{
+	margin-right: 1rem;
+}
+/* hover effect for appearance of کالیته in the page*/
+#products>ul>li:hover>ul{
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content: flex-start;
+}
+#products>ul>li:hover>a, #products>ul>li:hover>a>i, #products>ul>li:hover>ul{
+	background-color: aqua;
+	color:black;
+}
+/* hover effect on the second dropdown menu items */
+#products>ul>li>ul>li>a:hover, #products>ul>li>ul>li>a:hover>i{
+	background-color: #0080c0;
+	color:black;
+}
+input.search {
+	width: 80%;
+    direction:rtl;
+    font-family: 'IranSans';
+    font-size: 0.7rem;
+}
+::placeholder{
+	font-family:'IranSans';
+	color:rgb(101, 93, 93);
+	text-shadow: 4px 4px 10px rgba(45, 90, 90, 1);
+	font-size:0.7rem;
+	text-overflow: ellipsis;
+}
+/* search button */
+header nav>ul>a>i {
+	color:white;
+	margin-right:0.7rem;
+	font-size: 0.7rem;
+}
+header nav>ul>li i{
+	color:white;
+}
+/* search button hover effect */
+header nav>ul>a>i:hover {
+	color:black;
+}
+/* white horizontal navigation bar containing the logo */
+header>div {
+	width:100%;
+	margin:0;
+}
+header>div>ul{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+	list-style-type: none;
+	margin:0 1.5rem 0 0;
+	padding: 0;
+}
+header>div>ul>li{
+    border-left:3px solid black;
+    font-size: 0.7rem;
+	padding-left:0.5rem;
+	margin:0.5rem 0 0.5rem 0.5rem;
+}
+header>div>ul>a{
+	/* in order to put the logo image on the left side of the navigation bar */
+	display: flex;
+	width:100%;
+	align-items: center;
+}
+main{
+	background-image: url(/images/yoann-boyer-276971-unsplash.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height:900px;
+}
+main>div:last-child{
+	display:none;
+}
