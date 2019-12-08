@@ -1,0 +1,78 @@
+/* footer styles: */
+footer {
+    background-color: steelblue;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+  footer > section {
+    padding: 2.5rem 0;
+  }
+  footer > section > p {
+    line-height: 1.5rem;
+  }
+  footer > section:first-of-type > p {
+    direction: rtl;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+  footer > section:first-of-type > table {
+    direction: rtl;
+  }
+  footer > section:first-of-type > table p {
+    display: block;
+    direction: rtl;
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    line-height: 1.5rem;
+  }
+  footer > section:first-of-type > table p > span.Yekan {
+    font-family: "Yekan";
+    font-weight: bold;
+    color: inherit;
+    margin: 0 0.25rem;
+  }
+  footer > section:first-of-type > p > i,
+  footer > section:first-of-type > table i {
+    color: white;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+  footer > section:first-of-type > p > a > i {
+    color: white;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  footer > section:first-of-type > hr {
+    color: white;
+  }
+  /* map styles: */
+  footer > section:nth-of-type(2) > div#map {
+    width: 500px;
+    height: 300px;
+    border: 3px groove gray;
+  }
+  footer > section:last-of-type {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  footer > section:last-of-type > p {
+    color: white;
+    direction: rtl;
+  }
+  footer > section:last-of-type > p > span {
+    color: darkblue;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 525px){
+    footer > section:nth-of-type(2) > div#map {
+        width: 300px;
+      }
+  }
