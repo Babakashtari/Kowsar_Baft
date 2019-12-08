@@ -119,8 +119,6 @@ setInterval(() => {
     document.querySelector("header>nav").offsetHeight + "px";
 }, 200);
 const hideBar = () => {
-  // in order to have 3 onload/resize events:
-  showProgress();
   photoslider();
   // in order to reset the hamburger button on landscape/portrait change:
   hamburgerButton.classList.remove("far");
@@ -167,31 +165,6 @@ hamburgerButton.addEventListener("click", () => {
   }
 });
 
-// progress bar:
-const showProgress = () => {
-  const progressDiv = document.querySelector("#progress>div");
-  const paragraph = document.querySelector("#progress>p");
-  let width = 0;
-  const header = document.querySelector("header");
-  const main = document.querySelector("main");
-  const footer = document.querySelector("footer");
-  const progressBar = document.querySelector("#progress");
-
-  const increment = () => {
-    if (width === 100) {
-      clearInterval(x);
-      header.style.display = "block";
-      main.style.display = "block";
-      footer.style.display = "flex";
-      progressBar.style.display = "none";
-    } else {
-      width++;
-      progressDiv.style.width = width + "%";
-      paragraph.innerHTML = width + " %";
-    }
-  };
-  const x = setInterval(increment, 10);
-};
 // scroll effect on top logo:
 window.addEventListener("scroll", () => {
   if (scrollY > 80 && window.screen.width > 700) {

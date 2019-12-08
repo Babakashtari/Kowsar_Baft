@@ -128,8 +128,6 @@ setInterval(() => {
     document.querySelector("header>nav").offsetHeight + "px";
 }, 200);
 const hideBar = () => {
-  // in order to have 3 onload/resize events:
-  showProgress();
   // in order to reset the hamburger button on landscape/portrait change:
   hamburgerButton.classList.remove("far");
   hamburgerButton.classList.remove("fa-window-close");
@@ -462,31 +460,6 @@ const measure = () => {
   }
 })();
 
-// progress bar:
-const showProgress = () => {
-  const progressDiv = document.querySelector("#progress>div");
-  const paragraph = document.querySelector("#progress>p");
-  let width = 0;
-  const header = document.querySelector("header");
-  const main = document.querySelector("main");
-  const footer = document.querySelector("footer");
-  const progressBar = document.querySelector("#progress");
-
-  const increment = () => {
-    if (width === 100) {
-      clearInterval(x);
-      header.style.display = "block";
-      main.style.display = "block";
-      footer.style.display = "flex";
-      progressBar.style.display = "none";
-    } else {
-      width++;
-      progressDiv.style.width = width + "%";
-      paragraph.innerHTML = width + "%";
-    }
-  };
-  const x = setInterval(increment, 10);
-};
 // scroll effect on top logo:
 window.addEventListener("scroll", () => {
   if (scrollY > 80 && window.screen.width > 700) {
@@ -766,9 +739,7 @@ const colors = [
   for (let n = 0; n < teregal_select.length; n++) {
     let option1 = `<option value="">کد رنگ ترگال مورد نظر خود را انتخاب کنید</option>`;
     for (let i = 0; i < colors.length; i++) {
-      option1 += `<option value=${colors[i]} style="background-color:#${
-        colors[i]
-      }">کد رنگ:  ${codes[i]}</option>`;
+      option1 += `<option value=${colors[i]} style="background-color:#${colors[i]}">کد رنگ:  ${codes[i]}</option>`;
     }
     teregal_select[n].innerHTML = option1;
   }
@@ -790,9 +761,7 @@ const colors = [
   for (let n = 0; n < background_select.length; n++) {
     let option3 = `<option value="">کد پس زمینه مورد نظر خود را انتخاب کنید</option>`;
     for (let i = 0; i < colors.length; i++) {
-      option3 += `<option value=${colors[i]} style="background-color:#${
-        colors[i]
-      }">کد رنگ:  ${codes[i]}</option>`;
+      option3 += `<option value=${colors[i]} style="background-color:#${colors[i]}">کد رنگ:  ${codes[i]}</option>`;
     }
     background_select[n].innerHTML = option3;
   }
