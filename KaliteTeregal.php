@@ -11,7 +11,7 @@
   <!-- open graph meta tags for SEO -->
   <meta property="og:title" content="صنایع نساجی کوثربافت نوین-ترگال" />
   <meta property="og:site_name" content="کوثربافت نوین" />
-  <meta property="og:url" content="https://kowsarbaft.ir/KaliteTeregal.html" />
+  <meta property="og:url" content="https://kowsarbaft.ir/KaliteTeregal.php" />
   <meta property="og:description"
     content="فروش پارچه های ترگال، ارائه کالیته ترگال، جهت تولید روپوش و لباس فرم زنانه و دخترانه، کالیته ترگال 90 رنگی" />
   <meta property="og:locale:alternate" content="fa_IR" />
@@ -34,7 +34,7 @@
     "@type" : "Product",
     "name" : "ترگال",
     "description" : "درباره ترگال",
-    "url" : "https://kowsarbaft.ir/KaliteTeregal.html",
+    "url" : "https://kowsarbaft.ir/KaliteTeregal.php",
     "brand" : {
       "@type" : "Brand",
       "name" : "کوثر بافت نوین",

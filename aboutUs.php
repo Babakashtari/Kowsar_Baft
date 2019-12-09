@@ -11,7 +11,7 @@
   <!-- open graph meta tags for SEO -->
   <meta property="og:title" content="کوثر بافت نوین-درباره ما" />
   <meta property="og:site_name" content="کوثر بافت نوین" />
-  <meta property="og:url" content="https://kowsarbaft.ir/aboutUs.html" />
+  <meta property="og:url" content="https://kowsarbaft.ir/aboutUs.php" />
   <meta property="og:description"
     content="کوثر بافت نوین، تحت مدیریت رضا اشتری، پیشرو فروش پارچه های ترگال، مقنعه ای و چهارخانه جهت تولیدی ها و لباس فرم مدارس" />
   <meta property="og:locale:alternate" content="fa_IR" />
@@ -99,7 +99,7 @@
           گل سر سبد محصولات شرکت کوثر بافت نوین پارچه های "ترگال" است که جهت
           تولید و تکمیل لباس های مدارسی و روپوش زنانه کاربرد دارد. شرکت این
           محصول را در انواع "ساده" و "کجراه" و در
-          <a href="KaliteTeregal.html">رنگ بندی های <span class="Yekan">90</span> تایی</a>
+          <a href="KaliteTeregal.php">رنگ بندی های <span class="Yekan">90</span> تایی</a>
           ارائه می کند. ترگال کجراه به خاطر ضخامت بالاتری که دارد برای تولید
           شلوار پارچه ای، البسه ورزشهای رزمی، لباس کار کارگاه ها و پوشاک مربوط
           به فصل سرما ایده آل است.
@@ -109,7 +109,7 @@
           پارچه های چهارخانه دومین دسته از محصولات شرکت کوثر بافت نوین است.
           چهارخانه ها در واقع مجموعه طرح داری از پارچه های نخی هستند که مانند
           ترگال در
-          <a href="KaliteCharkhoune.html">رنگ بندی های <span class="Yekan">90</span> تایی</a>
+          <a href="KaliteCharkhoune.php">رنگ بندی های <span class="Yekan">90</span> تایی</a>
           با اشکال و انواع متنوع ارائه می شوند. این پارچه ها عموما از ترگال
           ارزان تر بوده و به خاطر طرح های متنوعی که دارد عموما برای پیراهن و
           یا خرج کار روپوش های زنانه مناسب اند. رنگ بندی این پارچه با توجه به
@@ -177,7 +177,7 @@
           "addressLocality": "تهران",
           "addressCountry": "ایران"
         },
-        "url": "http://www.kowsarbaft.ir/aboutUs.html"
+        "url": "http://www.kowsarbaft.ir/aboutUs.php"
       }
     </script>
 </body>

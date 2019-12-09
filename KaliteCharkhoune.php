@@ -11,7 +11,7 @@
   <!-- open graph meta tags for SEO -->
   <meta property="og:title" content="صنایع نساجی کوثربافت نوین-چهارخونه" />
   <meta property="og:site_name" content="کوثربافت نوین" />
-  <meta property="og:url" content="https://kowsarbaft.ir/KaliteCharkhoune.html" />
+  <meta property="og:url" content="https://kowsarbaft.ir/KaliteCharkhoune.php" />
   <meta property="og:description"
     content="فروش پارچه چهارخانه نخی، جهت پیراهن مردانه، خرج کار روپوش و لباس کار، کالیته چهارخانه با رنگ بندی متنوع، کالیته های چهارخانه 90 رنگی " />
   <meta property="og:locale:alternate" content="fa_IR" />
@@ -34,7 +34,7 @@
     "@type" : "Product",
     "name" : "چهارخانه",
     "description" : "درباره چهارخانه",
-    "url" : "https://kowsarbaft.ir/KaliteCharkhoune.html",
+    "url" : "https://kowsarbaft.ir/KaliteCharkhoune.php",
     "brand" : {
       "@type" : "Brand",
       "name" : "کوثر بافت نوین",

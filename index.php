@@ -120,7 +120,7 @@
           </li>
           <li>
             <p>
-              <a href="./KaliteTeregal.html">کالیته</a> : رنگ بندی
+              <a href="./KaliteTeregal.php">کالیته</a> : رنگ بندی
               <span class="Yekan">90</span> تایی
             </p>
           </li>

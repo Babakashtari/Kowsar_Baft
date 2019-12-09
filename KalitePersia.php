@@ -11,7 +11,7 @@
   <!-- open graph meta tags for SEO -->
   <meta property="og:title" content="صنایع نساجی کوثربافت نوین-پرشیا" />
   <meta property="og:site_name" content="کوثربافت نوین" />
-  <meta property="og:url" content="https://kowsarbaft.ir/KalitePersia.html" />
+  <meta property="og:url" content="https://kowsarbaft.ir/KalitePersia.php" />
   <meta property="og:description"
     content="فروش پارچه های پرشیا، ارائه کالیته پرشیا رنگبندی، جهت تهیه روپوش و لباس زنانه و دخترانه، کالیته پرشیا 90 رنگی" />
   <meta property="og:locale:alternate" content="fa_IR" />
@@ -120,7 +120,7 @@
         "@type": "Product",
         "name": "پرشیا",
         "description": "پارچه پرشیا، ارائه کالیته پرشیا رنگبندی، جهت تهیه روپوش و لباس زنانه و دخترانه، کالیته پرشیا 90 رنگی",
-        "url": "http://www.kowsarbaft.ir/KalitePersia.html",
+        "url": "http://www.kowsarbaft.ir/KalitePersia.php",
         "brand": {
           "@type": "Brand",
           "name": "کوثر بافت نوین",
