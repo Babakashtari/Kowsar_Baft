@@ -1,18 +1,9 @@
-const hideBar = () => {
-  // initializing photoslider
-  photoslider();
-  // running hidden bar function from the header.js
-  hiddenBar()
-};
-
-
-//homepage photoslider: prettier-ignore
-const radios = document.querySelectorAll(
-  "main > section > div > label> input "
-);
+// prettier-ignore
+const radios = document.querySelectorAll("main > section > div > label> input ");
+const photos = document.querySelectorAll("main>section>div:nth-child(1)>div");
 let index = 0;
+
 const photoslider = () => {
-  const photos = document.querySelectorAll("main>section>div:nth-child(1)>div");
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       index = i;
@@ -26,6 +17,8 @@ const photoslider = () => {
     }
   }
 };
+photoslider();
+
 // left and right buttons:
 const sideMoves = (n = 1) => {
   index += n;

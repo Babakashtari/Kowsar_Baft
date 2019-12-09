@@ -3,6 +3,8 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <meta name="description"
     content="فروش پارچه های ترگال، ارائه کالیته ترگال، جهت تولید روپوش و لباس فرم زنانه و دخترانه، کالیته ترگال 90 رنگی" />
   <meta name="author" content="Babak Ashtari" />
@@ -52,7 +54,7 @@
     <![endif]-->
 </head>
 
-<body onload="hideBar()">
+<body>
 <?php require "php/header.php" ?>
 <main>
     <section>

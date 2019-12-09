@@ -45,7 +45,7 @@
 
       <hr />
       <p>
-        راه های ارتباطی با ما:
+        <span>راه های ارتباطی با ما:</span>
         <a href="https://t.me/Kowsarbaft/"><i class="fab fa-telegram"></i></a>
         <a href="https://wa.me/989101912590"><i class="fab fa-whatsapp-square"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>

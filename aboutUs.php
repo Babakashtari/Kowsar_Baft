@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <meta name="description"
     content="صنایع نساجی کوثر بافت نوین، با مدیریت رضا اشتری، واقع در بازار عباس آباد تهران، از بزرگترین فروشندگان پارچه های ترگال، پرشیا، چهارخانه و مقنعه ای به شمار می رود" />
   <meta name="author" content="Babak Ashtari" />
@@ -31,7 +34,7 @@
     <![endif]-->
 </head>
 
-<body onload="hideBar()">
+<body>
 <?php require "php/header.php" ?>
   <main>
     <div>

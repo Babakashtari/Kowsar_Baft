@@ -3,6 +3,8 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
   <meta name="description"
     content="فروش پارچه چهارخانه نخی، جهت پیراهن مردانه، خرج کار روپوش و لباس کار، کالیته چهارخانه با رنگ بندی متنوع، کالیته های چهارخانه 90 رنگی" />
   <meta name="author" content="Babak Ashtari" />
@@ -53,7 +55,7 @@
 </head>
 
 
-<body onload="hideBar()">
+<body>
 <?php require "php/header.php" ?>
 <main>
     <section>

@@ -139,7 +139,9 @@ const hiddenBar = () => {
         hamburgerbuttonDiv.classList.add("displayNone");
     }
 };
-window.onresize = hideBar;
+hiddenBar();
+
+window.onresize = hiddenBar;
 hamburgerButton.addEventListener("click", () => {
     hamburgerButton.classList.toggle("far");
     hamburgerButton.classList.toggle("fa-window-close");

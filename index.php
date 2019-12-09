@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description"
     content="صنایع نساجی کوثر بافت نوین، پیشرو در فروش پارچه های ترگال، مقنعه ای و چهارخانه در رنگبندی متنوع جهت  تولید مانتو، لباس کار و یونیفرم مدارس." />
   <meta name="author" content="Babak Ashtari" />
@@ -31,7 +32,7 @@
     <![endif]-->
 </head>
 
-<body onload="hideBar()">
+<body>
 <?php require "php/header.php" ?>
 <main>
     <!-- photo slider section: -->

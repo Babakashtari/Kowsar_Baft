@@ -5,9 +5,6 @@ const sectionOne = document.querySelector("main>section:first-child");
 let index = 0;
 radios[index].checked = true;
 
-const hideBar = () => {
-  hiddenBar();
-};
 const kalite = () => {
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {

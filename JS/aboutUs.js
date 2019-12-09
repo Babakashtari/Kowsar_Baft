@@ -1,7 +1,3 @@
-const hideBar = () => {
-  hiddenBar();
-};
-
 // browser check:
 // prettier-ignore
 const browser_array = ['MSIE', 'Trident', 'Edge'];

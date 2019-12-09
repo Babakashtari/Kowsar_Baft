@@ -3,6 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description"
     content="فروش انواع پارچه های پرشیا با رنگبندی متنوع در کالیته های 90 تایی، جهت تهیه روپوش و لباس زنانه و دخترانه" />
   <meta name="author" content="Babak Ashtari" />
@@ -31,7 +32,7 @@
     <![endif]-->
 </head>
 
-<body onload="hideBar()">
+<body>
 <?php require "php/header.php" ?>
 <main>
     <section>

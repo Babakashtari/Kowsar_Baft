@@ -5,10 +5,6 @@ const sectionOne = document.querySelector("main>section:first-child");
 let index = 0;
 radios[index].checked = true;
 
-const hideBar = () => {
-  hiddenBar();
-};
-
 const prevnext = n => {
   index += n;
   if (index > radios.length - 1) {
