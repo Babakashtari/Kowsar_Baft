@@ -19,6 +19,8 @@ Header set Cache-Control "max-age=2592000, public"
 Header set Cache-Control "max-age=86400, public"
 </filesMatch>
 
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
 # redirect 301 /aboutUs.html https://kowsarbaft.ir/aboutUs.php
 # redirect 301 /kaliteCharkhoune.html https://kowsarbaft.ir/kaliteCharkhoune.php
 # redirect 301 /kaliteTeregal.html https://kowsarbaft.ir/kaliteTeregal.php
