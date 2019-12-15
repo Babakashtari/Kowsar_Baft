@@ -1,87 +1,104 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 @font-face {
-  src: url(https://kowsarbaft.ir/CSS/fonts/IRANSansWeb_Bold.ttf);
-  font-family: "IranSans";
+    src: url(https://kowsarbaft.ir/CSS/fonts/IRANSansWeb_Bold.ttf);
+    font-family: "IranSans";
 }
 
 body {
-  background-image: url(https://kowsarbaft.ir/images/404page.jpg);
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url(https://kowsarbaft.ir/images/404page.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 main {
-  width: 70%;
+    width: 70%;
 }
 main > div {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-  text-align: center;
-  padding: 4rem;
-  border: 3px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    padding: 4rem;
+    border: 3px solid white;
 }
 main > div > p {
-  text-align: center;
-  color: black;
-  direction: rtl;
-  padding: 1rem 0 1rem 0;
-  font-family: IranSans;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-shadow: 1px 1px 1px red;
+    text-align: center;
+    color: black;
+    direction: rtl;
+    padding: 1rem 0 1rem 0;
+    font-family: IranSans;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-shadow: 1px 1px 1px red;
 }
 main > div > ul {
-  padding: 2rem 0 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style-type: none;
-  justify-content: space-around;
-  flex: 1;
+    padding: 2rem 0 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none;
+    justify-content: space-around;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 main > div > ul > li > a {
-  font-family: IranSans;
-  font-size: 1rem;
-  color: black;
-  text-shadow: 1px 1px 1px blue;
+    font-family: IranSans;
+    font-size: 1rem;
+    color: black;
+    text-shadow: 1px 1px 1px blue;
 }
 @media screen and (max-width: 1263px) {
-  main > div > p {
-    font-size: 1rem;
-  }
+    main > div > p {
+        font-size: 1rem;
+    }
 }
 @media screen and (max-width: 906px) {
-  main {
-    width: 90%;
-  }
+    main {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 700px) {
-  main > div > ul > li > a {
-    font-size: 0.75rem;
-  }
+    main > div > ul > li > a {
+        font-size: 0.75rem;
+    }
 }
 @media screen and (max-width: 500px) {
-  main > div {
-    padding: 0.2rem;
-  }
-  main > div > p {
-    padding: 0;
-  }
-  main > div > ul {
-    flex-direction: column;
-    padding: 0.25rem 0 0.25rem 0;
-  }
-  main > div > ul > li {
-    padding: 1rem;
-  }
-  main > div > ul > li > a {
-    font-size: 1rem;
-  }
+    main > div {
+        padding: 0.2rem;
+    }
+    main > div > p {
+        padding: 0;
+    }
+    main > div > ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 0.25rem 0 0.25rem 0;
+    }
+    main > div > ul > li {
+        padding: 1rem;
+    }
+    main > div > ul > li > a {
+        font-size: 1rem;
+    }
 }

@@ -2,10 +2,16 @@
 <html lang="fa">
 
 <head>
-  <meta charset="UTF-8" />
+  <!-- <meta charset="UTF-8" /> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <meta http-equiv="content-security-policy" content="default-src 'none'; 
+  style-src 'self' 'unsafe-inline' https://necolas.github.io/normalize.css/latest/normalize.css; 
+  script-src 'self' 'unsafe-inline';
+  img-src 'self';
+  font-src 'self';
+  frame-src https://www.google.com;
+  "  >
   <meta name="description"
     content="صنایع نساجی کوثر بافت نوین، با مدیریت رضا اشتری، واقع در بازار عباس آباد تهران، از بزرگترین فروشندگان پارچه های ترگال، پرشیا، چهارخانه و مقنعه ای به شمار می رود" />
   <meta name="author" content="Babak Ashtari" />
@@ -20,6 +26,50 @@
   <meta property="og:locale:alternate" content="fa_IR" />
   <meta property="og:type" content="business.business" />
   <meta property="og:image" content="https://kowsarbaft.ir/images/logos/kowsarbaftGraftImage.jpg" />
+
+  <!-- https://technicalseo.com/tools/schema-markup-generator -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kowsar Baft Novin",
+  "image": "https://kowsarbaft.ir/images/logos/kowsarbaftMainLogo.png",
+  "@id": "https://kowsarbaft.ir",
+  "url": "https://kowsarbaft.ir",
+  "telephone": "982155158815",
+  "priceRange": "5$-15$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "302, 2nd Alley, Azadi Street, Abas Abad Bazar",
+    "addressLocality": "Tehran",
+    "postalCode": "12345",
+    "addressCountry": "IR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.758889,
+    "longitude": 51.43311349999999
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Thursday",
+    "opens": "09:00",
+    "closes": "15:00"
+  }]
+}
+</script>
+
   <link rel="shortcut icon" href="images/logos/kowsarbaftBrownLogo.png" type="image/x-icon" />
   <!-- font awesome -->
   <link rel="stylesheet" href="CSS/all.min.css" />
@@ -167,22 +217,6 @@
   <?php require "php/footer.php" ?>
   <script src="JS/aboutUs.js"></script>
   <script src="php/php_js/header.js"></script>
-  <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "LocalBusiness",
-        "name": "کوثر بافت نوین",
-        "image": "http://www.googleusercontent.com/images/logos/kowsarbaftMainLogo.png",
-        "telephone": "02155594456",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "بازار بزرگ، بازار عباس آباد، سرای آزادی، دالان دوم، پلاک 302، کوثر بافت نوین",
-          "addressLocality": "تهران",
-          "addressCountry": "ایران"
-        },
-        "url": "http://www.kowsarbaft.ir/aboutUs.php"
-      }
-    </script>
 </body>
 
 </html>

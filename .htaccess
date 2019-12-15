@@ -21,7 +21,8 @@ Header set Cache-Control "max-age=86400, public"
 
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
 
-# redirect 301 /aboutUs.html https://kowsarbaft.ir/aboutUs.php
-# redirect 301 /kaliteCharkhoune.html https://kowsarbaft.ir/kaliteCharkhoune.php
-# redirect 301 /kaliteTeregal.html https://kowsarbaft.ir/kaliteTeregal.php
-# redirect 301 /kalitePersia.html https://kowsarbaft.ir/kalitePersia.php
+redirect 301 /aboutUs.html https://kowsarbaft.ir/aboutUs.php
+redirect 301 /index.html https://kowsarbaft.ir/index.php
+redirect 301 /KaliteCharkhoune.html https://kowsarbaft.ir//KaliteCharkhoune.php
+redirect 301 /KaliteTeregal.html https://kowsarbaft.ir/KaliteTeregal.php
+redirect 301 /KalitePersia.html https://kowsarbaft.ir/KalitePersia.php
