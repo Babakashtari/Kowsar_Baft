@@ -1,0 +1,79 @@
+@font-face {
+    src: url(fonts/IRANSansWeb_Bold.ttf);
+    font-family: "IranSans";
+}
+@font-face {
+    src: url(fonts/yekannumbers-regular.woff);
+    font-family: "Yekan";
+}
+
+a,
+p,
+i,
+label,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    font-family: "IranSans";
+    color: #6c4c4c;
+}
+
+::-webkit-input-placeholder {
+    font-family: "IranSans";
+    color: rgb(101, 93, 93);
+    font-size: 1rem;
+    text-overflow: ellipsis;
+}
+
+:-ms-input-placeholder {
+    font-family: "IranSans";
+    color: rgb(101, 93, 93);
+    font-size: 1rem;
+    text-overflow: ellipsis;
+}
+
+::-ms-input-placeholder {
+    font-family: "IranSans";
+    color: rgb(101, 93, 93);
+    font-size: 1rem;
+    text-overflow: ellipsis;
+}
+
+::placeholder {
+    font-family: "IranSans";
+    color: rgb(101, 93, 93);
+    font-size: 1rem;
+    text-overflow: ellipsis;
+}
+main {
+    background-color: lightgreen;
+}
+main > h1 {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+main > section:first-of-type#kalite_container {
+    background-color: red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+main > section:first-of-type#kalite_container > div#cell_container {
+    position: relative;
+}
+main > section:first-of-type#kalite_container > div#cell_container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php require "php/code_functions.php" ?>
+
 <html lang="fa">
 
 <head>
@@ -86,17 +88,17 @@
 
 
 <body>
-<?php require "php/header.php" ?>
+<?php head(); ?>
 <main>
     <section>
       <h1>کالیته رنگ های چهارخانه:</h1>
       <h3>برای مشاهده بهتر نمونه رنگ بر روی کد آن کلیک کنید.</h3>
       <!-- kalite container and kalite cells: -->
-      <?php require "php/kaliteCells.php" ?>
+      <?php ninety_cells(); ?>
     </section>
     <div id="radioContainer">
       <span onclick="prevnext(-1)">&lt;</span>
-      <?php require "php/radioButtons.php" ?>
+      <?php ninety_cells_radio_buttons(); ?>
       <span onclick="prevnext(1)">&gt;</span>
     </div>
     <!-- comparison section: -->
@@ -201,7 +203,7 @@
       </div>
     </div>
   </main>
-<?php require "php/footer.php" ?>
+<?php footer(); ?>
 
   <script src="JS/KaliteCharkhoune.js"></script>
   <script src="php/php_js/header.js"></script>

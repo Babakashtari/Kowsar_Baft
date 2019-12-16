@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require "php/code_functions.php" ?>
 <html lang="fa">
 
 <head>
@@ -86,7 +87,7 @@
 </head>
 
 <body>
-<?php require "php/header.php" ?>
+<?php head(); ?>
 <main>
     <section>
       <!-- first container -->
@@ -163,7 +164,7 @@
       <span onclick="prevnext(1)">&gt;</span>
     </div>
   </main>
-<?php require "php/footer.php" ?>
+<?php footer(); ?>
   
   <script src="JS/KalitePersia.js"></script>
   <script src="php/php_js/header.js"></script>

@@ -28,13 +28,11 @@ h6 {
     text-decoration: none;
     font-family: "IranSans";
     color: #6c4c4c;
-    /* text-shadow: 0.25rem 0.25rem 0.75rem rgba(45, 90, 90, 1); */
 }
 
 ::-webkit-input-placeholder {
     font-family: "IranSans";
     color: rgb(101, 93, 93);
-    /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
     font-size: 1rem;
     text-overflow: ellipsis;
 }
@@ -42,7 +40,6 @@ h6 {
 :-ms-input-placeholder {
     font-family: "IranSans";
     color: rgb(101, 93, 93);
-    /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
     font-size: 1rem;
     text-overflow: ellipsis;
 }
@@ -50,7 +47,6 @@ h6 {
 ::-ms-input-placeholder {
     font-family: "IranSans";
     color: rgb(101, 93, 93);
-    /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
     font-size: 1rem;
     text-overflow: ellipsis;
 }
@@ -58,7 +54,6 @@ h6 {
 ::placeholder {
     font-family: "IranSans";
     color: rgb(101, 93, 93);
-    /* text-shadow: 4px 4px 10px rgba(45, 90, 90, 1); */
     font-size: 1rem;
     text-overflow: ellipsis;
 }
@@ -391,20 +386,6 @@ body > main > div:nth-of-type(2) > div:nth-child(2) > table td {
     padding: 1rem 0.5rem;
 }
 
-.zeroOpacity {
-    opacity: 0;
-}
-.left {
-    left: 100%;
-}
-.rotate {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-.border-bottom {
-    border-bottom: 0.1rem solid red;
-    margin-bottom: 0;
-}
 /* modal box kowsarbaft header */
 html > body > main > div > div table tr td#Header {
     padding-right: 0;

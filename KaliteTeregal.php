@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php require "php/code_functions.php" ?>
+
 <html lang="fa">
 
 <head>
@@ -85,17 +87,17 @@
 </head>
 
 <body>
-<?php require "php/header.php" ?>
+<?php head(); ?>
 <main>
     <section>
       <!-- kalite containers and cells -->
       <h1>کالیته رنگ های ترگال:</h1>
       <h3>برای مشاهده بهتر نمونه رنگ روی کد موردنظر کلیک کنید.</h3>
-      <?php require "php/kaliteCells.php" ?>
+      <?php ninety_cells(); ?>
     </section>
     <div id="radio-container">
       <span onclick="prevnext(-1)">&lt;</span>
-      <?php require "php/radioButtons.php" ?>
+      <?php ninety_cells_radio_buttons(); ?>
       <span onclick="prevnext(1)">&gt;</span>
     </div>
     <!-- comparison section: -->
@@ -199,7 +201,7 @@
       </div>
     </div>
   </main>
-<?php require "php/footer.php" ?>
+<?php footer(); ?>
 
   <script src="JS/KaliteTeregal.js"></script>
   <script src="php/php_js/header.js"></script>

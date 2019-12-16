@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php require "php/code_functions.php" ?>
+
 <html lang="fa">
 
 <head>
@@ -85,7 +87,7 @@
 </head>
 
 <body>
-<?php require "php/header.php" ?>
+<?php head(); ?>
   <main>
     <div>
       <img src="images/the3ladies.jpg" alt="the image didn't load" />
@@ -214,7 +216,7 @@
       </div>
     </section>
   </main>
-  <?php require "php/footer.php" ?>
+  <?php footer(); ?>
   <script src="JS/aboutUs.js"></script>
   <script src="php/php_js/header.js"></script>
 </body>
