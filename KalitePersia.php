@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="content-security-policy" content="default-src 'none'; 
-  style-src 'self' 'unsafe-inline' https://necolas.github.io/normalize.css/latest/normalize.css; 
+  style-src 'self' 'unsafe-inline'; 
   script-src 'self' 'unsafe-inline';
   img-src 'self';
   font-src 'self';
@@ -76,7 +76,7 @@
   <!-- font awesome -->
   <link rel="stylesheet" href="CSS/all.min.css" />
   <!-- this is how I normalize my file using an external css -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+  <link rel="stylesheet" href="CSS/Normalizer.css" />
   <title>صنایع نساجی کوثر بافت نوین - کالیه پرشیا</title>
   <link rel="stylesheet" href="php/php_css/header.css">
   <link rel="stylesheet" href="php/php_css/footer.css">  

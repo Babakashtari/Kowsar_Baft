@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="content-security-policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://necolas.github.io/normalize.css/latest/normalize.css; script-src 'self' 'unsafe-inline';  img-src 'self';  font-src 'self';  frame-src https://www.google.com;  "  >
+    <meta http-equiv="content-security-policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';  img-src 'self';  font-src 'self';  frame-src https://www.google.com;  "  >
     <meta name="description"
     content="فروش پارچه ترگال چاپی، خالدار نخی، جهت پیراهن مردانه، خرج کار روپوش و لباس کار، کالیته چاپی-خالدار با رنگ بندی متنوع، کالیته پارچه خالدار 11 رنگی" />
     <meta name="author" content="Babak Ashtari" />
@@ -25,10 +25,10 @@
   <link rel="shortcut icon" href="images/logos/kowsarbaftBrownLogo.png" type="image/x-icon" />
   <!-- font awesome -->
   <link rel="stylesheet" href="CSS/all.min.css" />
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+  <link rel="stylesheet" href="CSS/Normalizer.css" />
   <link rel="stylesheet" href="php/php_css/header.css">
   <link rel="stylesheet" href="php/php_css/footer.css">
-    <link rel="stylesheet" href="CSS/kaliteDotted.css">
+  <link rel="stylesheet" href="CSS/kaliteDotted.css">
 
     <title>صنایع نساجی کوثر بافت نوین - ترگال چاپی خالدار</title>
 </head>
@@ -39,15 +39,16 @@
         <section id="kalite_container">
             <div id="cell_container">
                 <img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" >
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="cell1"></div>
+                <div id="cell2"></div>
+                <div id="cell3"></div>
+                <div id="cell4"></div>
+                <div id="cell5"></div>
+                <div id="cell6"></div>
+                <div id="cell7"></div>
+                <div id="cell8"></div>
+                <div id="cell9"></div>
+
             </div>
         </section>
     </main>
