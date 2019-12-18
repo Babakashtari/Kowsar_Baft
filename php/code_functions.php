@@ -164,8 +164,16 @@ function ninety_cells(){
 }
 
 function ninety_cells_radio_buttons(){
+  // ریدیو باتن های کالیته های ترگال ساده و چهارخانه
   for($i=0; $i<8; $i++){
     echo "<label for=''><input type='radio' name='selector' id='first' /><div onclick='checker(event)'></div></label>";
+  }
+}
+
+function dotted_cells(){
+  // خانه های کالیته خالدار
+  for($i=0; $i<11; $i++){
+    echo '<div id="cell' . ($i+1) . '">' . '</div>';
   }
 }
 ?>

@@ -72,14 +72,16 @@ main > section:first-of-type#kalite_container > div#cell_container {
     -webkit-transform-style: preseve-3d;
     transform-style: preseve-3d;
     cursor: pointer;
+    width: 35rem;
+    height:30rem;
 }
-main > section:first-of-type#kalite_container > div#cell_container > img {
+main > section:first-of-type#kalite_container > div#cell_container > div> img {
     width: 100%;
     height: 100%;
     -webkit-transition: 1s;
     transition: 1s;
     /* should be removed */
-    opacity: 0;
+    /* opacity: 0; */
 }
 main > section:first-of-type#kalite_container > div#cell_container > div {
     position: absolute;
@@ -90,15 +92,23 @@ main > section:first-of-type#kalite_container > div#cell_container > div {
     -webkit-transition: 1s;
     transition: 1s;
     /* should be removed */
-    display: none;
+}
+main> section:first-of-type#kalite_container>div#cell_container>div:first-of-type{
+    background-color: red;
 }
 /* prettier-ignore */
-main> section:first-of-type#kalite_container> div#cell_container> div:first-of-type {
-    display: block;
-    background-color:rgb(4, 12, 3);
-    background-image: radial-gradient(circle,rgba(255, 255, 255, 0.4) 10px,transparent 10px);
+main> section:first-of-type#kalite_container> div#cell_container> div {
     background-position: 0 0;
     background-size: 100px 100px;
+}
+main> section:first-of-type#kalite_container> div#cell_container> div:last-of-type::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: red;
 }
 main
     > section:first-of-type#kalite_container

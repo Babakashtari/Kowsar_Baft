@@ -38,22 +38,16 @@
         <h1>ترگال طرح خالدار </h1>
         <section id="kalite_container">
             <div id="cell_container">
-                <img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" >
-                <div id="cell1"></div>
-                <div id="cell2"></div>
-                <div id="cell3"></div>
-                <div id="cell4"></div>
-                <div id="cell5"></div>
-                <div id="cell6"></div>
-                <div id="cell7"></div>
-                <div id="cell8"></div>
-                <div id="cell9"></div>
-
+                <!-- front cover -->
+                <div><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
+                <!-- kalite cells: -->
+                <?php dotted_cells(); ?>
+                <!-- back cover -->
+                <div></div>
             </div>
         </section>
     </main>
     <?php footer(); ?>
-
     <script src="php/php_js/header.js"></script>
     <script src="JS/kaliteDotted.js"></script>
 </body>
