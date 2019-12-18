@@ -4,7 +4,9 @@ const kaliteContainer = document.querySelector(
 const kaliteImage = document.querySelector(
     "main>section:first-of-type#kalite_container> div#cell_container>img"
 );
-const kalite_cells = document.querySelectorAll('main>section:first-of-type#kalite_container>div#cell_container>div');
+const kalite_cells = document.querySelectorAll(
+    "main>section:first-of-type#kalite_container>div#cell_container>div"
+);
 
 // background gradients:
 const kalite_cells_gradients = [
@@ -35,15 +37,34 @@ const kalite_cells_background_colors = [
     "rgb(4, 12, 3)"
 ];
 
-kaliteContainer.addEventListener("click", e => {
-    let current=0;
-    for(let i = 1 ; i<kalite_cells.length -1; i++){
-        kalite_cells[i].style.bottom = "100%";
-        if(e.target === kalite_cells[i]){
-            current = i + 1;
-            kalite_cells[current].style.bottom = "0";
+(() => {
+    for (let i = 1; i < kalite_cells.length - 1; i++) {
+        kalite_cells[i].style.backgroundColor =
+            kalite_cells_background_colors[i - 1];
+        kalite_cells[i].style.backgroundImage = kalite_cells_gradients[i - 1];
+        for (let s = 1; s < kalite_cells.length; s++) {
+            kalite_cells[s].style.bottom = "100%";
         }
     }
-    if(e.target === kaliteImage ){
+})();
+
+let current = 0;
+kaliteContainer.addEventListener("click", e => {
+    for (let i = 0; i < kalite_cells.length; i++) {
+        if (e.target === kalite_cells[i]) {
+            if (i < kalite_cells.length - 1) {
+                current = i + 1;
+                kalite_cells[i].style.bottom = "100%";
+            } else {
+                current = 0;
+                kalite_cells[kalite_cells.length - 1].style.bottom = "100%";
+            }
+            console.log(kalite_cells[current]);
+            setTimeout(() => {
+                kalite_cells[current].style.bottom = "0";
+            }, 1);
+        } else {
+            kalite_cells[i].style.bottom = "100%";
+        }
     }
 });
