@@ -67,6 +67,7 @@ main > section:first-of-type#kalite_container {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 main > section:first-of-type#kalite_container > div#cell_container {
     position: relative;
     -webkit-transform-style: preseve-3d;
@@ -74,6 +75,10 @@ main > section:first-of-type#kalite_container > div#cell_container {
     cursor: pointer;
     width: 37rem;
     height: 30rem;
+}
+main >p{
+    text-align: center;
+    padding: 0 1rem 1rem 1rem;
 }
 main > section:first-of-type#kalite_container > div#cell_container > div > img {
     width: 100%;
