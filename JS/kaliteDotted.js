@@ -57,14 +57,13 @@ kaliteContainer.addEventListener("click", e => {
                 kalite_cells[i].style.bottom = "100%";
             } else {
                 current = 0;
-                kalite_cells[kalite_cells.length - 1].style.bottom = "100%";
+                kalite_cells[kalite_cells.length - 1 ].style.bottom = "100%";
             }
-            console.log(kalite_cells[current]);
             setTimeout(() => {
                 kalite_cells[current].style.bottom = "0";
-            }, 1);
+            }, 1000);
         } else {
             kalite_cells[i].style.bottom = "100%";
-        }
+    }
     }
 });

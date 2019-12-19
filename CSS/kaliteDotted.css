@@ -51,7 +51,7 @@ h6 {
     text-overflow: ellipsis;
 }
 main {
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     padding: 1rem 0;
 }
 main > h1 {
