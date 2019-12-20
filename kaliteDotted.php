@@ -36,7 +36,7 @@
     <?php head(); ?>
     <main>
         <h1>ترگال طرح خالدار </h1>
-        <p>برای مشاهده رنگ های کالیته بر روی کالیته زیر کلیک کنید</p>
+        <p>برای مشاهده رنگ های کالیته بر روی آن ها کلیک کنید:</p>
         <section id="kalite_container">
             <div id="cell_container">
                 <!-- front cover -->
@@ -44,7 +44,7 @@
                 <!-- kalite cells: -->
                 <?php dotted_cells(); ?>
                 <!-- back cover -->
-                <div></div>
+                <div><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
             </div>
         </section>
     </main>

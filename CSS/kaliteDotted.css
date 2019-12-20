@@ -75,18 +75,16 @@ main > section:first-of-type#kalite_container > div#cell_container {
     cursor: pointer;
     width: 37rem;
     height: 30rem;
+    border: 3px inset black;
 }
-main >p{
+main > p {
     text-align: center;
+    direction: rtl;
     padding: 0 1rem 1rem 1rem;
 }
 main > section:first-of-type#kalite_container > div#cell_container > div > img {
     width: 100%;
     height: 100%;
-    -webkit-transition: 1s;
-    transition: 1s;
-    /* should be removed */
-    /* opacity: 0; */
 }
 main > section:first-of-type#kalite_container > div#cell_container > div {
     position: absolute;
@@ -96,7 +94,22 @@ main > section:first-of-type#kalite_container > div#cell_container > div {
     bottom: 0;
     -webkit-transition: 1s;
     transition: 1s;
-    /* should be removed */
+}
+main > section:first-of-type#kalite_container > div#cell_container > div > p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: 2s;
+    transition: 2s;
+    cursor: initial;
 }
 main
     > section:first-of-type#kalite_container

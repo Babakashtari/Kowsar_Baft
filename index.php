@@ -160,7 +160,7 @@
         <h3>ترگال</h3>
         <ul>
           <li>
-            <p>دو نوع <span>ساده</span> و <span>کجراه</span></p>
+            <p> انواع: <span>ساده</span> و <span>کجراه</span> و <span>طرحدار</span></p>
           </li>
           <li>
             <p>
@@ -174,9 +174,15 @@
           </li>
           <li>
             <p>
-              <a href="./KaliteTeregal.php">کالیته</a> : رنگ بندی
+              <a href="./KaliteTeregal.php"> کالیته ترگال ساده</a> : رنگ بندی
               <span class="Yekan">90</span> تایی
             </p>
+          </li>
+          <li>
+            <p><span>طرحدار:</span> پارچه ترگال ساده با طرح های چاپی چهارخانه و خالدار</p>
+            <p><a href="./kaliteDotted.php"> کالیته ترگال خالدار</a> : رنگ بندی
+              <span class="Yekan">11</span> تایی
+</p>
           </li>
           <li>
             <p>
@@ -211,7 +217,7 @@
           </li>
           <li>
             <p>
-              <a href="./KaliteCharkhoune.php">کالیته</a>: رنگ بندی
+              <a href="./KaliteCharkhoune.php"> کالیته چهارخانه خرج کار</a>: رنگ بندی
               <span class="Yekan">90</span> تایی
             </p>
           </li>

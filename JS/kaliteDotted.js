@@ -7,6 +7,9 @@ const kaliteImage = document.querySelector(
 const kalite_cells = document.querySelectorAll(
     "main>section:first-of-type#kalite_container>div#cell_container>div"
 );
+const kalite_labels = document.querySelectorAll(
+    "main > section:first-of-type#kalite_container > div#cell_container > div > p"
+);
 
 // background gradients:
 const kalite_cells_gradients = [
@@ -42,9 +45,9 @@ const kalite_cells_background_colors = [
         kalite_cells[i].style.backgroundColor =
             kalite_cells_background_colors[i - 1];
         kalite_cells[i].style.backgroundImage = kalite_cells_gradients[i - 1];
-        for (let s = 1; s < kalite_cells.length; s++) {
-            kalite_cells[s].style.bottom = "100%";
-        }
+    }
+    for (let s = 1; s < kalite_cells.length; s++) {
+        kalite_cells[s].style.bottom = "100%";
     }
 })();
 
@@ -54,16 +57,22 @@ kaliteContainer.addEventListener("click", e => {
         if (e.target === kalite_cells[i]) {
             if (i < kalite_cells.length - 1) {
                 current = i + 1;
-                kalite_cells[i].style.bottom = "100%";
+                setTimeout(() => {
+                    kalite_cells[i].style.bottom = "100%";
+                }, 1000);
+                if (i !== 0) {
+                    kalite_labels[i - 1].style.opacity = "0";
+                }
             } else {
                 current = 0;
-                kalite_cells[kalite_cells.length - 1 ].style.bottom = "100%";
+                setTimeout(() => {
+                    kalite_cells[kalite_cells.length - 1].style.bottom = "100%";
+                }, 1);
             }
-            setTimeout(() => {
-                kalite_cells[current].style.bottom = "0";
-            }, 1000);
-        } else {
-            kalite_cells[i].style.bottom = "100%";
-    }
+            kalite_cells[current].style.bottom = "0";
+            if (current !== 0) {
+                kalite_labels[current - 1].style.opacity = "1";
+            }
+        }
     }
 });

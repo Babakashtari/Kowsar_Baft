@@ -173,7 +173,9 @@ function ninety_cells_radio_buttons(){
 function dotted_cells(){
   // خانه های کالیته خالدار
   for($i=0; $i<11; $i++){
-    echo '<div id="cell' . ($i+1) . '">' . '</div>';
+    echo '<div id="cell' . ($i+1) . '">';
+    echo '<p>' . 'کد ' . ($i+1) . '<br />' . 'افزودن به سبد خرید' .'</p>';
+    echo '</div>';
   }
 }
 ?>

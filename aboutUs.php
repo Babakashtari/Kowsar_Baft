@@ -147,7 +147,7 @@
           ساله و با توجه به نیاز های روز بازار بازنگری و اصلاح می شود. از جمله
           مهمترین این محصولات می توان به این موارد اشاره کرد:
           <span><a href="https://chibepoosham.com/shopping-guide-tergal-fabric/" target="_blank">ترگال</a>
-            <a href="https://chibepoosham.com/new-plaid-fabrics/" target="_blank">چهارخانه</a>
+            <a href="https://chibepoosham.com/new-plaid-fabrics/" target="_blank">خرج کار چهارخانه</a>
             مقنعه ای، پرشیا</span>
         </p>
         <p>
@@ -159,6 +159,8 @@
           شلوار پارچه ای، البسه ورزشهای رزمی، لباس کار کارگاه ها و پوشاک مربوط
           به فصل سرما ایده آل است.
         </p>
+        <p> کوثر بافت نوین همچنین مجموعه ای طرحدار از پارچه های ترگال به صورت <a href="kaliteDotted.php">خالدار</a>
+        و چهارخانه ارائه کرده است که از طرفداران بسیاری بین مدارس دخترانه و تولیدی های روپوش های زنانه برخوردار است.</p>
         <img src="images/regal (3).jpg" alt="the image didn't load" width="250rem" height="150rem" />
         <p>
           پارچه های چهارخانه دومین دسته از محصولات شرکت کوثر بافت نوین است.
