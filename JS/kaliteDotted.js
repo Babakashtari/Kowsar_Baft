@@ -70,7 +70,7 @@ kaliteContainer.addEventListener("click", e => {
                 }, 1);
             }
             kalite_cells[current].style.bottom = "0";
-            if (current !== 0) {
+            if (current !== 0 && current !== kalite_cells.length - 1) {
                 kalite_labels[current - 1].style.opacity = "1";
             }
         }

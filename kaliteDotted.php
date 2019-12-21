@@ -40,11 +40,11 @@
         <section id="kalite_container">
             <div id="cell_container">
                 <!-- front cover -->
-                <div><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
+                <div class="coverage"><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
                 <!-- kalite cells: -->
                 <?php dotted_cells(); ?>
                 <!-- back cover -->
-                <div><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
+                <div class="coverage"><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
             </div>
         </section>
     </main>
