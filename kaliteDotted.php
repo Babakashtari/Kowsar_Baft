@@ -40,11 +40,13 @@
         <section id="kalite_container">
             <div id="cell_container">
                 <!-- front cover -->
-                <div class="coverage"><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
+                <div class="coverage"></div>
                 <!-- kalite cells: -->
                 <?php dotted_cells(); ?>
                 <!-- back cover -->
-                <div class="coverage"><img src="images/dotted_kalite_image.png" alt="dotted_kalite_cover" ></div>
+                <div>
+                    <div>برای مشاهده مجدد کالیته اینجا کلیک کنید</div>
+                </div>
             </div>
         </section>
     </main>
