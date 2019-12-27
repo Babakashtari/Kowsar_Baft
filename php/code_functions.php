@@ -56,6 +56,12 @@ function head(){
               </li>
             </ul>
           </li>
+          <li>
+            <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
+            <ul class="displayNone">
+              <li><a href="Fastoni.php">کالیته فاستونی</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li>

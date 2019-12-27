@@ -277,7 +277,7 @@ header > div > ul > a {
 }
 
 /* media queries */
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 454px) {
     header > nav > ul > li > ul {
         display: block;
         padding-right: 0;
