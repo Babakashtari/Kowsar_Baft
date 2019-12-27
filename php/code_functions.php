@@ -60,6 +60,7 @@ function head(){
             <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
             <ul class="displayNone">
               <li><a href="Fastoni.php">کالیته فاستونی</a></li>
+              <li><a href="https://chibepoosham.com/shopping-guide-fabric/">درباره فاستونی</a></li>
             </ul>
           </li>
         </ul>
