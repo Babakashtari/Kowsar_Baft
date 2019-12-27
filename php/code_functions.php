@@ -170,7 +170,7 @@ function ninety_cells(){
 }
 
 function ninety_cells_radio_buttons(){
-  // ریدیو باتن های کالیته های ترگال ساده و چهارخانه
+  // رادیو باتن های کالیته های ترگال ساده و چهارخانه
   for($i=0; $i<8; $i++){
     echo "<label for=''><input type='radio' name='selector' id='first' /><div onclick='checker(event)'></div></label>";
   }
@@ -184,5 +184,25 @@ function dotted_cells(){
     echo '</div>';
   }
 }
+
+function Fastoni_cells(){
+  // خانه های کالیته فاستونی طرح حلزونی
+  $Fastoni_codes = [
+    "زرشکی", "زرد", "یاسی", "کرم" 
+  ];
+  $Fastoni_images = [    
+  "images/Fastoni_halazoni_zereshki.jpg",
+  "images/Fastoni_halazoni_zard.jpg",
+  "images/Fastoni_halazoni_yasi.jpg",
+  "images/Fastoni_halazoni_creamy.jpg"
+];
+  for($i=0; $i<4; $i++){
+    echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Fastoni_images[$i]. '" />';
+    echo '<p class="label">' . 'فاستونی طرح حلزونی -  ' . $Fastoni_codes[$i] . '<br />' . 'افزودن به سبد خرید' .'</p>';
+    echo '</div>';
+  }
+}
+
+
 ?>
 

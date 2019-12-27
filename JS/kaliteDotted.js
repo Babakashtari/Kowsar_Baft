@@ -91,4 +91,3 @@ const click_event = e => {
 for (let s = 0; s < kalite_cells.length; s++) {
     kalite_cells[s].addEventListener("click", click_event);
 }
-// ending_div.addEventListener("click", click_event);
