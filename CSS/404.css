@@ -70,6 +70,7 @@ main > div > ul > li > a {
     color: black;
     text-shadow: 1px 1px 1px blue;
     line-height: 2rem;
+    padding: 0.5rem;
 }
 @media screen and (max-width: 1263px) {
     main > div > p {
