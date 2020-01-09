@@ -146,9 +146,9 @@
           شرکت کوثر بافت نوین محصولات متنوعی دارد که طرح ها و رنگ های آنها همه
           ساله و با توجه به نیاز های روز بازار بازنگری و اصلاح می شود. از جمله
           مهمترین این محصولات می توان به این موارد اشاره کرد:
-          <span><a href="https://chibepoosham.com/shopping-guide-tergal-fabric/" target="_blank">ترگال</a>
-            <a href="https://chibepoosham.com/new-plaid-fabrics/" target="_blank">خرج کار چهارخانه</a>
-            مقنعه ای، پرشیا</span>
+          <span><a href="KaliteTeregal.php" target="_blank">ترگال،</a>
+            <a href="KaliteCharkhoune.php" target="_blank">خرج کار چهارخانه،</a> <a href="Fastoni.php" target="_blank">شبه فاستونی طرح حلزونی،</a>
+            مقنعه ای، <a href="KalitePersia.php" target="_blank">پرشیا مکانیک ساده</a> و <a href="KalitePersiaLenin.php" target="_blank">لنین پرشیا</a></span>
         </p>
         <p>
           گل سر سبد محصولات شرکت کوثر بافت نوین پارچه های "ترگال" است که جهت

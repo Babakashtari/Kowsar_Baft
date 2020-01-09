@@ -44,8 +44,8 @@ function head(){
           <li>
             <span><i class="fa fa-caret-down"></i>&nbsp;پرشیا</span>
             <ul class="displayNone">
-              <li><a href="KalitePersia.php">ساده</a></li>
-              <li><a href="#">لنین</a></li>
+              <li><a href="KalitePersia.php">پرشیا مکانیک</a></li>
+              <li><a href="KalitePersiaLenin.php">پرشیا لنین</a></li>
 
             </ul>
           </li>
@@ -62,7 +62,7 @@ function head(){
             <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
             <ul class="displayNone">
               <li><a href="Fastoni.php">کالیته فاستونی</a></li>
-              <li><a href="https://chibepoosham.com/shopping-guide-fabric/">درباره فاستونی</a></li>
+              <li><a href="https://chibepoosham.com/shopping-guide-fabric/" target="_blank">درباره فاستونی</a></li>
             </ul>
           </li>
         </ul>
@@ -190,26 +190,43 @@ function dotted_cells(){
 
 function Fastoni_cells(){
   // خانه های کالیته فاستونی طرح حلزونی
-  $Fastoni_codes = [
-    "زرشکی", "زرد", "یاسی", "کرم" 
+    $Fastoni_codes = [
+      "زرشکی", "زرد", "یاسی", "کرم" 
+    ];
+    $Fastoni_images = [    
+    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_zereshki.jpg",
+    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_zard.jpg",
+    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_yasi.jpg",
+    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_creamy.jpg"
   ];
-  $Fastoni_images = [    
-  "images/kalite/fastoni_halazoni/Fastoni_halazoni_zereshki.jpg",
-  "images/kalite/fastoni_halazoni/Fastoni_halazoni_zard.jpg",
-  "images/kalite/fastoni_halazoni/Fastoni_halazoni_yasi.jpg",
-  "images/kalite/fastoni_halazoni/Fastoni_halazoni_creamy.jpg"
-];
   for($i=0; $i<4; $i++){
     echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Fastoni_images[$i]. '" />';
-    echo '<p class="label">' . 'فاستونی طرح حلزونی -  ' . $Fastoni_codes[$i] . '<br />' . 'افزودن به سبد خرید' .'</p>';
+    echo    '<p class="label">' . 'فاستونی طرح حلزونی -  ' . $Fastoni_codes[$i] . '<br />' . 'افزودن به سبد خرید' .'</p>';
     echo '</div>';
   }
 }
 
 function Persia_mechanic_cells(){
   // خانه های کالیته پرشیا مکانیک:
+  $Persia_mechanic_images = ["images/Kalite/Persia/Persia_Mechanic/Persia1.png", "images/Kalite/Persia/Persia_Mechanic/Persia2.png", "images/Kalite/Persia/Persia_Mechanic/Persia3.png", "images/Kalite/Persia/Persia_Mechanic/Persia4.png", "images/Kalite/Persia/Persia_Mechanic/Persia5.png", "images/Kalite/Persia/Persia_Mechanic/Persia6.png", "images/Kalite/Persia/Persia_Mechanic/Persia7.png", "images/Kalite/Persia/Persia_Mechanic/Persia8.png", "images/Kalite/Persia/Persia_Mechanic/Persia9.png", "images/Kalite/Persia/Persia_Mechanic/Persia10.png"];
 
+  for($i = 0; $i< count($Persia_mechanic_images); $i++){
+    echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Persia_mechanic_images[$i]. '" />';
+    echo    '<p class="label">' . 'پرشیا ساده کد -  ' . ($i+1) . '<br />' . 'افزودن به سبد خرید' .'</p>';
+    echo '</div>';
+  }
 }
 
+function Persia_lenin_cells(){
+  $Persia_lenin_images = [
+    "images/Kalite/Persia/Persia_Lenin/Persia_lenin1.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin2.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin3.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin4.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin5.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin6.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin7.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin8.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin9.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin10.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin11.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin12.png"
+  ];
+  for($i = 0; $i< count($Persia_lenin_images); $i++){
+    echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Persia_lenin_images[$i]. '" />';
+    echo    '<p class="label">' . 'پرشیا لنین کد -  ' . ($i+1) . '<br />' . 'افزودن به سبد خرید' .'</p>';
+    echo '</div>';
+  }
+
+}
 ?>
 
