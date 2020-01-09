@@ -194,10 +194,10 @@ function Fastoni_cells(){
       "زرشکی", "زرد", "یاسی", "کرم" 
     ];
     $Fastoni_images = [    
-    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_zereshki.jpg",
-    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_zard.jpg",
-    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_yasi.jpg",
-    "images/Kalite/Fastoni_halazoni/Fastoni_halazoni_creamy.jpg"
+    "images/kalite/fastoni_halazoni/Fastoni_halazoni_zereshki.jpg",
+    "images/kalite/fastoni_halazoni/Fastoni_halazoni_zard.jpg",
+    "images/kalite/fastoni_halazoni/Fastoni_halazoni_yasi.jpg",
+    "images/kalite/fastoni_halazoni/Fastoni_halazoni_creamy.jpg"
   ];
   for($i=0; $i<4; $i++){
     echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Fastoni_images[$i]. '" />';
@@ -208,7 +208,7 @@ function Fastoni_cells(){
 
 function Persia_mechanic_cells(){
   // خانه های کالیته پرشیا مکانیک:
-  $Persia_mechanic_images = ["images/Kalite/Persia/Persia_Mechanic/Persia1.png", "images/Kalite/Persia/Persia_Mechanic/Persia2.png", "images/Kalite/Persia/Persia_Mechanic/Persia3.png", "images/Kalite/Persia/Persia_Mechanic/Persia4.png", "images/Kalite/Persia/Persia_Mechanic/Persia5.png", "images/Kalite/Persia/Persia_Mechanic/Persia6.png", "images/Kalite/Persia/Persia_Mechanic/Persia7.png", "images/Kalite/Persia/Persia_Mechanic/Persia8.png", "images/Kalite/Persia/Persia_Mechanic/Persia9.png", "images/Kalite/Persia/Persia_Mechanic/Persia10.png"];
+  $Persia_mechanic_images = ["images/kalite/Persia/Persia_Mechanic/Persia1.png", "images/kalite/Persia/Persia_Mechanic/Persia2.png", "images/kalite/Persia/Persia_Mechanic/Persia3.png", "images/kalite/Persia/Persia_Mechanic/Persia4.png", "images/kalite/Persia/Persia_Mechanic/Persia5.png", "images/kalite/Persia/Persia_Mechanic/Persia6.png", "images/kalite/Persia/Persia_Mechanic/Persia7.png", "images/kalite/Persia/Persia_Mechanic/Persia8.png", "images/kalite/Persia/Persia_Mechanic/Persia9.png", "images/kalite/Persia/Persia_Mechanic/Persia10.png"];
 
   for($i = 0; $i< count($Persia_mechanic_images); $i++){
     echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Persia_mechanic_images[$i]. '" />';
@@ -219,7 +219,7 @@ function Persia_mechanic_cells(){
 
 function Persia_lenin_cells(){
   $Persia_lenin_images = [
-    "images/Kalite/Persia/Persia_Lenin/Persia_lenin1.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin2.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin3.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin4.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin5.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin6.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin7.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin8.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin9.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin10.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin11.png", "images/Kalite/Persia/Persia_Lenin/Persia_lenin12.png"
+    "images/kalite/Persia/Persia_Lenin/Persia_lenin1.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin2.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin3.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin4.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin5.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin6.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin7.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin8.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin9.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin10.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin11.png", "images/kalite/Persia/Persia_Lenin/Persia_lenin12.png"
   ];
   for($i = 0; $i< count($Persia_lenin_images); $i++){
     echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Persia_lenin_images[$i]. '" />';
