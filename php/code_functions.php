@@ -44,7 +44,9 @@ function head(){
           <li>
             <span><i class="fa fa-caret-down"></i>&nbsp;پرشیا</span>
             <ul class="displayNone">
-              <li><a href="#">در دست ساخت</a></li>
+              <li><a href="KalitePersia.php">ساده</a></li>
+              <li><a href="#">لنین</a></li>
+
             </ul>
           </li>
           <li>
@@ -192,10 +194,10 @@ function Fastoni_cells(){
     "زرشکی", "زرد", "یاسی", "کرم" 
   ];
   $Fastoni_images = [    
-  "images/Fastoni_halazoni_zereshki.jpg",
-  "images/Fastoni_halazoni_zard.jpg",
-  "images/Fastoni_halazoni_yasi.jpg",
-  "images/Fastoni_halazoni_creamy.jpg"
+  "images/kalite/fastoni_halazoni/Fastoni_halazoni_zereshki.jpg",
+  "images/kalite/fastoni_halazoni/Fastoni_halazoni_zard.jpg",
+  "images/kalite/fastoni_halazoni/Fastoni_halazoni_yasi.jpg",
+  "images/kalite/fastoni_halazoni/Fastoni_halazoni_creamy.jpg"
 ];
   for($i=0; $i<4; $i++){
     echo '<div id="cell' . ($i+1) . '">'. '<img src="'.$Fastoni_images[$i]. '" />';
@@ -204,6 +206,10 @@ function Fastoni_cells(){
   }
 }
 
+function Persia_mechanic_cells(){
+  // خانه های کالیته پرشیا مکانیک:
+
+}
 
 ?>
 

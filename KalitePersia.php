@@ -75,95 +75,36 @@
   <link rel="shortcut icon" href="images/logos/kowsarbaftBrownLogo.png" type="image/x-icon" />
   <!-- font awesome -->
   <link rel="stylesheet" href="CSS/all.min.css" />
-  <!-- this is how I normalize my file using an external css -->
   <link rel="stylesheet" href="CSS/Normalizer.css" />
-  <title>صنایع نساجی کوثر بافت نوین - کالیه پرشیا</title>
   <link rel="stylesheet" href="php/php_css/header.css">
   <link rel="stylesheet" href="php/php_css/footer.css">  
   <link rel="stylesheet" href="CSS/KalitePersia.css" />
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <![endif]-->
+
+  <title>صنایع نساجی کوثر بافت نوین - کالیه پرشیا</title>
 </head>
 
 <body>
 <?php head(); ?>
 <main>
-    <section>
-      <!-- first container -->
-      <h1>:کالیته رنگ های پرشیا</h1>
-      <div class="container">
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-        <div>
-          <div></div>
-          <p>
-            <a href="#"></a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <div id="radio-container">
-      <span onclick="prevnext(-1)">&lt;</span>
-      <label for="">
-        <input type="radio" name="selector" id="first" />
-        <div onclick="checker(event)"></div>
-      </label>
-      <span onclick="prevnext(1)">&gt;</span>
+    <div>
+        <h1> پرشیا مکانیک </h1>
+        <p>پارچه پرشیا با عرض <span class="Yekan">150</span> و وزن تقريبی <span class="Yekan">240</span> گرم به دو صورت پرشیا ساده و لنین پرشیا عرضه می شود. این پارچه ها نسبت به ترگال ضخامت کمتری دارند و به علت ترکیب رنگی و افکتی که دارند برای کت شلوار مردانه، کت دامن و مانتو و شلوار های زنانه ايده آل هستند. پارچه های پرشیا در طاقه های <span class="Yekan">40 و 50</span> متری عرضه می شوند. کالیته های پارچه های پرشیا در شرکت کوثر بافت نوین به دو صورت پرشیا مکانیک <span class="Yekan">12</span> رنگی و لنین پرشیا <span class="Yekan">10</span> رنگی خدمت مشتریان محترم تقدیم می گردد. </p>
     </div>
-  </main>
+    <p>برای مشاهده رنگ های کالیته بر روی تصویر زیر کلیک کنید:</p>
+    <section id="kalite_container">
+        <div id="cell_container">
+            <!-- front cover -->
+            <div class="coverage"></div>
+            <!-- kalite cells: -->
+            <?php Fastoni_cells(); ?>
+            <!-- back cover -->
+            <div>
+                <div>برای مشاهده مجدد کالیته اینجا کلیک کنید</div>
+            </div>
+        </div>
+    </section>
+</main>
+
 <?php footer(); ?>
   
   <script src="JS/KalitePersia.js"></script>
