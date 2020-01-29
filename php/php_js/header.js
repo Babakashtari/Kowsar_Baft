@@ -7,24 +7,12 @@ const products = document.querySelector("#products");
 const productsButton = document.querySelector("#products>span");
 const productsFirstSubmenu = document.querySelector("#products>ul");
 const productsButtonFontAwsome = document.querySelector("#products>span>i");
-const productsFirstSubmenuList = document.querySelectorAll(
-    "header>nav>ul>li>ul>li"
-);
-const productsFirstSubmenuSpan = document.querySelectorAll(
-    "header>nav>ul>li>ul>li>span"
-);
-const productsFirstSubmenuFontAwesome = document.querySelectorAll(
-    "header>nav>ul>li>ul>li>span>i"
-);
-const productsSecondSubmenu = document.querySelectorAll(
-    "header>nav>ul>li>ul>li>ul"
-);
-const productsSecondSubmenuList = document.querySelectorAll(
-    "header>nav>ul>li>ul>li>ul>li"
-);
-const productsSecondSubmenuLink = document.querySelectorAll(
-    "header>nav>ul>li>ul>li>ul>li>a"
-);
+const productsFirstSubmenuList = document.querySelectorAll("header>nav>ul>li>ul>li");
+const productsFirstSubmenuSpan = document.querySelectorAll("header>nav>ul>li>ul>li>span");
+const productsFirstSubmenuFontAwesome = document.querySelectorAll("header>nav>ul>li>ul>li>span>i");
+const productsSecondSubmenu = document.querySelectorAll("header>nav>ul>li>ul>li>ul");
+const productsSecondSubmenuList = document.querySelectorAll("header>nav>ul>li>ul>li>ul>li");
+const productsSecondSubmenuLink = document.querySelectorAll("header>nav>ul>li>ul>li>ul>li>a");
 // open main Products navbar click event:
 productsButton.addEventListener("click", () => {
     productsFirstSubmenu.classList.toggle("displayNone");
@@ -115,10 +103,10 @@ searchInitializer.addEventListener("click", () => {
 });
 
 // dynamic margin-top for the white navbar according to the size of the first nav bar:
-setInterval(() => {
-    document.querySelector("header>div").style.marginTop =
-        document.querySelector("header>nav").offsetHeight + "px";
-}, 200);
+// setInterval(() => {
+//     document.querySelector("header>div").style.marginTop =
+//         document.querySelector("header>nav").offsetHeight + "px";
+// }, 200);
 const hiddenBar = () => {
     // in order to reset the hamburger button on landscape/portrait change:
     hamburgerButton.classList.remove("far");
@@ -148,10 +136,7 @@ hamburgerButton.addEventListener("click", () => {
     hamburgerButton.classList.toggle("fas");
     hamburgerButton.classList.toggle("fa-bars");
     // وقتی منو بسته است
-    if (
-        navBar.classList.contains("displayNone") &&
-        navBar.classList.contains("zeroOpacity")
-    ) {
+    if (navBar.classList.contains("displayNone") && navBar.classList.contains("zeroOpacity")) {
         navBar.classList.remove("displayNone");
         setTimeout(() => {
             navBar.classList.remove("zeroOpacity");
@@ -167,15 +152,15 @@ hamburgerButton.addEventListener("click", () => {
     }
 });
 // scroll effect on top logo:
-window.addEventListener("scroll", () => {
-    if (scrollY > 80 && window.screen.width > 700) {
-        hamburgerbuttonDiv.classList.remove("displayNone");
-        hamburgerButton.classList.add("displayNone");
-    } else if (scrollY < 80 && window.screen.width > 700) {
-        hamburgerbuttonDiv.classList.add("displayNone");
-        hamburgerButton.classList.remove("displayNone");
-    } else if (window.screen.width < 700) {
-        hamburgerbuttonDiv.classList.remove("displayNone");
-        hamburgerButton.classList.remove("displayNone");
-    }
-});
+// window.addEventListener("scroll", () => {
+//     if (scrollY > 80 && window.screen.width > 700) {
+//         hamburgerbuttonDiv.classList.remove("displayNone");
+//         hamburgerButton.classList.add("displayNone");
+//     } else if (scrollY < 80 && window.screen.width > 700) {
+//         hamburgerbuttonDiv.classList.add("displayNone");
+//         hamburgerButton.classList.remove("displayNone");
+//     } else if (window.screen.width < 700) {
+//         hamburgerbuttonDiv.classList.remove("displayNone");
+//         hamburgerButton.classList.remove("displayNone");
+//     }
+// });
