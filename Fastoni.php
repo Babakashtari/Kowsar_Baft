@@ -46,7 +46,7 @@
                 <!-- front cover -->
                 <div class="coverage"></div>
                 <!-- kalite cells: -->
-                <?php Fastoni_cells(); ?>
+                <?php Fastoni_Halazoni_cells(); ?>
                 <!-- back cover -->
                 <div>
                     <div>برای مشاهده مجدد کالیته اینجا کلیک کنید</div>

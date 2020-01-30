@@ -61,7 +61,8 @@ function head(){
           <li>
             <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
             <ul class="displayNone">
-              <li><a href="Fastoni.php">کالیته فاستونی</a></li>
+              <li><a href="Fastoni.php">فاستوني طرح حلزوني</a></li>
+              <li><a href="Fastoni160.php">فاستوني عرض 160</a></li>
               <li><a href="https://chibepoosham.com/shopping-guide-fabric/" target="_blank">درباره فاستونی</a></li>
             </ul>
           </li>
@@ -188,7 +189,7 @@ function dotted_cells(){
   }
 }
 
-function Fastoni_cells(){
+function Fastoni_Halazoni_cells(){
   // خانه های کالیته فاستونی طرح حلزونی
     $Fastoni_codes = [
       "زرشکی", "زرد", "یاسی", "کرم" 

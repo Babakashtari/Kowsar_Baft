@@ -3,7 +3,6 @@
 <html lang="fa">
 
 <head>
-  <!-- <meta charset="UTF-8" /> -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="content-security-policy" content="default-src 'none'; 
@@ -128,6 +127,14 @@
             </p>
           </div>
         </div>
+        <div>
+          <img src="images/charkhouneh.jpg" alt="پارچه طرح چهارخانه" />
+          <div>
+            <p>
+              انواع پارچه های تترون و پیراهنی طرح چهارخانه جهت پیراهن مردانه
+            </p>
+          </div>
+        </div>
         <i class="fas fa-chevron-circle-left" onclick="sideMoves(-1)"></i>
         <i class="fas fa-chevron-circle-right" onclick="sideMoves(1)"></i>
       </div>
@@ -152,25 +159,30 @@
           <input type="radio" name="slide" id="fifth" onclick="photoslider()" />
           <span></span>
         </label>
+        <label for="sixth">
+          <input type="radio" name="slide" id="sixth" onclick="photoslider()" />
+          <span></span>
+        </label>
+
       </div>
     </section>
     <section>
       <h2>بر چسب مشخصات <span> محصولات </span>شرکت کوثر بافت نوین:</h2>
       <div>
-        <h3>ترگال</h3>
+        <h3>پارچه ترگال</h3>
         <ul>
           <li>
-            <p> انواع: <span>ساده</span> و <span>کجراه</span> و <span>طرحدار</span></p>
+            <p> انواع: <span>ترگال ساده</span> و <span>ترگال کجراه</span> و <span>ترگال طرحدار</span></p>
           </li>
           <li>
             <p>
-              <span>ساده</span> : عرض <span class="Yekan">150</span> و وزن
-              تقریبی <span class="Yekan">250</span> گرم، <span>کجراه</span> :
+              <span>ترگال ساده</span> : عرض <span class="Yekan">150</span> و وزن
+              تقریبی <span class="Yekan">250</span> گرم، <span>ترگال کجراه</span> :
               وزن تقریبی <span class="Yekan">290</span> گرم
             </p>
           </li>
           <li>
-            <p>طاقه های <span class="Yekan">40</span> متری</p>
+            <p>طاقه های كتابي<span class="Yekan">40</span> متری</p>
           </li>
           <li>
             <p>
@@ -179,7 +191,7 @@
             </p>
           </li>
           <li>
-            <p><span>طرحدار:</span> پارچه ترگال ساده با طرح های چاپی خالدار</p>
+            <p><span>ترگال طرحدار:</span> پارچه ترگال ساده با طرح های چاپی خالدار</p>
             <p><a href="./kaliteDotted.php"> کالیته ترگال خالدار</a> : رنگ بندی
               <span class="Yekan">11</span> تایی
             </p>
@@ -201,10 +213,10 @@
         </ul>
       </div>
       <div>
-        <h3>چهارخانه</h3>
+        <h3>پارچه تترون</h3>
         <ul>
           <li>
-            <p> پارچه های <span>طرح چهارخانه تترون</span> و <span>فاستونی طرح حلزونی</span></p>
+            <p> پارچه های <span>تترون</span> و <span> پيراهني طرح چهارخانه</span></p>
           </li>
           <li>
             <p>
@@ -213,7 +225,7 @@
             </p>
           </li>
           <li>
-            <p>طاقه های <span class="Yekan">40</span> متری</p>
+            <p>طاقه های كتابي<span class="Yekan">40</span> متری</p>
           </li>
           <li>
             <p>
@@ -222,7 +234,10 @@
             </p>
           </li>
           <li>
-            <p><a href="./Fastoni.php"> کالیته فاستونی طرح حلزونی</a> رنگ بندی <span class="Yekan">4</span> تایی</p>
+            <p>
+              <a href="./KaliteCharkhoune.php"> کالیته چهارخانه پيراهني</a>: رنگ بندی
+              <span class="Yekan">90</span> تایی
+            </p>
           </li>
           <li>
             <p>
@@ -240,25 +255,38 @@
         </ul>
       </div>
       <div>
-        <h3>مقنعه ای</h3>
+        <h3>پارچه فاستوني</h3>
         <ul>
           <li>
-            <p>پارچه های نخی خنک و سبک ایده آل برای فصول گرم</p>
+            <p>مقاوم،‌ بدون آب رفت و پرز در دو <span>طرح حلزوني</span> و <span>فاستوني ساده</span></p>
           </li>
           <li>
             <p>
-              عرض <span class="Yekan">150</span> و وزن تقریبی
-              <span class="Yekan">200</span> گرم
+              <span>فاستوني حلزوني </span> به عرض<span class="Yekan">150</span> و وزن تقریبی
+              <span class="Yekan">280</span> گرم
             </p>
-          </li>
-          <li>
-            <p>طاقه های <span class="Yekan">40</span> متری</p>
           </li>
           <li>
             <p>
-              <a href="#">کالیته</a> رنگ بندی
-              <span class="Yekan">90</span> تایی
+              <span>فاستوني ساده </span> به عرض<span class="Yekan">160</span> و وزن تقریبی
+              <span class="Yekan">280</span> گرم
             </p>
+          </li>
+          <li>
+            <p>فاستوني طرح حلزوني در طاقه های كتابي<span class="Yekan">40</span> متری</p>
+          </li>
+          <li>
+            <p>فاستوني عرض 160 در طاقه های كتابي<span class="Yekan">30</span> متری</p>
+          </li>
+
+          <li>
+            <p>
+              <a href="#">کالیته فاستوني ساده عرض 160</a>: رنگ بندی
+              <span class="Yekan">9</span> تایی
+            </p>
+          </li>
+          <li>
+            <p><a href="Fastoni.php"> کالیته فاستونی طرح حلزونی</a>: رنگ بندی <span class="Yekan">4</span> تایی</p>
           </li>
           <li>
             <p>
@@ -296,7 +324,6 @@
               رنگ بندی پرشیا لنین در <a href="KalitePersiaLenin.php">کالیته های  12 رنگی</a>
             </p>
           </li>
-
           <li>
             <p>
               موارد استفاده: کت شلوار، کت دامن، روپوش و پوشاک بهار پاییزه زنانه و دخترانه
