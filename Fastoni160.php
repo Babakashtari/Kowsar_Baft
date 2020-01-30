@@ -30,12 +30,15 @@
   <link rel="stylesheet" href="php/php_css/footer.css">
   <link rel="stylesheet" href="CSS/Fastoni160.css">
 
-    <title>صنایع نساجی کوثر بافت نوین - فاستونی عرض 160</title>
+    <title>صنایع نساجی کوثر بافت نوین - فاستونی ساده عرض 160</title>
 </head>
 <body>
     <?php head(); ?>
     <main>
-
+      <section>
+        <h3>فاستوني ساده عرض 160</h3>
+        <p>فاستوني ساده يك پارچه بادوام و با كيفيت مرغوب است كه با عرض 160 در طاقه هاي 30 متري عرضه مي شود. اين پارچه حدودا 280 گرم وزن داشته و جنس لخت و كيفيت درجه يك آن براي كت و شلوار و روپوش زنانه ايده آل است.  </p>
+      </section>
     </main>
     <?php footer(); ?>
     <script src="JS/Fastoni160.js"></script>
