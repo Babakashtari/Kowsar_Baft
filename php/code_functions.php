@@ -61,8 +61,8 @@ function head(){
           <li>
             <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
             <ul class="displayNone">
-              <li><a href="Fastoni.php">فاستوني طرح حلزوني</a></li>
-              <li><a href="Fastoni160.php">فاستوني عرض 160</a></li>
+            <li><a href="Fastoni160.php">ساده عرض 160</a></li>
+              <li><a href="Fastoni.php">طرح حلزونی</a></li>
               <li><a href="https://chibepoosham.com/shopping-guide-fabric/" target="_blank">درباره فاستونی</a></li>
             </ul>
           </li>
@@ -228,6 +228,16 @@ function Persia_lenin_cells(){
     echo '</div>';
   }
 
+}
+function fastoni160_cell_generator(){
+  $kalite_colors_array = ["rgb(7, 12, 16)", "rgb(2, 3, 2)", "rgb(0, 14, 14)", "rgb(58, 44, 0)", "rgb(13, 0, 0)", "rgb(199, 194, 84)", "rgb(15, 15, 15)", "rgb(41, 41, 37)", "rgb(0, 0, 0)"];
+  $kalite_codes_array = ["آبی نفتی کد 05", "سرمه ای کد 1.4", "آبی هوایی کد 65", "شکلاتی روشن کد 46", "قهوه ای کد 8.10", "کرم روشن کد 06", "مدادی کد 87", "طوسی کد 78", "مشکی کد 6.7"];
+  for($i = 0; $i<count($kalite_codes_array); $i++){
+    echo '<div style="background-color:' . $kalite_colors_array[$i] .';">'.
+            '<p>'.$kalite_codes_array[$i].'<br> افزودن به سبد خرید</p>'.
+          '</div>
+          ';
+  }
 }
 ?>
 
