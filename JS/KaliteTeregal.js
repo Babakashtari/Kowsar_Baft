@@ -33,9 +33,7 @@ const prevnext = n => {
   kalite();
 };
 const checker = event => {
-  const radio_divs = document.querySelectorAll(
-    "#radio-container > label > div"
-  );
+  const radio_divs = document.querySelectorAll("#radio-container > label > div");
   for (let i = 0; i < radio_divs.length; i++) {
     if (radio_divs[i] === event.target) {
       radios[i].checked = true;
@@ -46,9 +44,7 @@ const checker = event => {
 
 const heightset = () => {
   sectionOne.style.height =
-    containers[0].offsetHeight +
-    document.getElementById("radio-container").offsetHeight +
-    "px";
+    containers[0].offsetHeight + document.getElementById("radio-container").offsetHeight + "px";
 };
 setInterval(heightset, 1);
 // array for color codes and their color RGB:
@@ -310,61 +306,14 @@ const colors = [
 ];
 const kaliteCells = document.querySelectorAll(".container>div");
 const CodePlaces = document.querySelectorAll(".container>div>p>a");
-codes.forEach(function (value, index) {
+codes.forEach(function(value, index) {
   CodePlaces[index].innerHTML = "کد: " + value + "</br>" + "افزودن به سبد خرید";
 });
-colors.forEach(function (value, index) {
+colors.forEach(function(value, index) {
   kaliteCells[index].style.backgroundColor = "#" + value;
 });
 
 //modal box:
-// quantity calculation:
-const measure = () => {
-  const metters = document.getElementById("measurement");
-  const taghe = document.getElementsByName("orderQuantityTaghe")[0].value;
-  const adl = document.getElementsByName("OrderQuantityAdl")[0].value;
-  switch (taghe * 40 + adl * 320) {
-    case 0:
-      metters.innerHTML = "... متر";
-      break;
-    default:
-      metters.innerHTML = taghe * 40 + adl * 320 + " متر ";
-      break;
-  }
-};
-
-(() => {
-  const modalOpaqueBox = document.querySelector("body>main>div:nth-of-type(2)");
-  const modalBox = modalOpaqueBox.querySelector("div:nth-child(2)");
-  // const borderBox = modalOpaqueBox.querySelector("div:first-child");
-  const modalCloseBox = modalBox.querySelector("span");
-  // modal closing:
-  modalCloseBox.addEventListener("click", () => {
-    modalOpaqueBox.classList.add("zeroOpacity");
-    modalOpaqueBox.addEventListener("transitionend", () => {
-      if (modalOpaqueBox.classList.contains("zeroOpacity")) {
-        modalOpaqueBox.classList.add("displayNone");
-      }
-    });
-  });
-  // modal opening:
-  for (let index = 0; index < kaliteCells.length; index++) {
-    kaliteCells[index].addEventListener("click", event => {
-      modalBox.style.backgroundColor =
-        event.currentTarget.style.backgroundColor;
-      document.getElementById(
-        "colorCode"
-      ).innerHTML = event.currentTarget
-        .querySelector("div>p>a")
-        .innerHTML.replace("افزودن به سبد خرید", "");
-
-      modalOpaqueBox.classList.remove("displayNone");
-      setTimeout(() => {
-        modalOpaqueBox.classList.remove("zeroOpacity");
-      }, 20);
-    });
-  }
-})();
 
 // prettier-ignore
 const gradients = [
@@ -586,9 +535,7 @@ const teregalpicker = event => {
   const teregal_select = document.querySelectorAll(
     "main>section:nth-of-type(2)>div>select[name='teregal']"
   );
-  const T_shirt = document.querySelectorAll(
-    "main>section:nth-of-type(2)>div>i"
-  );
+  const T_shirt = document.querySelectorAll("main>section:nth-of-type(2)>div>i");
   for (let i = 0; i < teregal_select.length; i++) {
     if (event.target === teregal_select[i]) {
       T_shirt[i].style.color = "#" + event.target.value;
@@ -603,9 +550,7 @@ const colorpicker = event => {
   const charkhouneh_select = document.querySelectorAll(
     'main>section:nth-of-type(2)>div>select[name="Charkhoune"]'
   );
-  const T_shirt = document.querySelectorAll(
-    "main>section:nth-of-type(2)>div>i"
-  );
+  const T_shirt = document.querySelectorAll("main>section:nth-of-type(2)>div>i");
   for (let i = 0; i < charkhouneh_select.length; i++) {
     if (event.target === charkhouneh_select[i]) {
       T_shirt[i].style.backgroundImage = gradients[event.target.value];
@@ -616,15 +561,11 @@ const colorpicker = event => {
 };
 
 const backgroundpicker = event => {
-  const background_selector = document.querySelectorAll(
-    "main>section:nth-of-type(2)>div"
-  );
+  const background_selector = document.querySelectorAll("main>section:nth-of-type(2)>div");
   const background_select = document.querySelectorAll(
     "main>section:nth-of-type(2)>div>select[name='background']"
   );
-  const T_shirt = document.querySelectorAll(
-    "main>section:nth-of-type(2)>div>i"
-  );
+  const T_shirt = document.querySelectorAll("main>section:nth-of-type(2)>div>i");
   for (let i = 0; i < background_select.length; i++) {
     if (event.target === background_select[i]) {
       background_selector[i].style.backgroundColor = "#" + event.target.value;

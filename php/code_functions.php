@@ -1,4 +1,5 @@
 <?php 
+// website header:
 function head(){
   echo '<header>
   <nav>
@@ -96,7 +97,7 @@ function head(){
   </div>
 </header>';
 }
-
+// website footer:
 function footer(){
   echo '
   <footer>
@@ -234,10 +235,80 @@ function fastoni160_cell_generator(){
   $kalite_codes_array = ["آبی نفتی کد 05", "سرمه ای کد 1.4", "آبی هوایی کد 65", "شکلاتی روشن کد 46", "قهوه ای کد 8.10", "کرم روشن کد 06", "مدادی کد 87", "طوسی کد 78", "مشکی کد 6.7"];
   for($i = 0; $i<count($kalite_codes_array); $i++){
     echo '<div style="background-color:' . $kalite_colors_array[$i] .';">'.
-            '<p>'.$kalite_codes_array[$i].'<br> افزودن به سبد خرید</p>'.
+            '<p class="modal_opener">'.$kalite_codes_array[$i].'<br> افزودن به سبد خرید</p>'.
           '</div>
           ';
   }
+}
+function modal_box_generator(){
+  echo  '
+  <!-- modal opaque box -->
+  <div class="displayNone zeroOpacity modal">
+    <div id="skewBox"></div>
+    <!-- modal box -->
+    <div>
+      <span>&times;</span>
+      <table>
+        <tr>
+          <td colspan="2" id="Header">
+          <img src="images/kowsarbaft_band_header.png" alt="Kowsarbaft_Header">
+          <p>Is the Luxury Textile Collection</p>
+          </td>
+        </tr>
+        <tr>
+          <td>نوع پارچه:</td>
+          <td>چهارخانه</td>
+        </tr>
+        <tr>
+          <td>کد رنگ:</td>
+          <td id="colorCode">188</td>
+        </tr>
+        <tr>
+          <td>تعداد:</td>
+          <td>
+            <select name="orderQuantityTaghe" id="taghe" onchange="measure()">
+              <optgroup label="تعداد طاقه">
+                <option value="0">تعداد طاقه</option>
+                <option value="1">یک طاقه</option>
+                <option value="2">دو طاقه</option>
+                <option value="3">سه طاقه</option>
+                <option value="4">چهار طاقه</option>
+                <option value="5">پنج طاقه</option>
+                <option value="6">شش طاقه</option>
+                <option value="7">هفت طاقه</option>
+                <option value="8">هشت طاقه(یک عدل)</option>
+              </optgroup>
+            </select><br /><br />
+            <select name="OrderQuantityAdl" id="Adl" onchange="measure()">
+              <optgroup label="تعداد عدل">
+                <option value="0">تعداد عدل</option>
+                <option value="1">یک عدل</option>
+                <option value="2">دو عدل</option>
+                <option value="3">سه عدل</option>
+                <option value="4">چهار عدل</option>
+                <option value="5">پنج عدل</option>
+                <option value="6">شش عدل</option>
+                <option value="7">هفت عدل</option>
+                <option value="8">هشت عدل</option>
+                <option value="9">نه عدل</option>
+                <option value="10">ده عدل</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>متراژ کل:</td>
+          <td id="measurement">... متر</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="center">
+            <a href="#">افزودن به سبد خرید</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+        ';
 }
 ?>
 
