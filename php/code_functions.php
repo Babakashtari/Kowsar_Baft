@@ -62,7 +62,7 @@ function head(){
           <li>
             <span><i class="fa fa-caret-down"></i>&nbsp;فاستونی</span>
             <ul class="displayNone">
-            <li><a href="Fastoni160.php">ساده عرض 160</a></li>
+            <li><a href="Fastoni160.php">ساده عرض <span class="Yekan">160</span></a></li>
               <li><a href="Fastoni.php">طرح حلزونی</a></li>
               <li><a href="https://chibepoosham.com/shopping-guide-fabric/" target="_blank">درباره فاستونی</a></li>
             </ul>
@@ -163,16 +163,27 @@ function footer(){
   ';
 }
 
-function ninety_cells(){
-  // رنگ های کالیته های ترگال ساده و چهارخانه
+function teregal_cells(){
+  // رنگ های کالیته های ترگال ساده
   for($i = 0; $i<8; $i++){
     echo "<div class='container'>";
     for($l = 0; $l<12; $l++){
-      echo "<div><p><a href='#'></a></p></div>";
+      echo "<div onclick='Teregal_modal_opener(event)'><p><a href='#'></a></p></div>";
     }
     echo "</div>";
   }
 }
+function charkhouneh_cells(){
+  // رنگ های کالیته های چهارخانه
+  for($i = 0; $i<8; $i++){
+    echo "<div class='container'>";
+    for($l = 0; $l<12; $l++){
+      echo "<div onclick='charkhouneh_modal_opener(event)'><p><a href='#'></a></p></div>";
+    }
+    echo "</div>";
+  }
+}
+
 
 function ninety_cells_radio_buttons(){
   // رادیو باتن های کالیته های ترگال ساده و چهارخانه
@@ -232,10 +243,11 @@ function Persia_lenin_cells(){
 }
 function fastoni160_cell_generator(){
   $kalite_colors_array = ["rgb(7, 12, 16)", "rgb(2, 3, 2)", "rgb(0, 14, 14)", "rgb(58, 44, 0)", "rgb(13, 0, 0)", "rgb(199, 194, 84)", "rgb(15, 15, 15)", "rgb(41, 41, 37)", "rgb(0, 0, 0)"];
-  $kalite_codes_array = ["آبی نفتی کد 05", "سرمه ای کد 1.4", "آبی هوایی کد 65", "شکلاتی روشن کد 46", "قهوه ای کد 8.10", "کرم روشن کد 06", "مدادی کد 87", "طوسی کد 78", "مشکی کد 6.7"];
-  for($i = 0; $i<count($kalite_codes_array); $i++){
-    echo '<div style="background-color:' . $kalite_colors_array[$i] .';">'.
-            '<p class="modal_opener">'.$kalite_codes_array[$i].'<br> افزودن به سبد خرید</p>'.
+  $kalite_codes_text_array = ["آبی نفتی کد ", "سرمه ای کد ", "آبی هوایی کد ", "شکلاتی روشن کد ", "قهوه ای کد ", "کرم روشن کد ", "مدادی کد ", "طوسی کد ", "مشکی کد "];
+  $kalite_color_codes_array = [05, 1.4, 65, 46, 8.10, 06, 87, 78, 6.7 ];
+  for($i = 0; $i<count($kalite_codes_text_array); $i++){
+    echo '<div onclick="fastoni160_modal_opener(event)" style="background-color:' . $kalite_colors_array[$i] .';">'.
+            '<p class="modal_opener">'.$kalite_codes_text_array[$i].'<span class="Yekan modal_opener">'.$kalite_color_codes_array[$i].'</span><br><span class="modal_opener"> افزودن به سبد خرید</span></p>'.
           '</div>
           ';
   }

@@ -94,7 +94,7 @@
       <!-- kalite containers and cells -->
       <h1>کالیته رنگ های ترگال:</h1>
       <h3>برای مشاهده بهتر نمونه رنگ روی کد موردنظر کلیک کنید.</h3>
-      <?php ninety_cells(); ?>
+      <?php teregal_cells(); ?>
     </section>
     <div id="radio-container">
       <span onclick="prevnext(-1)">&lt;</span>

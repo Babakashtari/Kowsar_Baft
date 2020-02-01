@@ -56,13 +56,16 @@ header > nav > ul > li > span {
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
 }
+header > nav > ul > li a > span {
+    color: white;
+}
 /* green nav hover effect  */
 header > nav > ul > li > a:hover,
 nav > ul > li > a:hover > i {
     color: black;
 }
-header > nav > ul > li > span:hover,
-header > nav > ul > li > span:hover > i {
+header > nav > ul > li span:hover,
+header > nav > ul > li span:hover > i {
     color: black;
     cursor: pointer;
 }
@@ -157,6 +160,17 @@ header > nav > ul > li > ul > li > ul > li > a:hover > i {
     color: black;
     border-bottom: 0.1rem solid red;
     margin-bottom: 0;
+}
+header > nav > ul > li > ul > li > ul > li > a > span {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+/* عدد 160  در فاستونی ساده عرض 160 */
+header > nav > ul > li > ul > li > ul > li > a > span.Yekan {
+    font-family: "Yekan";
+}
+header > nav > ul > li > ul > li > ul > li > a:hover > span {
+    color: black;
 }
 /* search section */
 header > nav > ul > li:first-child {

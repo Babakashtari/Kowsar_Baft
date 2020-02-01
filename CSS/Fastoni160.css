@@ -1,15 +1,15 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 @font-face {
-  src: url(fonts/IRANSansWeb_Bold.ttf);
-  font-family: "IranSans";
+    src: url(fonts/IRANSansWeb_Bold.ttf);
+    font-family: "IranSans";
 }
 @font-face {
-  src: url(fonts/yekannumbers-regular.woff);
-  font-family: "Yekan";
+    src: url(fonts/yekannumbers-regular.woff);
+    font-family: "Yekan";
 }
 a,
 p,
@@ -22,83 +22,90 @@ h3,
 h4,
 h5,
 h6 {
-  text-decoration: none;
-  font-family: "IranSans";
-  color: #6c4c4c;
+    text-decoration: none;
+    font-family: "IranSans";
+    color: #6c4c4c;
+}
+span.Yekan {
+    font-family: "Yekan";
 }
 main {
-  width: 100%;
-  background-color: #90ee90;
-  padding: 2rem 1rem;
+    width: 100%;
+    background-color: #90ee90;
+    padding: 2rem 1rem;
 }
 main > section {
-  margin: 1rem;
-  padding: 1rem;
-  border: 3px solid gray;
-  border-radius: 15px;
-  direction: rtl;
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid gray;
+    border-radius: 15px;
+    direction: rtl;
 }
 main > section > h3 {
-  text-align: center;
-  padding: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 main > section > p {
-  line-height: 2rem;
-  text-align: justify;
+    line-height: 2rem;
+    text-align: justify;
 }
 main > section:nth-of-type(2) {
-  border: none;
+    border: none;
 }
 main > section:nth-of-type(2) > h3 {
-  text-align: center;
-  padding: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 main > section:nth-of-type(2) > div {
-  width: 70%;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px outset gray;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+    width: 70%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px outset gray;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 main > section:nth-of-type(2) > div > div {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
 }
 main > section:nth-of-type(2) > div > div::after {
-  content: "";
-  background-image: url(../images/fastoni_background.jpg);
-  opacity: 0.1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+    content: "";
+    background-image: url(../images/fastoni_background.jpg);
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 main > section:nth-of-type(2) > div > div > p {
-  cursor: pointer;
-  position: absolute;
-  padding: 2rem;
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  bottom: 1rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 1;
-  display: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    bottom: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+    display: none;
+}
+main > section:nth-of-type(2) > div > div > p > span {
+    color: white;
 }
 main > section:nth-of-type(2) > div > div:last-of-type > p {
-  display: block;
+    display: block;
 }

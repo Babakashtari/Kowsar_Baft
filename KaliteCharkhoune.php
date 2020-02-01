@@ -95,7 +95,7 @@
       <h1>کالیته رنگ های چهارخانه:</h1>
       <h3>برای مشاهده بهتر نمونه رنگ بر روی کد آن کلیک کنید.</h3>
       <!-- kalite container and kalite cells: -->
-      <?php ninety_cells(); ?>
+      <?php charkhouneh_cells(); ?>
     </section>
     <div id="radioContainer">
       <span onclick="prevnext(-1)">&lt;</span>

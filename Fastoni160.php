@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="CSS/Normalizer.css" />
   <link rel="stylesheet" href="php/php_css/header.css">
   <link rel="stylesheet" href="php/php_css/footer.css">
+  <link rel="stylesheet" href="php/php_css/modal.css">
   <link rel="stylesheet" href="CSS/Fastoni160.css">
 
     <title>صنایع نساجی کوثر بافت نوین - فاستونی ساده عرض 160</title>
@@ -36,8 +37,8 @@
     <?php head(); ?>
     <main>
       <section>
-        <h3>فاستونی ساده عرض 160</h3>
-        <p>فاستونی ساده يك پارچه بادوام و با كيفيت مرغوب است كه با عرض 160 در طاقه های 30 متری عرضه مي شود. اين پارچه حدودا 280 گرم وزن داشته و جنس لخت و كيفيت درجه يك آن برای كت و شلوار و روپوش زنانه ايده آل است. فاستونی ساده عرض 160 دارای 30 درصد الیاف پنبه و 70 درصد الیاف ویسکوز است که پنبه موجود در آن به پارچه لطافت بالا و در عین حال ویسکوز موجود در آن  دوام و محکمی عالی می بخشد. </p>
+        <h3>فاستونی ساده عرض <span class="Yekan">160</span></h3>
+        <p>فاستونی ساده يك پارچه بادوام و با كيفيت مرغوب است كه با عرض <span class="Yekan">160</span> در طاقه های <span class="Yekan">30</span> متری عرضه مي شود. اين پارچه حدودا <span class="Yekan">280</span> گرم وزن داشته و جنس لخت و كيفيت درجه يك آن برای كت و شلوار و روپوش زنانه ايده آل است. فاستونی ساده عرض <span class="Yekan">160</span> دارای <span class="Yekan">30</span> درصد الیاف پنبه و <span class="Yekan">70</span> درصد الیاف ویسکوز است که پنبه موجود در آن به پارچه لطافت بالا و در عین حال ویسکوز موجود در آن  دوام و محکمی عالی می بخشد. </p>
       </section>
       <!-- kalite section: -->
       <section>
@@ -46,10 +47,12 @@
           <?php fastoni160_cell_generator(); ?>
         </div>
       </section>
+      <?php modal_box_generator(); ?>
     </main>
     <?php footer(); ?>
     <script src="JS/Fastoni160.js"></script>
     <script src="php/php_js/header.js"></script>
+    <script src="php/php_js/modal.js"></script>
 
 </body>
 </html>
