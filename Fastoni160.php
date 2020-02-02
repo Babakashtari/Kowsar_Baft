@@ -44,10 +44,6 @@
       <section>
         <div class="cell_container">
           <div id="kalite_header">
-            <div>
-              <img src="images/kowsarbaft_band_header.png" alt="کوثر بافت نوین">
-              <p>Is the luxury textile collection</p>
-            </div>
             <h3>مشخصات پارچه: </h3>
             <table>
               <tr>
