@@ -42,8 +42,28 @@
       </section>
       <!-- kalite section: -->
       <section>
-        <h3>برای ورق زدن رنگ های کالیته روی آن کلیک کنید.</h3>
         <div class="cell_container">
+          <div id="kalite_header">
+            <div>
+              <img src="images/kowsarbaft_band_header.png" alt="کوثر بافت نوین">
+              <p>Is the luxury textile collection</p>
+            </div>
+            <h3>مشخصات ‍‍پارچه: </h3>
+            <table>
+              <tr>
+                <th>نام جنس</th>
+                <th>طرح</th>
+                <th>عرض</th>
+                <th>متراژ طاقه</th>
+              </tr>
+              <tr>
+                <td>فاستونی</td>
+                <td>ساده</td>
+                <td><span class="Yekan">160</span></td>
+                <td><span class="Yekan">30</span> متری</td>
+              </tr>
+            </table>
+          </div>
           <?php fastoni160_cell_generator(); ?>
         </div>
       </section>

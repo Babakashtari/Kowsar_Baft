@@ -80,7 +80,7 @@ function head(){
   <!-- white manu bar and logo container -->
   <div>
     <ul>
-      <a href="#">
+      <a href="index.php">
         <img src="images/logos/kowsarbaftMainLogo.png" alt="Kosar Baft" width="auto" height="100rem" />
       </a>
       <li>
@@ -242,11 +242,11 @@ function Persia_lenin_cells(){
 
 }
 function fastoni160_cell_generator(){
-  $kalite_colors_array = ["rgb(7, 12, 16)", "rgb(2, 3, 2)", "rgb(0, 14, 14)", "rgb(58, 44, 0)", "rgb(13, 0, 0)", "rgb(199, 194, 84)", "rgb(15, 15, 15)", "rgb(41, 41, 37)", "rgb(0, 0, 0)"];
+  $kalite_colors_array = ["rgb(10, 10, 15)", "rgb(17, 17, 17)", "rgb(0, 23, 27)", "rgb(82, 62, 4)", "rgb(13, 8, 7)", "rgb(217, 210, 128)", "rgb(0, 5, 5)", "rgb(48, 53, 53)", "rgb(0, 0, 0)"];
   $kalite_codes_text_array = ["آبی نفتی کد ", "سرمه ای کد ", "آبی هوایی کد ", "شکلاتی روشن کد ", "قهوه ای کد ", "کرم روشن کد ", "مدادی کد ", "طوسی کد ", "مشکی کد "];
   $kalite_color_codes_array = [05, 1.4, 65, 46, 8.10, 06, 87, 78, 6.7 ];
   for($i = 0; $i<count($kalite_codes_text_array); $i++){
-    echo '<div onclick="fastoni160_modal_opener(event)" style="background-color:' . $kalite_colors_array[$i] .';">'.
+    echo '<div onclick="fastoni160_modal_opener(event)" class="cell" style="background-color:' . $kalite_colors_array[$i] .';">'.
             '<p class="modal_opener">'.$kalite_codes_text_array[$i].'<span class="Yekan modal_opener">'.$kalite_color_codes_array[$i].'</span><br><span class="modal_opener"> افزودن به سبد خرید</span></p>'.
           '</div>
           ';
