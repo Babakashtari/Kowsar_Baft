@@ -48,7 +48,7 @@
               <img src="images/kowsarbaft_band_header.png" alt="کوثر بافت نوین">
               <p>Is the luxury textile collection</p>
             </div>
-            <h3>مشخصات ‍‍پارچه: </h3>
+            <h3>مشخصات پارچه: </h3>
             <table>
               <tr>
                 <th>نام جنس</th>
@@ -63,6 +63,7 @@
                 <td><span class="Yekan">30</span> متری</td>
               </tr>
             </table>
+            <p>فاستونی ساده عرض 160</p>
           </div>
           <?php fastoni160_cell_generator(); ?>
         </div>

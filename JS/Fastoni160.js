@@ -9,7 +9,6 @@ const kalite_last_paragraph = document.querySelector(
   "main > section:nth-of-type(2) > div > div:last-of-type > p"
 );
 
-console.log(kalite_cells);
 const resizer = () => {
   let s = kalite_cells.length;
   for (let i = 0; i < s; i++) {
@@ -18,3 +17,4 @@ const resizer = () => {
   }
 };
 resizer();
+

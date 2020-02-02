@@ -135,3 +135,52 @@ main > section:nth-of-type(2) > div > div.cell > p {
 main > section:nth-of-type(2) > div > div.cell > p > span {
   color: white;
 }
+main>section:nth-of-type(2)>div>div#kalite_header>p{
+  display:none;
+}
+@media screen and (max-width:1160px){
+  main > section:nth-of-type(2) > div > div#kalite_header > div{
+    top:0;
+    right:0;
+    position:relative;
+    text-align:center;
+    border-radius: 5px;
+    margin-bottom:1rem;
+  }
+  main>section:nth-of-type(2)>div>div#kalite_header>div>img{
+    width:60%;
+    border-radius:5px;
+  }
+  main>section:nth-of-type(2)>div>div#kalite_header>div>p{
+    display:none;
+  }
+}
+@media screen and (max-width:626px){
+  main>section:nth-of-type(2)>div>div#kalite_header,
+  main>section:nth-of-type(2)>div>div.cell
+  {
+    font-size:0.75rem;
+  }
+}
+@media screen and (max-width:566px){
+  main>section:nth-of-type(2)>div{
+    width:90%;
+  }
+}
+@media screen and (max-width:461px){
+  main>section:nth-of-type(2)>div>div#kalite_header>table{
+    display:none;
+  }
+  main>section:nth-of-type(2)>div>div#kalite_header>p{
+    display:block;
+    padding-top:1rem;
+  }
+  main>section:nth-of-type(2)>div>div#kalite_header>div>img{
+    width:100%;
+  }
+}
+@media screen and (max-width:375px){
+  main>section:nth-of-type(2)>div.cell_container>div.cell>p.modal_opener{
+    width:90%;
+  }
+}
