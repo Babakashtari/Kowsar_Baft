@@ -87,7 +87,6 @@
     <![endif]-->
 </head>
 
-
 <body>
   <?php head(); ?>
   <main>
