@@ -31,6 +31,51 @@
   <link rel="stylesheet" href="php/php_css/modal.css">
   <link rel="stylesheet" href="CSS/Fastoni160.css">
 
+  <!-- https://technicalseo.com/tools/schema-markup-generator -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "Fastoni",
+  "image": "https://kowsarbaft.ir/images/logos/kowsarbaftMainLogo.png",
+  "description": "Fastoni Iranian fabric 160m width, viscose filament and provided in 40m rolls.",
+  "brand": "Kowsar Baft Novin",
+  "sku": "800000",
+  "mpn": "9789643674700",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://kowsarbaft.ir/Fastoni160.php",
+    "priceCurrency": "IRR",
+    "price": "150000",
+    "priceValidUntil": "2020-03-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "15",
+    "bestRating": "15",
+    "worstRating": "5",
+    "ratingCount": "1",
+    "reviewCount": "1"
+  },
+  "review": {
+    "@type": "Review",
+    "name": "Checked the Price",
+    "reviewBody": "Highest quality and reasonable price",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "15",
+      "bestRating": "15",
+      "worstRating": "5"
+    },
+    "datePublished": "2019-12-10",
+    "author": {"@type": "Person", "name": "Babak"},
+    "publisher": {"@type": "Organization", "name": "kowsarbaft novin"}
+  }
+}
+</script>
+
     <title>صنایع نساجی کوثر بافت نوین - فاستونی ساده عرض 160</title>
 </head>
 <body>
